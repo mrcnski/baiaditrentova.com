@@ -1,5 +1,5 @@
 import { languages, ui, paths } from './ui';
-import Astro from "astro.config.mjs";
+import Astro from "../../astro.config.mjs";
 
 const defaultLang = Astro.i18n!.defaultLocale as keyof typeof languages;
 
