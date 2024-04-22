@@ -3,13 +3,28 @@ import Layout from "@layouts/Layout.astro";
 
 import PageContainer from "@components/PageContainer.astro";
 
-import { getLangFromUrl, useTranslations } from '../i18n/utils';
+import { Image } from "astro:assets";
+import Index1 from "@assets/images/index/index1.jpg";
+
+import { getLangFromUrl, useTranslations } from '@i18n/utils';
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 ---
 
 <Layout title={t("index.title")} description={t("index.description")}>
+    <Image class="index-img" src={Index1} alt={t("site.name")} />
+
     <PageContainer>
-        <h2>Welcome to Cilento</h2>
+        <h2>{t("index.welcome")}</h2>
     </PageContainer>
 </Layout>
+
+<style>
+    .index-img {
+        position: absolute;
+        z-index: -1;
+
+        height: 100vh;
+        object-fit: cover;
+    }
+</style>

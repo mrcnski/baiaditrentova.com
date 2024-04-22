@@ -27,6 +27,7 @@ export const ui = {
 
         "index.title": "B&B Baia di Trentova",
         "index.description": "B&B Baia di Trentova is a family-run bed and breakfast located in Agropoli in Cilento. The B&B is located in a quiet area, just a few steps from the sea and the Trentova Bay.",
+        "index.welcome": "Welcome to Cilento",
     },
     it: {
         'site.name': 'B&B Baia di Trentova',
@@ -35,5 +36,6 @@ export const ui = {
 
         "index.title": "B&B Baia di Trentova",
         "index.description": "Il B&B Baia di Trentova è un bed and breakfast a conduzione familiare situato ad Agropoli nel Cilento. Il B&B si trova in una zona tranquilla, a pochi passi dal mare e dalla Baia di Trentova.",
+        "index.welcome": "Benvenuti nel Cilento",
     },
 } as const;
