@@ -1,0 +1,45 @@
+---
+interface Props {
+    image: ImageMetadata;
+    heading?: string;
+}
+
+import { Image } from "astro:assets";
+
+import { getLangFromUrl, useTranslations } from '@i18n/utils';
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
+const { image, heading } = Astro.props;
+---
+
+<div class="index-img-container">
+    <Image class="index-img" src={image} alt={heading || t("site.name")} />
+    {(heading) && <h1 class="index-heading">{heading}</h1>}
+</div>
+
+<style>
+    .index-img-container {
+        position: relative;
+    }
+
+    .index-img {
+        /* position: absolute; */
+        z-index: -1;
+
+        height: 100vh;
+        object-fit: cover;
+    }
+
+    .index-heading {
+        position: absolute;
+        top: 33%;
+        left: 10%;
+
+        margin: 0;
+        
+        font-weight: bold;
+        color: var(--white-bg);
+        filter: drop-shadow(2px 9px 1px rgba(0, 0, 0, .26));
+    }
+</style>

@@ -1,10 +1,16 @@
 ---
 import Layout from "@layouts/Layout.astro";
 
+import IndexImage from "@components/IndexImage.astro";
 import PageContainer from "@components/PageContainer.astro";
 
-import { Image } from "astro:assets";
 import Index1 from "@assets/images/index/index1.jpg";
+import Index2 from "@assets/images/index/index2.jpg";
+import Index3 from "@assets/images/index/index3.jpg";
+import Index4 from "@assets/images/index/index4.jpeg";
+import Index5 from "@assets/images/index/index5.jpeg";
+import Index6 from "@assets/images/index/index6.jpeg";
+import Index7 from "@assets/images/index/index7.jpg";
 
 import { getLangFromUrl, useTranslations } from '@i18n/utils';
 const lang = getLangFromUrl(Astro.url);
@@ -12,19 +18,60 @@ const t = useTranslations(lang);
 ---
 
 <Layout title={t("index.title")} description={t("index.description")}>
-    <Image class="index-img" src={Index1} alt={t("site.name")} />
-
-    <PageContainer>
-        <h2>{t("index.welcome")}</h2>
-    </PageContainer>
+    <IndexImage image={Index1} heading={t("index.welcome")} />
+    <IndexImage image={Index2} heading={t("index.terrace")} />
+    <IndexImage image={Index3} heading={t("index.seaview")} />
+    <IndexImage image={Index4} heading={t("index.smile")} />
+    <IndexImage image={Index5} />
+    <IndexImage image={Index6} />
+    <IndexImage image={Index7} />
 </Layout>
 
 <style>
-    .index-img {
-        position: absolute;
-        z-index: -1;
-
-        height: 100vh;
-        object-fit: cover;
-    }
 </style>
+
+<script>
+    document.addEventListener('astro:page-load', () => {
+        // An array that holds all IMG elements that have the "parallax" CSS
+        // class in the containing .wp-block-image
+        const parallaxImages: Array<HTMLImageElement> = [];
+
+        // Find all our parallax images and add them to the
+        // parallaxImages array.
+        document.querySelectorAll('.index-img').forEach(function(element) {
+            console.log(element);
+            parallaxImages.push(element as HTMLImageElement);
+            setImageScrollPercentage(element as HTMLImageElement);
+        });
+
+        // Listen for window-resize and document-scroll events.
+        window.addEventListener('resize', function(event) {
+            parallaxImages.forEach(setImageScrollPercentage);
+        });
+        document.addEventListener('scroll', function(event) {
+            parallaxImages.forEach(setImageScrollPercentage);
+        });
+
+        // Given an image, find out whether it's near the top or the
+        // bottom of the window and set the image's object-position
+        // CSS property accordingly.
+        function setImageScrollPercentage(image: HTMLImageElement) {
+            // The on-screen rectangle made by the IMG element.
+            const rect = image.getBoundingClientRect();
+            // The image's natural size and aspect.
+            const imageAspect = image.naturalWidth / image.naturalHeight;
+            const imageHeight = rect.width / imageAspect;
+
+            // The viewable height region is the the height of the window minus
+            // the height of the rect, unless the image is higher than the
+            // window.
+            var viewableRegion = window.innerHeight - rect.height;
+            if (imageHeight > viewableRegion) {
+                viewableRegion = imageHeight - rect.height;
+            }
+
+            const objectVerticalOffset = Math.round(1000 * rect.top / viewableRegion) / 10.0;
+            image.style.objectPosition = `0 ${objectVerticalOffset}%`;
+        }
+    });
+</script>
