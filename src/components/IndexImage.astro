@@ -2,6 +2,7 @@
 interface Props {
     image: ImageMetadata;
     heading?: string;
+    id?: string;
 }
 
 import { Image } from "astro:assets";
@@ -10,11 +11,11 @@ import { getLangFromUrl, useTranslations } from '@i18n/utils';
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 
-const { image, heading } = Astro.props;
+const { id, image, heading } = Astro.props;
 ---
 
 <div class="index-img-container">
-    <Image class="index-img" src={image} alt={heading || t("site.name")} />
+    <Image id={id} class="index-img" src={image} alt={heading || t("site.name")} />
     {(heading) && <h1 class="index-heading">{heading}</h1>}
 </div>
 
@@ -24,10 +25,8 @@ const { image, heading } = Astro.props;
     }
 
     .index-img {
-        /* position: absolute; */
-        z-index: -1;
-
         height: 100vh;
+        width: 100vw;
         object-fit: cover;
     }
 
