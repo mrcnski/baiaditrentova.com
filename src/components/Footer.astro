@@ -1,0 +1,55 @@
+---
+---
+
+<footer>
+    <p class="detail">© 2024 B&B Baia di Trentova</p>
+    <p class="detail">Via De Filippo, 13 - 84043 Agropoli</p>
+    <p class="detail"><a href="mailto:info@baiaditrentova.com">info@baiaditrentova.com</a></p>
+    <p class="detail"><a href="tel:+390974829444">+39-0974 829 444</a></p>
+    <p class="made-with">Site made with <span class="heart">♡</span> by <a href="mailto:marcin@realemail.net ">Marcin S.</a></p>
+    <slot name="footer" />
+</footer>
+
+<style lang="less">
+    footer {
+        bottom: 0;
+		width: 65%;
+		max-width: 1000px;
+        
+		margin: 0 auto;
+        padding: 2em;
+        border-top: 1px solid var(--gray-bg);
+
+        text-align: center;
+        color: var(--brown);
+		
+		@media (max-width: 800px) {
+			width: 85%;
+		}
+		
+		@media (max-width: 600px) {
+			width: 95%;
+		}
+    }
+
+    .detail {
+        margin-top: 0.5rem;
+        font-size: 1.1rem;
+
+        @media (max-width: 768px) {
+            font-size: 0.9em;
+        }
+    }
+    .made-with {
+        margin-top: 0.5rem;
+        font-size: 1rem;
+
+        @media (max-width: 768px) {
+            font-size: 0.85em;
+        }
+    }
+
+    .heart {
+        color: red;
+    }
+</style>

@@ -34,13 +34,26 @@ const t = useTranslations(lang);
     document.addEventListener('astro:page-load', () => {
         // An array that holds all IMG elements that have the "parallax" CSS
         // class in the containing .wp-block-image
-        const parallaxImages: Array<HTMLImageElement> = [];
+        const parallaxImages: Array<[image: HTMLImageElement, viewableRegion: number]> = [];
 
         // Find all our parallax images and add them to the
         // parallaxImages array.
         document.querySelectorAll('.index-img').forEach(function(element) {
-            parallaxImages.push(element as HTMLImageElement);
-            setImageScrollPercentage(element as HTMLImageElement);
+            const image = element as HTMLImageElement;
+
+            // The on-screen rectangle made by the IMG element.
+            const rect = image.getBoundingClientRect();
+            
+            const imageAspectRatio = image.naturalWidth / image.naturalHeight;
+            const imageHeight = rect.width / imageAspectRatio;
+
+            var viewableRegion = window.innerHeight - rect.height;
+            if (imageHeight > viewableRegion) {
+                viewableRegion = imageHeight - rect.height;
+            }
+
+            parallaxImages.push([image, viewableRegion]);
+            setImageScrollPercentage([image, viewableRegion]);
         });
 
         // Listen for window-resize and document-scroll events.
@@ -54,17 +67,11 @@ const t = useTranslations(lang);
         // Given an image, find out whether it's near the top or the
         // bottom of the window and set the image's object-position
         // CSS property accordingly.
-        function setImageScrollPercentage(image: HTMLImageElement) {
+        function setImageScrollPercentage(value: [image: HTMLImageElement, viewableRegion: number]) {
+            const [image, viewableRegion] = value;
+            
             // The on-screen rectangle made by the IMG element.
             const rect = image.getBoundingClientRect();
-            
-            const imageAspectRatio = image.naturalWidth / image.naturalHeight;
-            const imageHeight = rect.width / imageAspectRatio;
-
-            var viewableRegion = window.innerHeight - rect.height;
-            if (imageHeight > viewableRegion) {
-                viewableRegion = imageHeight - rect.height;
-            }
 
             const objectVerticalOffset = Math.round(1000 * rect.top / viewableRegion) / 10.0;
             image.style.objectPosition = `0 ${objectVerticalOffset}%`;

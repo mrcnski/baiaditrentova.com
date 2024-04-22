@@ -5,7 +5,7 @@ import "@assets/styles/global.css";
 import { ViewTransitions } from "astro:transitions";
 
 import MainNav from "@components/MainNav.astro";
-// import Footer from "@components/Footer.astro";
+import Footer from "@components/Footer.astro";
 
 interface Props {
 	title: string;
@@ -50,13 +50,16 @@ const t = useTranslations(lang);
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
 	</head>
+	
 	<body transition:animate="fade">
 		<header>
 			<MainNav />
 		</header>
+
 		<main>
 			<slot />
 		</main>
-		<!-- <Footer><slot name="footer" slot="footer" /></Footer> -->
+
+		<Footer><slot name="footer" slot="footer" /></Footer>
 	</body>
 </html>
