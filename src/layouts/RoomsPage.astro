@@ -1,13 +1,41 @@
 ---
 import Layout from "@layouts/Layout.astro";
 
+import IndexImage from "@components/IndexImage.astro";
+import PageSection from "@components/PageSection.astro";
+
+import { Image } from "astro:assets";
+import Index2 from "@images/index/index2.jpg";
+import Index3 from "@images/index/index3.jpg";
+
 import { getLangFromUrl, useTranslations } from '@i18n/utils';
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 ---
 
-<Layout title={t("index.title")} description={t("index.description")}>
+<Layout title={t("rooms.title")} description={t("index.description")}>
+    <div style="margin-top: 5rem;"></div>
+
+    <IndexImage image={Index2} heading={t("rooms.welcome.header")} description={t("rooms.welcome")} height="80vh" />
+    
+    <PageSection>
+        <h2 class="description-header">{t("rooms.description.header")}</h2>
+        <p class="description">{t("rooms.description")}</p>
+    </PageSection>
 </Layout>
 
 <style lang="less">
+    .description-header {
+        margin-bottom: 1rem;
+
+        font-size: 1.5em;
+        font-weight: 500;
+    }
+    .description {
+        display: inline-block;
+        
+        max-width: 60ch;
+
+        font-size: 1.5em;
+    }
 </style>

@@ -17,8 +17,6 @@ if (!currentPage.startsWith('/')) {
     currentPage = '/' + currentPage;
 }
 
-console.log(currentPage);
-console.log(href);
 if (href === currentPage) {
     classList.push('active');
 }
@@ -30,7 +28,7 @@ if (href === currentPage) {
     </span>
 </a>
 
-<style>
+<style lang="less">
     .nav-card {
         display: block;
 
