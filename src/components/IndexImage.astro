@@ -19,7 +19,7 @@ const { id, image, heading } = Astro.props;
     {(heading) && <h1 class="index-heading">{heading}</h1>}
 </div>
 
-<style>
+<style lang="less">
     .index-img-container {
         position: relative;
     }
@@ -32,13 +32,14 @@ const { id, image, heading } = Astro.props;
 
     .index-heading {
         position: absolute;
-        top: 33%;
+        top: 25%;
         left: 10%;
+        max-width: 80%;
 
         margin: 0;
         
         font-weight: bold;
         color: var(--white-bg);
-        filter: drop-shadow(2px 9px 1px rgba(0, 0, 0, .26));
+        filter: drop-shadow(2px 9px 2px rgba(0, 0, 0, .26));
     }
 </style>
