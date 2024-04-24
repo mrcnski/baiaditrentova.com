@@ -1,5 +1,6 @@
 ---
 import LanguagePicker from '@components/LanguagePicker.astro';
+import NavCard from '@components/NavCard.astro';
 
 import { Image } from 'astro:assets';
 import logoLong from "@images/logo/long.svg";
@@ -23,9 +24,9 @@ The outer container is needed just to center the whole thing.
             </div>
             <div class="nav-links">
                 {/* TODO: Replace with actual links and translated text */}
-                <a class="hover" href={translatePath("en/rooms")}>{t("nav.rooms")}</a>
-                <a class="hover" href={translatePath("en/contact")}>{t("nav.contact")}</a>
-                <a class="hover" href="https://wubook.net/nneb/bk?f=tomorrow&n=2&ep=621e64c4&board=bb&o=2.0.0.0">{t("nav.book")}</a>
+                <NavCard href={translatePath("en/rooms")} text={t("nav.rooms")} />
+                <NavCard href={translatePath("en/contact")} text={t("nav.contact")} />
+                <NavCard href="https://wubook.net/nneb/bk?f=tomorrow&n=2&ep=621e64c4&board=bb&o=2.0.0.0" text={t("nav.book")} />
             </div>
         </div>
 
@@ -148,16 +149,8 @@ The outer container is needed just to center the whole thing.
         }
     }
 
-    .nav-links a {
-        display: block;
-
+    :global(.nav-links a) {
         padding: 1em 0;
-
-        text-align: center;
-        font-weight: normal;
-
-        color: var(--brown-dk);
-        text-decoration: none;
     }
 
     .expanded {
@@ -176,8 +169,7 @@ The outer container is needed just to center the whole thing.
             height: 100%;
             background: none;
         
-            a {
-                display: inline-block;
+            :global(a) {
                 padding: 1em 1.2em;
             }
         }

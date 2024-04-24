@@ -1,5 +1,4 @@
 ---
-
 import { languages } from '@i18n/ui';
 import { getLangFromUrl, urlToLangPath } from '@i18n/utils';
 const pageLang = getLangFromUrl(Astro.url);
@@ -45,6 +44,8 @@ const pageLang = getLangFromUrl(Astro.url);
             text-align: center;
             font-weight: normal;
             text-transform: uppercase;
+
+            padding: 0.15em 0;
 
             @media (max-width: 700px) {
                 font-size: 1em;

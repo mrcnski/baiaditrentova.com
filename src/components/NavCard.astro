@@ -1,0 +1,51 @@
+---
+interface Props {
+	text: string;
+	href: string;
+}
+
+const { text, href } = Astro.props;
+
+const classList = ['nav-card hover'];
+
+// Set the current page in the navbar to active.
+//
+// Trim any trailing slashes from the current page.
+var currentPage = Astro.url.pathname.replace(/\/$/, '');
+// Ensure a leading slash.
+if (!currentPage.startsWith('/')) {
+    currentPage = '/' + currentPage;
+}
+
+console.log(currentPage);
+console.log(href);
+if (href === currentPage) {
+    classList.push('active');
+}
+---
+
+<a class:list={classList} href={href}>
+    <span class="inner">
+        {text}
+    </span>
+</a>
+
+<style>
+    .nav-card {
+        display: block;
+
+        text-align: center;
+
+        color: var(--brown-dk);
+        text-decoration: none;
+
+        span {
+            font-weight: normal;
+            padding: 0.15em 0;
+        }
+    }
+
+    .active .inner {
+        border-bottom: 1.5px solid var(--blue)
+    }
+</style>
