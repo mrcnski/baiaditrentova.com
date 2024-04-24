@@ -1,12 +1,179 @@
 ---
+import LanguagePicker from '@components/LanguagePicker.astro';
+
+import { Image } from 'astro:assets';
+import logoLong from "@images/logo/long.svg";
+
 import { getLangFromUrl, useTranslations, useTranslatedPath } from '@i18n/utils';
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 const translatePath = useTranslatedPath(lang);
 ---
 
-<div>
-    <nav>
+{/*
+The outer container is needed just to center the whole thing.
+*/}
+<div id="main-nav-main" class="navbar-container-outer">
+    <div class="navbar-container">
+        <div class="navbar-left">
+            <div class="hamburger">
+                <span class="line"></span>
+                <span class="line"></span>
+                <span class="line"></span>
+            </div>
+            <div class="nav-links">
+                {/* TODO: Replace with actual links and translated text */}
+                <a class="hover" href={translatePath("en/rooms")}>{t("nav.rooms")}</a>
+                <a class="hover" href={translatePath("en/contact")}>{t("nav.contact")}</a>
+                <a class="hover" href="https://wubook.net/nneb/bk?f=tomorrow&n=2&ep=621e64c4&board=bb&o=2.0.0.0">{t("nav.book")}</a>
+            </div>
+        </div>
 
-    </nav>
+        <div class="navbar-right">
+            <LanguagePicker />
+            <a class="nav-logo hover" href={translatePath("")}>
+                <Image class="nav-logo-inner" src={logoLong} alt={t('site.name')} />
+            </a>
+        </div>
+    </div>
 </div>
+
+<style lang="less">
+    .navbar-container-outer {
+        position: fixed;
+		display: flex;
+		justify-content: center;
+        
+        top: 0;
+        width: 100%;
+        height: 5rem;
+        z-index: 100;
+
+        background: var(--white-bg);
+
+        filter: drop-shadow(0px 4px 5px rgba(0, 0, 0, .2));
+
+        @media (max-width: 700px) {
+            height: 4rem;
+        }
+
+        .navbar-container {
+            display: flex;
+            justify-content: space-between;
+
+            width: 100%;
+            /* Synced with .index-heading */
+            max-width: 82.5%;
+
+            border-bottom: 1px solid var(--gray);
+
+            @media (max-width: 636px) {
+                max-width: 95%;
+            }
+
+            .navbar-right {
+                display: flex;
+                flex-direction: row;
+                // align-items: center;
+            }
+        }
+    }
+
+    .nav-logo {
+        display: flex;
+        align-items: center;
+        height: 100%;
+        width: 300px;
+
+        @media (max-width: 636px) {
+            width: 220px;
+        }
+        
+        .nav-logo-inner {
+            display: flex;
+            align-items: center;
+            height: 60%;
+
+            filter: drop-shadow(2px 4px 1.5px rgba(0, 0, 0, .26));
+        }
+    }
+
+    // 
+    // Hamburger styles
+    //
+    
+    .hamburger {
+        padding-right: 20px;
+        cursor: pointer;
+    }
+
+    .hamburger .line {
+        display: block;
+        width: 40px;
+        height: 5px;
+        margin-bottom: 10px;
+        background-color: #ff9776;
+    }
+
+    /* Mobile */
+    .nav-links {
+        display: none;
+
+        width: 100%;
+        top: 5rem;
+        left: 48px;
+        margin: 0;
+
+        background-color: #ff9776;
+    }
+
+    .nav-links a {
+        display: block;
+
+        padding: 10px 0;
+
+        text-align: center;
+        font-size: 1.2rem;
+        font-weight: normal;
+
+        color: var(--brown-dk);
+        text-decoration: none;
+    }
+
+    .expanded {
+        display: unset;
+    }
+
+    /* Desktop */
+    @media screen and (min-width: 1150px) {
+        .nav-links {
+            display: flex;
+            align-items: center;
+
+            height: 100%;
+            background: none;
+        
+            a {
+                display: inline-block;
+                padding: 1em 1.2em;
+            }
+        }
+        
+        .hamburger {
+            display: none;
+        }
+    }
+</style>
+
+<script>
+    document.addEventListener('astro:page-load', () => {
+        // Hamburger menu.
+        const hamburger = document.querySelector('.hamburger');
+        if (!hamburger) return;
+        hamburger.addEventListener('click', () => {
+            const navLinks = document.querySelector('.nav-links');
+            if (!navLinks) return;
+            navLinks.classList.toggle('expanded');
+        });
+    });
+</script>

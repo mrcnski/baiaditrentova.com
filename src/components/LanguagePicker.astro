@@ -1,0 +1,50 @@
+---
+
+import { languages } from '@i18n/ui';
+import { getLangFromUrl, urlToLangPath } from '@i18n/utils';
+const pageLang = getLangFromUrl(Astro.url);
+---
+
+<div class="language-picker">
+    {Object.entries(languages).map(([lang, label]) => (
+        <a class={"lang-link hover" + ((pageLang === lang) ? " lang-link-active" : "")}
+            href={urlToLangPath(Astro.url, lang as keyof typeof languages)}
+            title={label}
+            >
+            <span class="lang-link-inner">{lang}</span>
+        </a>
+    ))}
+</div>
+
+<style lang="less">
+    .language-picker {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        margin: 0 2rem;
+    }
+
+    .lang-link {
+        padding: 0.25rem 0.5rem;
+        border-bottom: 1px solid transparent;
+
+        text-decoration: none;
+        color: var(--brown);
+
+        @media (max-width: 700px) {
+            font-size: 16px;
+        }
+
+        .lang-link-inner {
+            text-align: center;
+            font-size: 1.1em;
+            font-weight: normal;
+            text-transform: uppercase;
+        }
+    }
+
+    .lang-link-active .lang-link-inner {
+        border-bottom: 1.5px solid var(--blue)
+    }
+</style>
