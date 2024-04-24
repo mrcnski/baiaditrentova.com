@@ -60,21 +60,26 @@ The outer container is needed just to center the whole thing.
         .navbar-container {
             display: flex;
             justify-content: space-between;
-
+            
             width: 100%;
             /* Synced with .index-heading */
             max-width: 82.5%;
-
+            
             border-bottom: 1px solid var(--gray);
-
-            @media (max-width: 636px) {
+            
+            @media (max-width: 700px) {
                 max-width: 95%;
             }
-
+            
+            .navbar-left {
+                display: flex;
+                align-items: center;
+            }
+            
             .navbar-right {
                 display: flex;
                 flex-direction: row;
-                // align-items: center;
+                align-items: center;
             }
         }
     }
@@ -85,13 +90,11 @@ The outer container is needed just to center the whole thing.
         height: 100%;
         width: 300px;
 
-        @media (max-width: 636px) {
+        @media (max-width: 700px) {
             width: 220px;
         }
         
         .nav-logo-inner {
-            display: flex;
-            align-items: center;
             height: 60%;
 
             filter: drop-shadow(2px 4px 1.5px rgba(0, 0, 0, .26));
@@ -103,37 +106,54 @@ The outer container is needed just to center the whole thing.
     //
     
     .hamburger {
-        padding-right: 20px;
+        margin: 0 1rem;
         cursor: pointer;
     }
 
     .hamburger .line {
         display: block;
-        width: 40px;
-        height: 5px;
-        margin-bottom: 10px;
-        background-color: #ff9776;
+
+        width: 30px;
+        height: 3px;
+        margin: 8px 0;
+        
+        background-color: var(--orange);
+
+        @media (max-width: 700px) {
+            width: 20px;
+            height: 2px;
+            margin: 6px 0;
+        }
     }
 
     /* Mobile */
     .nav-links {
         display: none;
+        opacity: 0;
+        position: absolute;
 
-        width: 100%;
+        width: 16rem;
         top: 5rem;
-        left: 48px;
+        left: 0;
+        padding: 1rem 0;
         margin: 0;
+        border-top: 1px solid var(--brown-dk);
 
-        background-color: #ff9776;
+        background-color: var(--white-bg);
+
+        transition: opacity 0.3s ease-in-out;
+
+        @media (max-width: 700px) {
+            top: 4rem;
+        }
     }
 
     .nav-links a {
         display: block;
 
-        padding: 10px 0;
+        padding: 1em 0;
 
         text-align: center;
-        font-size: 1.2rem;
         font-weight: normal;
 
         color: var(--brown-dk);
@@ -149,7 +169,10 @@ The outer container is needed just to center the whole thing.
         .nav-links {
             display: flex;
             align-items: center;
+            position: static;
+            opacity: 1;
 
+            width: auto;
             height: 100%;
             background: none;
         
@@ -168,12 +191,33 @@ The outer container is needed just to center the whole thing.
 <script>
     document.addEventListener('astro:page-load', () => {
         // Hamburger menu.
+        var navbarVisible = false;
+        function toggleNavbarMenu() {
+            const navLinks = document.querySelector('.nav-links') as HTMLElement;
+            if (!navLinks) return;
+            
+            function showNavbarMenu() {
+                navLinks!.style.opacity = "1";
+            }
+            function hideNavbarMenu() {
+                navLinks!.style.display = "none";
+            }
+            
+            if (!navbarVisible) {
+                navLinks!.style.display = "block";
+                setTimeout(showNavbarMenu, 5);
+                navbarVisible = true;
+            } else {
+                navLinks.style.opacity = "0";
+                setTimeout(hideNavbarMenu, 300);
+                navbarVisible = false;
+            }
+        }
+
         const hamburger = document.querySelector('.hamburger');
         if (!hamburger) return;
         hamburger.addEventListener('click', () => {
-            const navLinks = document.querySelector('.nav-links');
-            if (!navLinks) return;
-            navLinks.classList.toggle('expanded');
+            toggleNavbarMenu();
         });
     });
 </script>

@@ -13,7 +13,8 @@ const pageLang = getLangFromUrl(Astro.url);
             >
             <span class="lang-link-inner">{lang}</span>
         </a>
-    ))}
+        <span>{(lang != "en") ? "|" : "" }</span>
+    )) }
 </div>
 
 <style lang="less">
@@ -23,6 +24,10 @@ const pageLang = getLangFromUrl(Astro.url);
         align-items: center;
 
         margin: 0 2rem;
+
+        @media (max-width: 700px) {
+            margin: 0 1rem;
+        }
     }
 
     .lang-link {
@@ -30,17 +35,20 @@ const pageLang = getLangFromUrl(Astro.url);
         border-bottom: 1px solid transparent;
 
         text-decoration: none;
-        color: var(--brown);
+        color: var(--brown-dk);
 
         @media (max-width: 700px) {
-            font-size: 16px;
+            font-size: 0.85em;
         }
 
         .lang-link-inner {
             text-align: center;
-            font-size: 1.1em;
             font-weight: normal;
             text-transform: uppercase;
+
+            @media (max-width: 700px) {
+                font-size: 1em;
+            }
         }
     }
 
