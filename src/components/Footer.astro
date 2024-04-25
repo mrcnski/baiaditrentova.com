@@ -2,11 +2,11 @@
 ---
 
 <footer>
-    <p class="detail">© 2024 B&B Baia di Trentova</p>
-    <p class="detail">Via De Filippo, 13 - 84043 Agropoli</p>
-    <p class="detail"><a href="mailto:info@baiaditrentova.com">info@baiaditrentova.com</a></p>
-    <p class="detail"><a href="tel:+390974829444">+39-0974 829 444</a></p>
-    <p class="made-with">Site made with <span class="heart">♡</span> by <a href="mailto:marcin@realemail.net ">Marcin S.</a></p>
+    <span class="detail">© 2024 B&B Baia di Trentova</span>
+    <span class="detail">Via De Filippo, 13 - 84043 Agropoli</span>
+    <span class="detail"><a href="mailto:info@baiaditrentova.com">info@baiaditrentova.com</a></span>
+    <span class="detail"><a href="tel:+390974829444">+39-0974 829 444</a></span>
+    <span class="made-with">Site made with <span class="heart">♡</span> by <a href="mailto:marcin@realemail.net ">Marcin S.</a></span>
     <slot name="footer" />
 </footer>
 
@@ -17,8 +17,9 @@
 		max-width: 1000px;
         
 		margin: 0 auto;
+        margin-top: 5rem;
         padding: 2em;
-        border-top: 1px solid var(--gray-bg);
+        border-top: 1px solid var(--brown);
 
         text-align: center;
         color: var(--brown);
@@ -30,6 +31,10 @@
 		@media (max-width: 600px) {
 			width: 95%;
 		}
+
+        > span {
+            display: block;
+        }
     }
 
     .detail {

@@ -1,12 +1,25 @@
 ---
 import Layout from "@layouts/Layout.astro";
 
+import PageSection from "@components/PageSection.astro";
+import FormatText from "@components/FormatText.astro";
+
 import { getLangFromUrl, useTranslations } from '@i18n/utils';
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 ---
 
 <Layout title={t("contact.title")} description={t("index.description")}>
+    <PageSection>
+        <h1>{t("contact.title")}</h1>
+        <p><FormatText text={t("contact.description")} /></p>
+    </PageSection>
+    
+    <PageSection>
+        TODO: add back map!
+        <!-- <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
+        <div class="elfsight-app-a02a5bdb-eea8-40e4-a586-620b1f7b76fc" data-elfsight-app-lazy></div> -->
+    </PageSection>
 </Layout>
 
 <style lang="less">
