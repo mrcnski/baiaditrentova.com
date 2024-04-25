@@ -114,7 +114,7 @@ The outer container is needed just to center the whole thing.
         background: none;
         
         margin: 0;
-        border-top: 1.5px solid var(--orange);
+        border-top: 1.5px solid var(--brown);
     
         :global(a) {
             padding: 1em 1.2em;
@@ -313,7 +313,7 @@ The outer container is needed just to center the whole thing.
                 navLinks!.style.display = "none";
             }
             
-            if (!navbarVisible || force === "show") {
+            if (force !== "hide" && (!navbarVisible || force === "show")) {
                 navLinks!.style.display = "block";
                 if (force === "hide") {
                     finishShow()

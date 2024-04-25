@@ -4,6 +4,7 @@ interface Props {
     heading?: string;
     description?: string;
     height?: string;
+    id?: string;
 }
 
 import { Image } from "astro:assets";
@@ -12,12 +13,13 @@ import { getLangFromUrl, useTranslations } from '@i18n/utils';
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 
-const { image, heading, description, height = "100vh" } = Astro.props;
+let { image, heading, description, height = "100vh", id } = Astro.props;
 
 // Make sure the ID doesn't start with a number.
-let id: string | undefined;
-while (!id || /^\d/.test(id)) {
-    id = Math.random().toString(36).slice(2, 11)
+if (!id) {
+    while (!id || /^\d/.test(id)) {
+        id = Math.random().toString(36).slice(2, 11)
+    }
 }
 ---
 
@@ -53,7 +55,7 @@ while (!id || /^\d/.test(id)) {
 
     .parallax-description {
         position: absolute;
-        top: 38%;
+        top: 45%;
         left: 10%;
         width: 60ch;
         max-width: 80%;
@@ -63,6 +65,10 @@ while (!id || /^\d/.test(id)) {
         color: var(--white-bg);
         font-size: 1.5rem;
         filter: drop-shadow(2px 9px 2px rgba(0, 0, 0, .26));
+
+        @media (max-width: 700px) {
+            font-size: 1.25rem;
+        }
     }
 </style>
 

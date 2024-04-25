@@ -16,7 +16,7 @@ const t = useTranslations(lang);
 <Layout title={t("rooms.title")} description={t("index.description")}>
     <div style="margin-top: 5rem;"></div>
 
-    <ParallaxImage image={Index2} heading={t("rooms.welcome.header")} description={t("rooms.welcome")} height="80vh" />
+    <ParallaxImage id="welcome-img" image={Index2} heading={t("rooms.welcome.header")} description={t("rooms.welcome")} height="60vh" />
     
     <PageSection>
         <h2 class="description-header">{t("rooms.description.header")}</h2>
@@ -25,6 +25,11 @@ const t = useTranslations(lang);
 </Layout>
 
 <style lang="less">
+    :global(#welcome-img) {
+        // filter: brightness(75%);
+        filter: brightness(65%) saturate(140%);
+    }
+    
     .description-header {
         margin-bottom: 1rem;
 

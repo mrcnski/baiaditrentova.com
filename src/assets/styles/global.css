@@ -2,6 +2,7 @@
   --blue: #0086BF;
   --orange: #d27b35;
   --brown: #887860;
+  --brown-trans: rgba(136, 120, 96, 0.3);
   --brown-dk: #554A37;
 
   --white-bg: #F5FAFF;
@@ -98,4 +99,28 @@ img, svg {
 .hover:focus span {
     scale: 1.05;
     color: var(--brown);
+}
+
+.separator {
+    position: relative;
+}
+.separator:not(:first-child)::before {
+    position: absolute;
+    content: "";
+    left: 0;
+    top: 30%;
+    width: 1px;
+    height: 40%;
+
+    border-right: 1px solid var(--brown-trans);
+}
+.separator:not(:last-child)::after {
+    position: absolute;
+    content: "";
+    right: 0;
+    top: 30%;
+    width: 1px;
+    height: 40%;
+
+    border-right: 1px solid var(--brown-trans);
 }
