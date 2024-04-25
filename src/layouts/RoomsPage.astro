@@ -1,7 +1,7 @@
 ---
 import Layout from "@layouts/Layout.astro";
 
-import IndexImage from "@components/IndexImage.astro";
+import ParallaxImage from "@components/ParallaxImage.astro";
 import PageSection from "@components/PageSection.astro";
 
 import { Image } from "astro:assets";
@@ -16,7 +16,7 @@ const t = useTranslations(lang);
 <Layout title={t("rooms.title")} description={t("index.description")}>
     <div style="margin-top: 5rem;"></div>
 
-    <IndexImage image={Index2} heading={t("rooms.welcome.header")} description={t("rooms.welcome")} height="80vh" />
+    <ParallaxImage image={Index2} heading={t("rooms.welcome.header")} description={t("rooms.welcome")} height="80vh" />
     
     <PageSection>
         <h2 class="description-header">{t("rooms.description.header")}</h2>
