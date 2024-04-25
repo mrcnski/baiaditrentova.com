@@ -17,13 +17,13 @@ The outer container is needed just to center the whole thing.
 <div id="main-nav-main" class="navbar-container-outer">
     <div class="navbar-container">
         <div class="navbar-left">
-            <div class="hamburger">
-                <span class="line"></span>
-                <span class="line"></span>
-                <span class="line"></span>
-            </div>
+            <button class="hamburger hamburger--collapse" type="button">
+                <span class="hamburger-box">
+                    <span class="hamburger-inner"></span>
+                </span>
+            </button>  
+
             <div class="nav-links">
-                {/* TODO: Replace with actual links and translated text */}
                 <NavCard href={translatePath("en/rooms")} text={t("nav.rooms")} />
                 <NavCard href={translatePath("en/contact")} text={t("nav.contact")} />
                 <NavCard href="https://wubook.net/nneb/bk?f=tomorrow&n=2&ep=621e64c4&board=bb&o=2.0.0.0" text={t("nav.book")} />
@@ -101,115 +101,262 @@ The outer container is needed just to center the whole thing.
             filter: drop-shadow(2px 4px 1.5px rgba(0, 0, 0, .26));
         }
     }
-
-    // 
-    // Hamburger styles
-    //
     
-    .hamburger {
-        margin: 0 1rem;
-        cursor: pointer;
-    }
-
-    .hamburger .line {
-        display: block;
-
-        width: 30px;
-        height: 3px;
-        margin: 8px 0;
-        
-        background-color: var(--orange);
-
-        @media (max-width: 700px) {
-            width: 20px;
-            height: 2px;
-            margin: 6px 0;
-        }
-    }
-
-    /* Mobile */
     .nav-links {
-        display: none;
-        opacity: 0;
-        position: absolute;
+        display: flex;
+        opacity: 1;
+        position: static;
 
-        width: 16rem;
-        top: 5rem;
-        left: 0;
-        padding: 1rem 0;
+        align-items: center;
+
+        width: auto;
+        height: 100%;
+        background: none;
+        
         margin: 0;
         border-top: 1.5px solid var(--orange);
+    
+        :global(a) {
+            padding: 1em 1.2em;
+        }
 
-        background-color: var(--white-bg);
+        @media (max-width: 1150px) {
+            display: none;
+            opacity: 0;
+            position: absolute;
 
-        transition: opacity 0.3s ease-in-out;
+            width: 16rem;
+            height: auto;
+            top: 5rem;
+            left: 0;
+            padding: 1rem 0;
+
+            background-color: var(--white-bg);
+
+            transition: opacity 0.3s ease-in-out;
+
+            :global(a) {
+                padding: 1em 0;
+            }
+        }
 
         @media (max-width: 700px) {
             top: 4rem;
         }
     }
 
-    :global(.nav-links a) {
-        padding: 1em 0;
-    }
+    /*!
+     * Hamburgers
+     * @description Tasty CSS-animated hamburgers
+     * @author Jonathan Suh @jonsuh
+     * @site https://jonsuh.com/hamburgers
+     * @link https://github.com/jonsuh/hamburgers
+     */
+    @hamburger-padding-x     : 0.5rem;
+    @hamburger-padding-y     : 0.5rem;
+    @hamburger-layer-color   : var(--orange);
 
-    .expanded {
-        display: unset;
-    }
+    @hamburger-layer-width   : 28px;
+    @hamburger-layer-height  :  3px;
+    @hamburger-layer-spacing :  7px;
 
-    /* Desktop */
-    @media screen and (min-width: 1150px) {
-        .nav-links {
-            display: flex;
-            align-items: center;
-            position: static;
-            opacity: 1;
+    @hamburger-layer-width-mobile   : 20px;
+    @hamburger-layer-height-mobile  :  2px;
+    @hamburger-layer-spacing-mobile :  5px;
 
-            width: auto;
-            height: 100%;
-            background: none;
-        
-            :global(a) {
-                padding: 1em 1.2em;
-            }
+    .hamburger {
+        display: none;
+        @media (max-width: 1150px) {
+            display: inline-block;
         }
         
-        .hamburger {
-            display: none;
+        cursor: pointer;
+
+        transition-property: filter, scale;
+        transition-duration: 0.15s;
+        transition-timing-function: linear;
+
+        // Normalize (<button>)
+        font: inherit;
+        color: inherit;
+        text-transform: none;
+        background-color: transparent;
+        border: 0;
+        overflow: visible; 
+
+        margin: 0 0.5rem;
+        padding: @hamburger-padding-y @hamburger-padding-x;
+    }
+    .hamburger:hover {
+        scale: 1.1;
+    }
+    .hamburger.is-active:hover {
+        scale: 1.1;
+    }
+    .hamburger.is-active .hamburger-inner,
+    .hamburger.is-active .hamburger-inner::before,
+    .hamburger.is-active .hamburger-inner::after {
+        background-color: @hamburger-layer-color;
+    }
+    
+    .hamburger-box {
+        display: inline-block;
+        position: relative; 
+
+        width: @hamburger-layer-width;
+        height: @hamburger-layer-height * 3 + @hamburger-layer-spacing * 2 + 6px;
+        @media (max-width: 700px) {
+            width: @hamburger-layer-width-mobile;
+            height: @hamburger-layer-height-mobile * 3 + @hamburger-layer-spacing-mobile * 2 + 6px;
         }
+    }
+    
+    .hamburger-inner {
+        display: block;
+        top: 50%;
+        margin-top: (@hamburger-layer-height / -2);
+    }
+    .hamburger-inner, 
+    .hamburger-inner::before, 
+    .hamburger-inner::after {
+        position: absolute;
+
+        width: @hamburger-layer-width;
+        height: @hamburger-layer-height;
+        @media (max-width: 700px) {
+            width: @hamburger-layer-width-mobile;
+            height: @hamburger-layer-height-mobile;
+        }
+
+        background-color: @hamburger-layer-color;
+        border-radius: 3px;
+
+        transition-property: transform;
+        transition-duration: 0.15s;
+        transition-timing-function: ease; 
+    }
+    .hamburger-inner::before, 
+    .hamburger-inner::after {
+        content: "";
+        display: block; 
+    }
+    .hamburger-inner::before {
+        top: (@hamburger-layer-spacing + @hamburger-layer-height) * -1;
+        @media (max-width: 700px) {
+            top: (@hamburger-layer-spacing-mobile + @hamburger-layer-height-mobile) * -1;
+        }
+    }
+    .hamburger-inner::after {
+        bottom: (@hamburger-layer-spacing + @hamburger-layer-height) * -1;
+        @media (max-width: 700px) {
+            bottom: (@hamburger-layer-spacing-mobile + @hamburger-layer-height-mobile) * -1;
+        }
+    }
+    
+    /*
+    * Collapse
+    */
+    .hamburger--collapse .hamburger-inner {
+        top: auto;
+        bottom: 0;
+        transition-duration: 0.13s;
+        transition-delay: 0.13s;
+        transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19); 
+    }
+    .hamburger--collapse .hamburger-inner::after {
+        top: (@hamburger-layer-spacing * 2 + @hamburger-layer-height * 2) * -1;
+        @media (max-width: 700px) {
+            top: (@hamburger-layer-spacing-mobile * 2 + @hamburger-layer-height-mobile * 2) * -1;
+        }
+        transition: top 0.2s 0.2s cubic-bezier(0.33333, 0.66667, 0.66667, 1), opacity 0.1s linear; 
+    }
+    .hamburger--collapse .hamburger-inner::before {
+        transition: top 0.12s 0.2s cubic-bezier(0.33333, 0.66667, 0.66667, 1), transform 0.13s cubic-bezier(0.55, 0.055, 0.675, 0.19); 
+    }
+    
+    .hamburger--collapse.is-active .hamburger-inner {
+        transform: translate3d(0, (@hamburger-layer-spacing + @hamburger-layer-height) * -1, 0) rotate(-45deg);
+        @media (max-width: 700px) {
+            transform: translate3d(0, (@hamburger-layer-spacing-mobile + @hamburger-layer-height-mobile) * -1, 0) rotate(-45deg);
+        }
+        transition-delay: 0.22s;
+        transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1); 
+    }
+    .hamburger--collapse.is-active .hamburger-inner::after {
+        top: 0;
+        opacity: 0;
+        transition: top 0.2s cubic-bezier(0.33333, 0, 0.66667, 0.33333), opacity 0.1s 0.22s linear; 
+    }
+    .hamburger--collapse.is-active .hamburger-inner::before {
+        top: 0;
+        transform: rotate(-90deg);
+        transition: top 0.1s 0.16s cubic-bezier(0.33333, 0, 0.66667, 0.33333), transform 0.13s 0.25s cubic-bezier(0.215, 0.61, 0.355, 1); 
     }
 </style>
 
 <script>
     document.addEventListener('astro:page-load', () => {
         // Hamburger menu.
-        var navbarVisible = false;
-        function toggleNavbarMenu() {
+
+        const desktopThreshold = 1150;
+        let navbarVisible = false;
+        let isDesktop = (window.innerWidth > 1150);
+
+        function toggleNavbarMenu(force: string | null = null) {
             const navLinks = document.querySelector('.nav-links') as HTMLElement;
             if (!navLinks) return;
-            
-            function showNavbarMenu() {
+
+            function finishShow() {
                 navLinks!.style.opacity = "1";
             }
-            function hideNavbarMenu() {
+            function finishHide() {
                 navLinks!.style.display = "none";
             }
             
-            if (!navbarVisible) {
+            if (!navbarVisible || force === "show") {
                 navLinks!.style.display = "block";
-                setTimeout(showNavbarMenu, 5);
+                if (force === "hide") {
+                    finishShow()
+                } else {
+                    setTimeout(finishShow, 5);
+                }
                 navbarVisible = true;
             } else {
                 navLinks.style.opacity = "0";
-                setTimeout(hideNavbarMenu, 300);
+                if (force === "hide") {
+                    finishHide();
+                } else {
+                    setTimeout(finishHide, 300);
+                }
                 navbarVisible = false;
             }
         }
 
         const hamburger = document.querySelector('.hamburger');
         if (!hamburger) return;
+
         hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('is-active');
             toggleNavbarMenu();
+        });
+        window.addEventListener('resize', () => {
+            const navLinks = document.querySelector('.nav-links') as HTMLElement;
+            if (!navLinks) return;
+            
+            // Show the navbar menu if the window is resized to desktop size.
+            if (window.innerWidth > 1150) {
+                if (!isDesktop) {
+                    hamburger.classList.remove('is-active');
+                    toggleNavbarMenu("show");
+                    navLinks.style.display = "flex";
+                    isDesktop = true;
+                }
+            } else {
+                if (isDesktop) {
+                    toggleNavbarMenu("hide");
+                    isDesktop = false;
+                }
+            }
         });
     });
 </script>
