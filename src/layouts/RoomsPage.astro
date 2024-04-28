@@ -14,7 +14,7 @@ const t = useTranslations(lang);
 ---
 
 <Layout title={t("rooms.title")} description={t("rooms.description")}>
-    <div style="margin-top: 5rem;"></div>
+    <div class="rooms-top-spacer"></div>
     <ParallaxImage id="welcome-img" image={Index2} heading={t("rooms.welcome.header")} description={t("rooms.welcome")} height="60vh" />
     
     <PageSection>
@@ -26,5 +26,14 @@ const t = useTranslations(lang);
 <style lang="less">
     :global(#welcome-img) {
         filter: brightness(65%) saturate(140%);
-    }    
+    }
+
+    /* Synced with navbar-container-outer */
+    .rooms-top-spacer {
+        margin-top: 5rem;
+
+        @media (max-width: 700px) {
+            margin-top: 4rem;
+        }
+    }
 </style>

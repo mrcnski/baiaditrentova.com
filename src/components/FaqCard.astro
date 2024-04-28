@@ -29,18 +29,22 @@ const { question, answer, id } = Astro.props;
 </style>
 
 <script define:vars={{id}}>
-    const cardId = `#card-${id}`;
+    function main() {
+        const cardId = `#card-${id}`;
 
-    const card = document.querySelector(cardId);
-    if (!card) return;
-    const cardHeader = card.querySelector(`.card-header`);
-    if (!cardHeader) return;
-    const cardBody = card.querySelector(`.card-body`);
-    if (!cardBody) return;
+        const card = document.querySelector(cardId);
+        if (!card) return;
+        const cardHeader = card.querySelector(`.card-header`);
+        if (!cardHeader) return;
+        const cardBody = card.querySelector(`.card-body`);
+        if (!cardBody) return;
 
-    cardHeader.removeAttribute('href');
-    cardHeader.addEventListener('click', () => {
-        cardBody.style.display = cardBody.style.display === 'none' ? 'block' : 'none';
-        cardBody.style.height = cardBody.style.height === '0px' ? `${cardBody.scrollHeight}px` : '0px';
-    });
+        cardHeader.removeAttribute('href');
+        cardHeader.addEventListener('click', () => {
+            cardBody.style.display = cardBody.style.display === 'none' ? 'block' : 'none';
+            cardBody.style.height = cardBody.style.height === '0px' ? `${cardBody.scrollHeight}px` : '0px';
+        });
+    }
+
+    main();
 </script>

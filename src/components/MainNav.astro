@@ -297,7 +297,7 @@ The outer container is needed just to center the whole thing.
 </style>
 
 <script>
-    document.addEventListener('astro:page-load', () => {
+    function main() {
         // Hamburger menu.
 
         const desktopThreshold = 1150;
@@ -360,5 +360,7 @@ The outer container is needed just to center the whole thing.
                 }
             }
         });
-    });
+    }
+
+    main();
 </script>
