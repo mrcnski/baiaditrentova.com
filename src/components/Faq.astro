@@ -1,0 +1,29 @@
+---
+import yaml from 'js-yaml';
+import fs from 'fs';
+
+import FaqCard from "@components/FaqCard.astro";
+
+let faqs: any[] = [];
+try {
+    faqs = yaml.load(fs.readFileSync('oreste/faq.yaml', 'utf8')) as any[];
+} catch (e) {
+  console.log(e);
+}
+
+import { getLangFromUrl, useTranslations, useDataTranslations } from '@i18n/utils';
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+const { d } = useDataTranslations(lang);
+---
+
+<div class="faq">
+    {faqs.map((faq, index) => (
+        <div class="faq-item">
+            <FaqCard question={d(faq.question)} answer={d(faq.answer)} id={index}  />
+        </div>
+    ))}
+</div>
+
+<style lang="less">
+</style>

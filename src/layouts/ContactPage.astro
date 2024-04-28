@@ -1,6 +1,7 @@
 ---
 import Layout from "@layouts/Layout.astro";
 
+import Faq from "@components/Faq.astro";
 import PageSection from "@components/PageSection.astro";
 import FormatText from "@components/FormatText.astro";
 
@@ -13,12 +14,21 @@ const t = useTranslations(lang);
     <div style="margin-top: 10rem;"></div>
 
     <PageSection>
-        <h2>{t("contact.title")}</h2>
-        <p class="body-text"><FormatText text={t("contact.description")} /></p>
-        <br>
-        <br>
-        TODO: add back contact form!
-        <!-- <slot name="contact-widget" /> -->
+        <div class="columns">
+            <div class="column-left">
+                <h2>{t("contact.title")}</h2>
+                <p class="body-text"><FormatText text={t("contact.description")} /></p>
+                <br>
+                <br>
+                TODO: add back contact form!
+                <!-- <slot name="contact-widget" /> -->
+            </div>
+            
+            <div class="column-right">
+                <h2>{t("contact.faq")}</h2>
+                <Faq />
+            </div>
+        </div>
     </PageSection>
     
     <PageSection>
@@ -28,4 +38,13 @@ const t = useTranslations(lang);
 </Layout>
 
 <style lang="less">
+    .columns {
+        display: flex;
+        justify-content: space-between;
+        gap: 2rem;
+
+        @media (max-width: 768px) {
+            flex-direction: column;
+        }
+    }
 </style>

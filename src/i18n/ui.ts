@@ -32,7 +32,7 @@ export const ui = {
         'site.name': 'B&B Baia di Trentova',
         
         'nav.rooms': 'Our Rooms',
-        'nav.contact': 'Contact Us / FAQ',
+        'nav.contact': 'Contact Us / Info',
         'nav.reviews': 'Reviews',
         'nav.book': 'Book Now!',
 
@@ -54,12 +54,13 @@ export const ui = {
 
         "contact.title": "Contact Us",
         "contact.description": "We’re always happy to hear from you, so talk to us any time you like.<br><br>If your inquiry is urgent, please use one of the social media contacts listed below, otherwise, we will reply by email as soon as possible. Ciao!",
+        "contact.faq": "FAQ",
     },
     it: {
         'site.name': 'B&B Baia di Trentova',
 
         'nav.rooms': 'Camere',
-        'nav.contact': 'Contattaci / FAQ',
+        'nav.contact': 'Contattaci / Info',
         'nav.reviews': 'Recensioni',
         'nav.book': 'Prenota Ora!',
 
@@ -81,5 +82,6 @@ export const ui = {
 
         "contact.title": "Contattaci",
         "contact.description": "Siamo sempre felici di sentirti, quindi parla con noi in qualsiasi momento ti piaccia.<br><br>Se la tua richiesta è urgente, utilizza uno dei contatti sui social media elencati di seguito, altrimenti ti risponderemo via email il prima possibile. Ciao!",
+        "contact.faq": "FAQ",
     },
 } as const;

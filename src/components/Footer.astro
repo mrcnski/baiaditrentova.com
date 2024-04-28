@@ -1,4 +1,7 @@
 ---
+import { getLangFromUrl, useTranslatedPath } from '@i18n/utils';
+const lang = getLangFromUrl(Astro.url);
+const translatePath = useTranslatedPath(lang);
 ---
 
 <footer>
@@ -10,11 +13,18 @@
             <p class="detail"><a href="tel:+390974829444">+39-0974 829 444</a></p>
         </div>
         <div class="column-right">
-            TODO: Add back.
-            <!-- <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
-            <div class="elfsight-app-67a3d5b1-7338-41fa-82c4-d69858f168e6" data-elfsight-app-lazy></div> -->
+            <a href={translatePath("en/reviews")}>
+                TODO: Add back.
+                <!-- <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
+                <div class="elfsight-app-3b51f4df-ccf9-4184-aa7d-e47df0224df1" data-elfsight-app-lazy></div> -->
+            </a>
         </div>
     </div>
+
+    <br>
+    TODO: Add back.
+    <!-- <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
+    <div class="elfsight-app-67a3d5b1-7338-41fa-82c4-d69858f168e6" data-elfsight-app-lazy></div> -->
 
     <br>
     <p class="made-with">Site made with <span class="heart">♡</span> by <a href="mailto:marcin@realemail.net ">Marcin S.</a></p>

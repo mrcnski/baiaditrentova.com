@@ -75,37 +75,35 @@ if (!id) {
 </style>
 
 <script define:vars={{id}}>
-    document.addEventListener('astro:page-load', () => {
-        const image = document.querySelector(`#${id}`);
-        if (!image) return;
+    const image = document.querySelector(`#${id}`);
+    if (!image) return;
 
+    setImageScrollPercentage(image);
+
+    // Listen for window-resize and document-scroll events.
+    window.addEventListener('resize', function() {
         setImageScrollPercentage(image);
-
-        // Listen for window-resize and document-scroll events.
-        window.addEventListener('resize', function(event) {
-            setImageScrollPercentage(image);
-        });
-        document.addEventListener('scroll', function(event) {
-            setImageScrollPercentage(image);
-        });
-
-        // Given an image, find out whether it's near the top or the
-        // bottom of the window and set the image's object-position
-        // CSS property accordingly.
-        function setImageScrollPercentage(image) {
-            // The on-screen rectangle made by the IMG element.
-            const rect = image.getBoundingClientRect();
-
-            const imageAspectRatio = image.naturalWidth / image.naturalHeight;
-            const imageHeight = rect.width / imageAspectRatio;
-
-            var viewableRegion = window.innerHeight - rect.height;
-            if (imageHeight > viewableRegion) {
-                viewableRegion = imageHeight - rect.height;
-            }
-
-            const objectVerticalOffset = Math.round(1000 * rect.top / viewableRegion) / 10.0;
-            image.style.objectPosition = `0 ${50+objectVerticalOffset}%`;
-        }
     });
+    document.addEventListener('scroll', function() {
+        setImageScrollPercentage(image);
+    });
+
+    // Given an image, find out whether it's near the top or the
+    // bottom of the window and set the image's object-position
+    // CSS property accordingly.
+    function setImageScrollPercentage(image) {
+        // The on-screen rectangle made by the IMG element.
+        const rect = image.getBoundingClientRect();
+
+        const imageAspectRatio = image.naturalWidth / image.naturalHeight;
+        const imageHeight = rect.width / imageAspectRatio;
+
+        var viewableRegion = window.innerHeight - rect.height;
+        if (imageHeight > viewableRegion) {
+            viewableRegion = imageHeight - rect.height;
+        }
+
+        const objectVerticalOffset = Math.round(1000 * rect.top / viewableRegion) / 10.0;
+        image.style.objectPosition = `0 ${50+objectVerticalOffset}%`;
+    }
 </script>
