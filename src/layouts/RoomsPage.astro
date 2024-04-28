@@ -13,13 +13,13 @@ const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 ---
 
-<Layout title={t("rooms.title")} description={t("index.description")}>
+<Layout title={t("rooms.title")} description={t("rooms.description")}>
     <div style="margin-top: 5rem;"></div>
     <ParallaxImage id="welcome-img" image={Index2} heading={t("rooms.welcome.header")} description={t("rooms.welcome")} height="60vh" />
     
     <PageSection>
         <h2 class="description-header">{t("rooms.description.header")}</h2>
-        <p class="description">{t("rooms.description")}</p>
+        <p class="body-text">{t("rooms.description")}</p>
     </PageSection>
 </Layout>
 

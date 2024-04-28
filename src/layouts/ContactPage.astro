@@ -9,10 +9,12 @@ const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 ---
 
-<Layout title={t("contact.title")} description={t("index.description")}>
+<Layout title={t("contact.title")} description={t("contact.description")}>
+    <div style="margin-top: 10rem;"></div>
+
     <PageSection>
-        <h1>{t("contact.title")}</h1>
-        <p><FormatText text={t("contact.description")} /></p>
+        <h2>{t("contact.title")}</h2>
+        <p class="body-text"><FormatText text={t("contact.description")} /></p>
         <br>
         <br>
         TODO: add back contact form!

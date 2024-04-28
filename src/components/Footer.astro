@@ -2,11 +2,25 @@
 ---
 
 <footer>
-    <span class="detail">© 2024 B&B Baia di Trentova</span>
-    <span class="detail">Via De Filippo, 13 - 84043 Agropoli</span>
-    <span class="detail"><a href="mailto:info@baiaditrentova.com">info@baiaditrentova.com</a></span>
-    <span class="detail"><a href="tel:+390974829444">+39-0974 829 444</a></span>
-    <span class="made-with">Site made with <span class="heart">♡</span> by <a href="mailto:marcin@realemail.net ">Marcin S.</a></span>
+    <div class="columns">
+        <div class="column-left">
+            <p class="detail">© 2024 B&B Baia di Trentova</p>
+            <p class="detail">Via De Filippo, 13 - 84043 Agropoli</p>
+        </div>
+        <div class="column-right">
+            <p class="detail"><a href="mailto:info@baiaditrentova.com">info@baiaditrentova.com</a></p>
+            <p class="detail"><a href="tel:+390974829444">+39-0974 829 444</a></p>
+        </div>
+    </div>
+    
+    <br>
+    TODO: Add back.
+    <!-- <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
+    <div class="elfsight-app-67a3d5b1-7338-41fa-82c4-d69858f168e6" data-elfsight-app-lazy></div> -->
+
+    <br>
+    <p class="made-with">Site made with <span class="heart">♡</span> by <a href="mailto:marcin@realemail.net ">Marcin S.</a></p>
+
     <slot name="footer" />
 </footer>
 
@@ -25,18 +39,35 @@
         color: var(--brown);
 		
 		@media (max-width: 800px) {
-			width: 85%;
+            width: 85%;
 		}
 		
 		@media (max-width: 600px) {
-			width: 95%;
+            width: 95%;
 		}
-
-        > span {
-            display: block;
+        
+        p {
+            font-weight: 300;
+            margin: auto;
         }
     }
 
+    .columns {
+        display: flex;
+        flex: 1 1 0px;
+        justify-content: space-evenly;
+        align-items: center;
+        gap: 1rem;
+
+        @media (max-width: 768px) {
+            flex-direction: column;
+        }
+    }
+    .column-left {
+    }
+    .column-right {
+    }
+    
     .detail {
         margin-top: 0.5rem;
         font-size: 1.1rem;
