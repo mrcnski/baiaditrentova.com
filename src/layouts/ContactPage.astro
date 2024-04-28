@@ -17,23 +17,26 @@ const t = useTranslations(lang);
         <div class="columns">
             <div class="column-left">
                 <h2>{t("contact.title")}</h2>
-                <p class="body-text"><FormatText text={t("contact.description")} /></p>
+                <p class="contact-description"><FormatText text={t("contact.description")} /></p>
+
                 <br>
                 <br>
-                TODO: add back contact form!
-                <!-- <slot name="contact-widget" /> -->
+                <slot name="contact-widget" />
             </div>
             
             <div class="column-right">
                 <h2>{t("contact.faq")}</h2>
                 <Faq />
+
+                <div class="weather-widget">
+                    <slot name="weather-widget" />
+                </div>
             </div>
         </div>
     </PageSection>
     
     <PageSection>
-        TODO: add back map!
-        <!-- <slot name="map-widget" /> -->
+        <slot name="map-widget" />
     </PageSection>
 </Layout>
 
@@ -46,5 +49,23 @@ const t = useTranslations(lang);
         @media (max-width: 768px) {
             flex-direction: column;
         }
+    }
+    .column-left {
+        flex: 1;
+    }
+    .column-right {
+        flex: 1;
+    }
+
+    .contact-description {
+        font-size: 1.2rem;
+        font-weight: 300;
+    }
+
+    .weather-widget {
+        display: flex;
+        justify-content: center;
+        
+        margin-top: 2rem;
     }
 </style>

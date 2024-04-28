@@ -4,10 +4,15 @@ interface Props {
 }
 
 const { text } = Astro.props;
+
+const regexItalics = /["|“]([^"“”]+)["|”]/g;
+const regexBold = /\*([^\*]+)\*/g;
 ---
 
 <Fragment set:html={
     text
+        .replace(regexItalics, "<i>$1</i>")
+        .replace(regexBold, "<b>$1</b>")
 }/>
 
 <style lang="less">

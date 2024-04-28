@@ -30,13 +30,12 @@
   font-style: normal;
 }
 
-h1, h2 {
+body {  
   font-family: 'Lato', sans-serif;
-  font-weight: normal;
 }
 
-h3, h4, h5, h6, p, span, a, button {  
-  font-family: 'Lato', sans-serif;
+h1, h2 {
+  font-weight: normal;
 }
 
 h1, h2, h3, h4, h5, h6 {

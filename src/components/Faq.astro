@@ -20,10 +20,18 @@ const { d } = useDataTranslations(lang);
 <div class="faq">
     {faqs.map((faq, index) => (
         <div class="faq-item">
-            <FaqCard question={d(faq.question)} answer={d(faq.answer)} id={index}  />
+            <FaqCard question={d(faq.question)!} answer={d(faq.answer)!} id={index}  />
         </div>
     ))}
 </div>
 
 <style lang="less">
+    .faq {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .faq-item {
+        width: 100%;
+    }
 </style>

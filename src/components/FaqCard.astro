@@ -1,50 +1,207 @@
 ---
 interface Props {
-    question?: string;
-    answer?: string;
+    question: string;
+    answer: string;
     id: number;
 }
+
+import FormatText from "@components/FormatText.astro";
 
 const { question, answer, id } = Astro.props;
 ---
 
-<div id={`card-${id}`} class="card">
-    <a href="#" class="card-header">
-        <!-- <a> -->
-            <p class="">
-                {question}
-            </p>
-        <!-- </a> -->
-    </a>
-    <div class="card-body">
-        <p>{answer}</p>
+<details>
+    <summary class="">
+        <FormatText text={question} />
+    </summary>
+    <div class="content">
+        <p class="">
+            <FormatText text={answer} />
+        </p>
     </div>
-</div>
+</details>
 
 <style lang="less">
-    .card-body {
-        display: none;
-        max-height: 0;
+    summary {
+        display: block;
+        position: relative;
+
+        border: 1px solid transparent;
+        outline: none;
+        padding: 0.5rem 1rem;
+        padding-left: 2.2rem;
+
+        background: var(--gray-bg);
+        color: var(--brown-dk);
+
+        cursor: pointer;
+
+        &:focus {
+            border-color: var(--brown);  
+        }
+    }
+    details {
+        width: 100%;
+        box-sizing: border-box;
+
+        margin-top: 0.5em;
+
+        background: white;
+    }
+    details summary::-webkit-details-marker {
+        display:none;
+    }
+    details[open] > summary:before {
+        transform: rotate(90deg);
+    }
+    summary:before {
+        position: absolute;
+
+        content: '';
+
+        border-width: .4rem;
+        border-style: solid;
+        border-color: transparent transparent transparent var(--brown-dk);
+        top: 15px;
+        left: 1rem;
+
+        transform: rotate(0);
+        transform-origin: .2rem 50%;
+
+        transition: .25s transform ease;
+    }
+
+    .content {
+        width: auto;
+        
+        padding: 10px;
+        border-top: none;
+
+        p {
+            margin: 0;
+            font-weight: 300;
+            font-size: 1rem;
+        }
     }
 </style>
 
 <script define:vars={{id}}>
-    function main() {
-        const cardId = `#card-${id}`;
+    // From https://css-tricks.com/how-to-animate-the-details-element/.
+    class Accordion {
+        constructor(el) {
+            // Store the <details> element
+            this.el = el;
+            // Store the <summary> element
+            this.summary = el.querySelector('summary');
+            // Store the <div class="content"> element
+            this.content = el.querySelector('.content');
 
-        const card = document.querySelector(cardId);
-        if (!card) return;
-        const cardHeader = card.querySelector(`.card-header`);
-        if (!cardHeader) return;
-        const cardBody = card.querySelector(`.card-body`);
-        if (!cardBody) return;
+            // Store the animation object (so we can cancel it if needed)
+            this.animation = null;
+            // Store if the element is closing
+            this.isClosing = false;
+            // Store if the element is expanding
+            this.isExpanding = false;
+            // Detect user clicks on the summary element
+            this.summary.addEventListener('click', (e) => this.onClick(e));
+        }
 
-        cardHeader.removeAttribute('href');
-        cardHeader.addEventListener('click', () => {
-            cardBody.style.display = cardBody.style.display === 'none' ? 'block' : 'none';
-            cardBody.style.height = cardBody.style.height === '0px' ? `${cardBody.scrollHeight}px` : '0px';
-        });
+        onClick(e) {
+            // Stop default behaviour from the browser
+            e.preventDefault();
+            // Add an overflow on the <details> to avoid content overflowing
+            this.el.style.overflow = 'hidden';
+
+            // Check if the element is being closed or is already closed
+            if (this.isClosing || !this.el.open) {
+                this.open();
+            // Check if the element is being openned or is already open
+            } else if (this.isExpanding || this.el.open) {
+                this.shrink();
+            }
+        }
+
+        shrink() {
+            // Set the element as "being closed"
+            this.isClosing = true;
+            
+            // Store the current height of the element
+            const startHeight = `${this.el.offsetHeight}px`;
+            // Calculate the height of the summary
+            const endHeight = `${this.summary.offsetHeight}px`;
+            
+            // If there is already an animation running
+            if (this.animation) {
+                // Cancel the current animation
+                this.animation.cancel();
+            }
+            
+            // Start a WAAPI animation
+            this.animation = this.el.animate({
+                // Set the keyframes from the startHeight to endHeight
+                height: [startHeight, endHeight]
+            }, {
+                duration: 400,
+                easing: 'ease-out'
+            });
+            
+            // When the animation is complete, call onAnimationFinish()
+            this.animation.onfinish = () => this.onAnimationFinish(false);
+            // If the animation is cancelled, isClosing variable is set to false
+            this.animation.oncancel = () => this.isClosing = false;
+        }
+
+        open() {
+            // Apply a fixed height on the element
+            this.el.style.height = `${this.el.offsetHeight}px`;
+            // Force the [open] attribute on the details element
+            this.el.open = true;
+            // Wait for the next frame to call the expand function
+            window.requestAnimationFrame(() => this.expand());
+        }
+
+        expand() {
+            // Set the element as "being expanding"
+            this.isExpanding = true;
+            // Get the current fixed height of the element
+            const startHeight = `${this.el.offsetHeight}px`;
+            // Calculate the open height of the element (summary height + content height)
+            const endHeight = `${this.summary.offsetHeight + this.content.offsetHeight}px`;
+            
+            // If there is already an animation running
+            if (this.animation) {
+                // Cancel the current animation
+                this.animation.cancel();
+            }
+            
+            // Start a WAAPI animation
+            this.animation = this.el.animate({
+                // Set the keyframes from the startHeight to endHeight
+                height: [startHeight, endHeight]
+            }, {
+                duration: 400,
+                easing: 'ease-out'
+            });
+            // When the animation is complete, call onAnimationFinish()
+            this.animation.onfinish = () => this.onAnimationFinish(true);
+            // If the animation is cancelled, isExpanding variable is set to false
+            this.animation.oncancel = () => this.isExpanding = false;
+        }
+
+        onAnimationFinish(open) {
+            // Set the open attribute based on the parameter
+            this.el.open = open;
+            // Clear the stored animation
+            this.animation = null;
+            // Reset isClosing & isExpanding
+            this.isClosing = false;
+            this.isExpanding = false;
+            // Remove the overflow hidden and the fixed height
+            this.el.style.height = this.el.style.overflow = '';
+        }
     }
 
-    main();
+    document.querySelectorAll('details').forEach((el) => {
+        new Accordion(el);
+    });
 </script>
