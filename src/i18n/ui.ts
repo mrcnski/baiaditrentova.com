@@ -50,7 +50,7 @@ export const ui = {
         "rooms.description": "All five of our rooms are simple, clean and cozy. They are equipped with: an en-suite bathroom, minibar, hair-dryer, TV, Wi-Fi, courtesy set, and, most importantly, a small terrace outside to enjoy the beautiful view over the sea.",
 
         "reviews.title": "Reviews",
-        "reviews.description": "Read what our guests have to say about their stay with us!",
+        "reviews.description": "Read what our guests have to say about their stay!",
 
         "contact.title": "Contact Us",
         "contact.description": "We’re always happy to hear from you, so talk to us any time you like.<br><br>If your inquiry is urgent, please use one of the social media contacts listed below, otherwise, we will reply by email as soon as possible. Ciao!",
@@ -78,7 +78,7 @@ export const ui = {
         "rooms.description": "Tutte e cinque le nostre camere sono semplici, pulite e accoglienti. Sono dotate di: bagno privato, minibar, asciugacapelli, TV, Wi-Fi, set di cortesia e, soprattutto, un piccolo terrazzo esterno per godere della bellissima vista sul mare.",
 
         "reviews.title": "Recensioni",
-        "reviews.description": "Leggi cosa dicono i nostri ospiti del loro soggiorno con noi!",
+        "reviews.description": "Leggi cosa dicono i nostri ospiti del loro soggiorno!",
 
         "contact.title": "Contattaci",
         "contact.description": "Siamo sempre felici di sentirti, quindi parla con noi in qualsiasi momento ti piaccia.<br><br>Se la tua richiesta è urgente, utilizza uno dei contatti sui social media elencati di seguito, altrimenti ti risponderemo via email il prima possibile. Ciao!",
