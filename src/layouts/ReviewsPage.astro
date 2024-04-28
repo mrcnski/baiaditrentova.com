@@ -1,0 +1,26 @@
+---
+import Layout from "@layouts/Layout.astro";
+
+import PageSection from "@components/PageSection.astro";
+import FormatText from "@components/FormatText.astro";
+
+import { getLangFromUrl, useTranslations } from '@i18n/utils';
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
+<Layout title={t("reviews.title")} description={t("reviews.description")}>
+    <div style="margin-top: 10rem;"></div>
+
+    <PageSection>
+        <h2>{t("reviews.title")}</h2>
+        <p><FormatText text={t("reviews.description")} /></p>
+    </PageSection>
+
+    <PageSection>
+        <slot name="all-reviews-widget" />
+    </PageSection>
+</Layout>
+
+<style lang="less">
+</style>
