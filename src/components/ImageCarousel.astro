@@ -24,8 +24,13 @@ const { images, name } = Astro.props;
 
     :global(.carousel img) {
         display: block;
-        height: 200px;
+
+        height: 300px;
+
         object-fit: cover;
+    }
+    /* selected image */
+    :global(.carousel .is-selected) {
     }
 
     @media screen and ( min-width: 768px ) {

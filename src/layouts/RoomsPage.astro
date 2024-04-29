@@ -45,20 +45,20 @@ const { d } = useDataTranslations(lang);
 
     {rooms.map((room, index) => (
         <PageSection>
-            <div class="columns">
-                <div class="column-left">
+            <div class="columns" data-reverse={(index % 2 == 1) ? "yes" : "no"} >
+                <div class="column-images">
                     <ImageCarousel images={room.images} name={d(room.name)!} />
                 </div>
 
-                <div class="column-right">
+                <div class="column-details">
                     <h3 class="description-header"><FormatText text={d(room.name)!} /></h3>
 
-                    <p class="header-text">{t("rooms.capacity")}</p>
-                    <p class="detail-text"><FormatText text={d(room.capacity)!} /></p>
-                    <p class="header-text">{t("rooms.rooms")}</p>
-                    <p class="detail-text"><FormatText text={d(room.rooms)!} /></p>
-                    <p class="header-text">{t("rooms.bed")}</p>
-                    <p class="detail-text"><FormatText text={d(room.bed)!} /></p>
+                    <p class="header-text small-text">{t("rooms.capacity")}</p>
+                    <p class="detail-text small-text"><FormatText text={d(room.capacity)!} /></p>
+                    <p class="header-text small-text">{t("rooms.rooms")}</p>
+                    <p class="detail-text small-text"><FormatText text={d(room.rooms)!} /></p>
+                    <p class="header-text small-text">{t("rooms.bed")}</p>
+                    <p class="detail-text small-text"><FormatText text={d(room.bed)!} /></p>
                 </div>
             </div>
         </PageSection>
@@ -84,29 +84,43 @@ const { d } = useDataTranslations(lang);
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
+        gap: 2rem;
+
+        &[data-reverse="yes"] {
+            flex-direction: row-reverse;
+        }
 
         @media (max-width: 700px) {
-            flex-direction: column;
+            flex-direction: column !important;
+            row-gap: 3rem;
+        }
+
+        h3 {
+            max-width: 75%;
+            margin: auto;
+            margin-bottom: 1rem;
         }
     }
-    .column-left {
-        flex: 1;
+    .column-images {
+        flex: 0.55;
+
+        width: 100%;
     }
-    .column-right {
-        flex: 1;
+    .column-details {
+        flex: 0.45;
 
         text-align: center;
         max-width: 80%;
     }
 
     .header-text {
+        margin-top: 1rem;
+        
         color: var(--blue);    
-        font-size: 1.3rem;
     }
     .detail-text {
         margin: 0;
 
-        font-size: 1.3rem;
         font-weight: 300;
     }
 </style>
