@@ -51,6 +51,8 @@ export const ui = {
         "rooms.capacity": "Capacity",
         "rooms.rooms": "Rooms",
         "rooms.bed": "Beds",
+        "rooms.breakfast.header": "Breakfast",
+        "rooms.breakfast": "Our breakfast is a must-try experience. Enjoy quality local products and a wide variety of tastes in the morning sun. All served with a smile by Adriana, while you sit comfortably at your table enjoying the view.",
 
         "reviews.title": "Reviews",
         "reviews.description": "Read what our guests have to say about their stay!",
@@ -82,6 +84,8 @@ export const ui = {
         "rooms.capacity": "Capacità",
         "rooms.rooms": "Camere",
         "rooms.bed": "Letti",
+        "rooms.breakfast.header": "Colazione",
+        "rooms.breakfast": "La nostra colazione è un'esperienza da non perdere. Goditi prodotti locali di qualità e una vasta varietà di sapori al sole del mattino. Il tutto servito con un sorriso da Adriana, mentre ti siedi comodamente al tuo tavolo godendoti la vista.",
 
         "reviews.title": "Recensioni",
         "reviews.description": "Leggi cosa dicono i nostri ospiti del loro soggiorno!",

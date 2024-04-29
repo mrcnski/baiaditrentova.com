@@ -45,7 +45,7 @@ const { d } = useDataTranslations(lang);
 
     {rooms.map((room, index) => (
         <PageSection>
-            <div class="columns" data-reverse={(index % 2 == 1) ? "yes" : "no"} >
+            <div class="columns-rooms" data-reverse={(index % 2 == 1) ? "yes" : "no"} >
                 <div class="column-images">
                     <ImageCarousel images={room.images} name={d(room.name)!} />
                 </div>
@@ -63,6 +63,17 @@ const { d } = useDataTranslations(lang);
             </div>
         </PageSection>
     ))}
+
+    <div class="columns-breakfast">
+        <div class="column-breakfast-images">
+            <Image src={Index3} alt="Breakfast" />
+        </div>
+
+        <div class="column-breakfast-details">
+            <h2 class="description-header">{t("rooms.breakfast.header")}</h2>
+            <p class="body-text">{t("rooms.breakfast")}</p>
+        </div>
+    </div>
 </Layout>
 
 <style lang="less">
@@ -79,7 +90,7 @@ const { d } = useDataTranslations(lang);
         }
     }
 
-    .columns {
+    .columns-rooms {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
@@ -111,6 +122,46 @@ const { d } = useDataTranslations(lang);
 
         text-align: center;
         max-width: 80%;
+    }
+
+    .columns-breakfast {
+        display: flex;
+        flex-direction: row;
+        align-items: stretch;
+        
+        margin-top: 8rem;
+
+        @media (max-width: 700px) {
+            margin-top: 6rem;
+        }
+
+        @media (max-width: 700px) {
+            flex-direction: column-reverse !important;
+        }
+    }
+    .column-breakfast-images {
+        flex: 0.5;
+
+        img {
+            width: 100%;
+            height: 100%;
+
+            object-fit: cover;
+        }
+    }
+    .column-breakfast-details {
+        flex: 0.5;
+
+        padding: 2rem;
+
+        background-color: var(--gray-bg);
+        
+        h2 {
+        }
+        p {
+            // width: 40ch;
+            max-width: 95%;
+        }
     }
 
     .header-text {
