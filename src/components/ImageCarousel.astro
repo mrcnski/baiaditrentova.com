@@ -1,0 +1,36 @@
+---
+interface Props {
+    name: string;
+    images: string[];
+}
+
+import RelativeSrcImage from "@components/RelativeSrcImage.astro";
+
+const { images, name } = Astro.props;
+---
+
+<div class="carousel" 
+    data-flickity='{ "imagesLoaded": true, "percentPosition": false, "wrapAround": true }'>
+
+    {images.map((image, index) => (
+        <RelativeSrcImage relativeSrc={image} alt={name} />
+    ))}
+</div>
+
+<style lang="less">
+    .carousel {
+        background: var(--white-bg);
+    }
+
+    :global(.carousel img) {
+        display: block;
+        height: 200px;
+        object-fit: cover;
+    }
+
+    @media screen and ( min-width: 768px ) {
+        :global(.carousel img) {
+            height: 400px;
+        }
+    }
+</style>

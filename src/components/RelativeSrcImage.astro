@@ -1,0 +1,18 @@
+---
+interface Props {
+    relativeSrc: string;
+    alt: string;
+}
+
+import { Image } from 'astro:assets';
+
+const { relativeSrc, alt } = Astro.props;
+
+const dir = '/src/assets/images';
+const src = `${dir}/${relativeSrc}`;
+const images = import.meta.glob<{ default: ImageMetadata }>('/src/assets/images/**');
+const image = images[src]();
+if (!image) throw new Error(`"${relativeSrc}" does not exist in glob: "${dir}/*"`);
+---
+
+<Image src={image} alt={alt} />

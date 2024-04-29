@@ -1,6 +1,26 @@
 ---
+import yaml from 'js-yaml';
+import fs from 'fs';
+
+interface Room {
+    name: string;
+    capacity: string;
+    rooms: string;
+    bed: string;
+    images: string[];
+}
+
+let rooms: Room[] = [];
+try {
+    rooms = yaml.load(fs.readFileSync('oreste/rooms.yaml', 'utf8')) as Room[];
+} catch (e) {
+  console.log(e);
+}
+
 import Layout from "@layouts/Layout.astro";
 
+import FormatText from "@components/FormatText.astro";
+import ImageCarousel from "@components/ImageCarousel.astro";
 import ParallaxImage from "@components/ParallaxImage.astro";
 import PageSection from "@components/PageSection.astro";
 
@@ -8,9 +28,10 @@ import { Image } from "astro:assets";
 import Index2 from "@images/index/index2.jpg";
 import Index3 from "@images/index/index3.jpg";
 
-import { getLangFromUrl, useTranslations } from '@i18n/utils';
+import { getLangFromUrl, useTranslations, useDataTranslations } from '@i18n/utils';
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
+const { d } = useDataTranslations(lang);
 ---
 
 <Layout title={t("rooms.title")} description={t("rooms.description")}>
@@ -21,6 +42,27 @@ const t = useTranslations(lang);
         <h2 class="description-header">{t("rooms.description.header")}</h2>
         <p class="body-text">{t("rooms.description")}</p>
     </PageSection>
+
+    {rooms.map((room, index) => (
+        <PageSection>
+            <div class="columns">
+                <div class="column-left">
+                    <ImageCarousel images={room.images} name={d(room.name)!} />
+                </div>
+
+                <div class="column-right">
+                    <h3 class="description-header"><FormatText text={d(room.name)!} /></h3>
+
+                    <p class="header-text">{t("rooms.capacity")}</p>
+                    <p class="detail-text"><FormatText text={d(room.capacity)!} /></p>
+                    <p class="header-text">{t("rooms.rooms")}</p>
+                    <p class="detail-text"><FormatText text={d(room.rooms)!} /></p>
+                    <p class="header-text">{t("rooms.bed")}</p>
+                    <p class="detail-text"><FormatText text={d(room.bed)!} /></p>
+                </div>
+            </div>
+        </PageSection>
+    ))}
 </Layout>
 
 <style lang="less">
@@ -36,4 +78,38 @@ const t = useTranslations(lang);
             margin-top: 4rem;
         }
     }
+
+    .columns {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+
+        @media (max-width: 700px) {
+            flex-direction: column;
+        }
+    }
+    .column-left {
+        flex: 1;
+    }
+    .column-right {
+        flex: 1;
+
+        text-align: center;
+        max-width: 80%;
+    }
+
+    .header-text {
+        color: var(--blue);    
+        font-size: 1.3rem;
+    }
+    .detail-text {
+        margin: 0;
+
+        font-size: 1.3rem;
+        font-weight: 300;
+    }
 </style>
+
+<script>
+</script>
