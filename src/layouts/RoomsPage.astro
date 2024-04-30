@@ -9,12 +9,17 @@ interface Room {
     bed: string;
     images: string[];
 }
+interface RoomsPage {
+    welcomeImage: string;
+    breakfastImage: string;
+    rooms: Room[];
+}
 
-let rooms: Room[] = [];
+let roomsPage: RoomsPage | undefined = undefined;
 try {
-    rooms = yaml.load(fs.readFileSync('oreste/rooms.yaml', 'utf8')) as Room[];
+    roomsPage = yaml.load(fs.readFileSync('oreste/rooms.yaml', 'utf8')) as RoomsPage;
 } catch (e) {
-  console.log(e);
+    console.log(e);
 }
 
 import Layout from "@layouts/Layout.astro";
@@ -23,10 +28,7 @@ import FormatText from "@components/FormatText.astro";
 import ImageCarousel from "@components/ImageCarousel.astro";
 import ParallaxImage from "@components/ParallaxImage.astro";
 import PageSection from "@components/PageSection.astro";
-
-import { Image } from "astro:assets";
-import Index2 from "@images/index/index2.jpg";
-import Index3 from "@images/index/index3.jpg";
+import RelativeSrcImage from "@components/RelativeSrcImage.astro";
 
 import { getLangFromUrl, useTranslations, useDataTranslations } from '@i18n/utils';
 const lang = getLangFromUrl(Astro.url);
@@ -36,14 +38,14 @@ const { d } = useDataTranslations(lang);
 
 <Layout title={t("rooms.title")} description={t("rooms.description")}>
     <div class="rooms-top-spacer"></div>
-    <ParallaxImage id="welcome-img" image={Index2} heading={t("rooms.welcome.header")} description={t("rooms.welcome")} height="60vh" />
+    <ParallaxImage id="welcome-img" relativeSrc={roomsPage!.welcomeImage} heading={t("rooms.welcome.header")} description={t("rooms.welcome")} height="60vh" />
     
     <PageSection>
         <h2 class="description-header">{t("rooms.description.header")}</h2>
         <p class="body-text">{t("rooms.description")}</p>
     </PageSection>
 
-    {rooms.map((room, index) => (
+    {roomsPage!.rooms.map((room, index) => (
         <PageSection>
             <div class="columns-rooms" data-reverse={(index % 2 == 1) ? "yes" : "no"} >
                 <div class="column-images">
@@ -66,7 +68,7 @@ const { d } = useDataTranslations(lang);
 
     <div class="columns-breakfast">
         <div class="column-breakfast-images">
-            <Image src={Index3} alt="Breakfast" />
+            <RelativeSrcImage relativeSrc={roomsPage!.breakfastImage} alt="Breakfast" />
         </div>
 
         <div class="column-breakfast-details">

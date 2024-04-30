@@ -1,18 +1,25 @@
 ---
 interface Props {
+    id?: string;
+    classes?: string;
     relativeSrc: string;
     alt: string;
 }
 
 import { Image } from 'astro:assets';
 
-const { relativeSrc, alt } = Astro.props;
+const { id, classes, relativeSrc, alt } = Astro.props;
 
 const dir = '/src/assets/images';
 const src = `${dir}/${relativeSrc}`;
 const images = import.meta.glob<{ default: ImageMetadata }>('/src/assets/images/**');
-const image = images[src]();
+let image: ImageMetadata | undefined;
+try {
+    image = (await images[src]()).default;
+} catch (e) {
+    console.log(`"${relativeSrc}" does not exist in glob: "${dir}/*"`);
+}
 if (!image) throw new Error(`"${relativeSrc}" does not exist in glob: "${dir}/*"`);
 ---
 
-<Image src={image} alt={alt} />
+<Image id={id} class={classes} src={image} alt={alt} />

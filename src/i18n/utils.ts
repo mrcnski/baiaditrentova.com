@@ -21,7 +21,8 @@ export function useTranslations(lang: keyof typeof ui) {
 /// The data could be a string, in which case it is returned as is, or an object containing
 /// translations, in which case the correct translation is chosen.
 export function useDataTranslations(lang: keyof typeof ui) {
-    function d(record: string | Record<string, string>) {
+    function d(record: string | Record<string, string> | undefined) {
+        if (!record) return undefined;
         if (typeof record === 'string') return record;
         return record[lang] || record[defaultLang] || undefined;
     }

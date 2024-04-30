@@ -2,56 +2,58 @@
 #
 # Images are found in the /src/assets/images directory.
 
-- name: 
-    en: Double Room With Sea View Terrace
-    it: Camera Doppia con Terrazza Vista Mare
-  capacity: 
-    en: 2 persons (max. 2 persons)
-    it: 2 persone (max. 2 persone)
-  rooms: 
-    en: 1 bed room, 1 private bath room
-    it: 1 camera da letto, 1 bagno privato
-  bed: 
-    en: King Bed (160x190)
-    it: Letto Matrimoniale (160x190)
-  images:
-    - rooms/sanfra-1.jpg
-    - rooms/sanfra-2.jpg
-    - rooms/sanfra-3.jpg
+welcomeImage: index/index2.jpg
 
-- name: 
-    en: Triple Room With Sea View Terrace
-    it: Camera Tripla con Terrazza Vista Mare
-  capacity: 
-    en: 3 persons (max. 3 persons)
-    it: 3 persone (max. 3 persone)
-  rooms: 
-    en: 1 bed room, 1 private bath room
-    it: 1 camera da letto, 1 bagno privato
-  bed: 
-    en: Single Bed (80x190), King Bed (160x190)
-    it: Letto Singolo (80x190), Letto Matrimoniale (160x190)
-  images:
-    - rooms/vallone-1.jpg
-    - rooms/vallone-2.jpg
-    - rooms/vallone-3.jpg
+breakfastImage: index/index3.jpg
 
-- name: 
-    en: Double Room With Sea View Patio
-    it: Camera Doppia con Patio Vista Mare
-  capacity: 
-    en: 2 persons (max.2 persons)
-    it: 2 persone (max. 2 persone)
-  rooms: 
-    en: 1 bed room, 1 private bath room
-    it: 1 camera da letto, 1 bagno privato
-  bed: 
-    en: King Bed (160x190)
-    it: Letto Matrimoniale (160x190)
-  images:
-    - rooms/fortino-1.jpg
-    - rooms/fortino-2.jpg
-    - rooms/fortino-3.jpg
+rooms:
+  - name: 
+      en: Double Room With Sea View Terrace
+      it: Camera Doppia con Terrazza Vista Mare
+    capacity: 
+      en: 2 persons (max. 2 persons)
+      it: 2 persone (max. 2 persone)
+    rooms: 
+      en: 1 bed room, 1 private bath room
+      it: 1 camera da letto, 1 bagno privato
+    bed: 
+      en: King Bed (160x190)
+      it: Letto Matrimoniale (160x190)
+    images:
+      - rooms/sanfra-1.jpg
+      - rooms/sanfra-2.jpg
+      - rooms/sanfra-3.jpg
 
+  - name: 
+      en: Triple Room With Sea View Terrace
+      it: Camera Tripla con Terrazza Vista Mare
+    capacity: 
+      en: 3 persons (max. 3 persons)
+      it: 3 persone (max. 3 persone)
+    rooms: 
+      en: 1 bed room, 1 private bath room
+      it: 1 camera da letto, 1 bagno privato
+    bed: 
+      en: Single Bed (80x190), King Bed (160x190)
+      it: Letto Singolo (80x190), Letto Matrimoniale (160x190)
+    images:
+      - rooms/vallone-1.jpg
+      - rooms/vallone-2.jpg
+      - rooms/vallone-3.jpg
 
-
+  - name: 
+      en: Double Room With Sea View Patio
+      it: Camera Doppia con Patio Vista Mare
+    capacity: 
+      en: 2 persons (max.2 persons)
+      it: 2 persone (max. 2 persone)
+    rooms: 
+      en: 1 bed room, 1 private bath room
+      it: 1 camera da letto, 1 bagno privato
+    bed: 
+      en: King Bed (160x190)
+      it: Letto Matrimoniale (160x190)
+    images:
+      - rooms/fortino-1.jpg
+      - rooms/fortino-2.jpg
+      - rooms/fortino-3.jpg

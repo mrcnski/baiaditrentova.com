@@ -1,0 +1,30 @@
+# Description: This file contains the index information for the Oreste Hotel. 
+#
+# Images are found in the /src/assets/images directory.
+
+images:
+  - image: index/index1.jpg
+    heading: 
+      en: Welcome to Cilento
+      it: Benvenuti nel Cilento
+
+  - image: index/index2.jpg
+    heading: 
+      en: Bedroom with a Terrace
+      it: Camera con Terrazza
+
+  - image: index/index3.jpg
+    heading: 
+      en: Breakfast with a View
+      it: Colazione con Vista
+
+  - image: index/index4.jpeg
+    heading: 
+      en: Hosts with a Smile
+      it: Ospirit con un Sorriso
+
+  - image: index/index5.jpeg
+
+  - image: index/index6.jpeg
+
+  - image: index/index7.jpg

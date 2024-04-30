@@ -1,30 +1,35 @@
 ---
+import yaml from 'js-yaml';
+import fs from 'fs';
+
+interface IndexPage {
+    images: {
+        image: string;
+        heading?: string;
+    }[];
+}
+
+let indexPage: IndexPage | undefined = undefined;
+try {
+    indexPage = yaml.load(fs.readFileSync('oreste/index.yaml', 'utf8')) as IndexPage;
+} catch (e) {
+    console.log(e);
+}
+
 import Layout from "@layouts/Layout.astro";
 
 import ParallaxImage from "@components/ParallaxImage.astro";
-import PageSection from "@components/PageSection.astro";
 
-import Index1 from "@images/index/index1.jpg";
-import Index2 from "@images/index/index2.jpg";
-import Index3 from "@images/index/index3.jpg";
-import Index4 from "@images/index/index4.jpeg";
-import Index5 from "@images/index/index5.jpeg";
-import Index6 from "@images/index/index6.jpeg";
-import Index7 from "@images/index/index7.jpg";
-
-import { getLangFromUrl, useTranslations } from '@i18n/utils';
+import { getLangFromUrl, useTranslations, useDataTranslations } from '@i18n/utils';
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
+const { d } = useDataTranslations(lang);
 ---
 
 <Layout title={t("index.title")} description={t("index.description")}>
-    <ParallaxImage image={Index1} heading={t("index.welcome")} />
-    <ParallaxImage image={Index2} heading={t("index.terrace")} />
-    <ParallaxImage image={Index3} heading={t("index.seaview")} />
-    <ParallaxImage image={Index4} heading={t("index.smile")} />
-    <ParallaxImage image={Index5} />
-    <ParallaxImage image={Index6} />
-    <ParallaxImage image={Index7} />
+    {(indexPage?.images || []).map((image, index) => (
+        <ParallaxImage relativeSrc={image.image} heading={d(image.heading)!} />
+    ))}
 </Layout>
 
 <style lang="less">
