@@ -25,6 +25,7 @@ The outer container is needed just to center the whole thing.
 
             <div class="nav-links">
                 <NavCard href={translatePath("en/rooms")} text={t("nav.rooms")} />
+                <NavCard href="https://ubbipo.it" text={t("nav.restaurant")} />
                 <NavCard href={translatePath("en/reviews")} text={t("nav.reviews")} />
                 <NavCard href={translatePath("en/contact")} text={t("nav.contact")} />
                 <NavCard href="https://wubook.net/nneb/bk?f=tomorrow&n=2&ep=621e64c4&board=bb&o=2.0.0.0" text={t("nav.book")} />
@@ -122,7 +123,7 @@ The outer container is needed just to center the whole thing.
             padding: 1em 1.2em;
         }
 
-        @media (max-width: 1150px) {
+        @media (max-width: 1200px) {
             display: none;
             opacity: 0;
             position: absolute;
@@ -168,7 +169,7 @@ The outer container is needed just to center the whole thing.
 
     .hamburger {
         display: none;
-        @media (max-width: 1150px) {
+        @media (max-width: 1200px) {
             display: inline-block;
         }
         
@@ -300,9 +301,9 @@ The outer container is needed just to center the whole thing.
     function main() {
         // Hamburger menu.
 
-        const desktopThreshold = 1150;
+        const desktopThreshold = 1200;
         let navbarVisible = false;
-        let isDesktop = (window.innerWidth > 1150);
+        let isDesktop = (window.innerWidth > desktopThreshold);
 
         function toggleNavbarMenu(force: string | null = null) {
             const navLinks = document.querySelector('.nav-links') as HTMLElement;
@@ -346,7 +347,7 @@ The outer container is needed just to center the whole thing.
             if (!navLinks) return;
             
             // Show the navbar menu if the window is resized to desktop size.
-            if (window.innerWidth > 1150) {
+            if (window.innerWidth > desktopThreshold) {
                 if (!isDesktop) {
                     hamburger.classList.remove('is-active');
                     toggleNavbarMenu("show");

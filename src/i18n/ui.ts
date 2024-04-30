@@ -32,6 +32,7 @@ export const ui = {
         'site.name': 'B&B Baia di Trentova',
         
         'nav.rooms': 'Our Rooms',
+        'nav.restaurant': 'Restaurant',
         'nav.contact': 'Contact Us / Info',
         'nav.reviews': 'Reviews',
         'nav.book': 'Book Now!',
@@ -65,6 +66,7 @@ export const ui = {
         'site.name': 'B&B Baia di Trentova',
 
         'nav.rooms': 'Camere',
+        'nav.restaurant': 'Ristorante',
         'nav.contact': 'Contattaci / Info',
         'nav.reviews': 'Recensioni',
         'nav.book': 'Prenota Ora!',

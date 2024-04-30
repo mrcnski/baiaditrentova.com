@@ -33,7 +33,6 @@ const translatePath = useTranslatedPath(lang);
 
 <style lang="less">
     footer {
-        bottom: 0;
 		width: 65%;
 		max-width: 1000px;
         
@@ -43,7 +42,6 @@ const translatePath = useTranslatedPath(lang);
         border-top: 1px solid var(--brown);
 
         text-align: center;
-        color: var(--brown);
 		
 		@media (max-width: 800px) {
             width: 85%;
@@ -76,6 +74,7 @@ const translatePath = useTranslatedPath(lang);
     
     .detail {
         margin-top: 0.5rem;
+        
         font-size: 1.1rem;
 
         @media (max-width: 768px) {
@@ -84,7 +83,9 @@ const translatePath = useTranslatedPath(lang);
     }
     .made-with {
         margin-top: 0.5rem;
+        
         font-size: 1rem;
+        color: var(--brown);
 
         @media (max-width: 768px) {
             font-size: 0.85em;
