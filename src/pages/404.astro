@@ -1,0 +1,21 @@
+---
+import Layout from "@layouts/Layout.astro";
+
+const title = "404";
+---
+
+<Layout title={title} description="404 non trovato">
+    <div class="center-404">
+        <h1>404</h1>
+        <br />
+        <p>Non trovato</p>
+        <p>Not found</p>
+    </div>
+</Layout>
+
+<style lang="less">
+    .center-404 * {
+        text-align: center;
+        max-width: 100%;
+    }
+</style>
