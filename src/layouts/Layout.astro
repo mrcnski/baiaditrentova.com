@@ -1,6 +1,9 @@
 ---
 import "@assets/styles/reset.css";
 import "@assets/styles/global.css";
+import "@assets/styles/flickity.css";
+
+//import Flickity from "@assets/scripts/flickity.pkgd.min.js";
 
 import MainNav from "@components/MainNav.astro";
 import Footer from "@components/Footer.astro";
@@ -8,7 +11,6 @@ import Footer from "@components/Footer.astro";
 interface Props {
 	title: string;
 	description: string;
-	// shortDescription: string;
 }
 
 const { title, description } = Astro.props;
@@ -37,7 +39,7 @@ const t = useTranslations(lang);
 
 		<meta property="og:title" content={title /* raw title (no branding) */} />
 		<meta property="og:url" content={`${urlToLangUrl(Astro.url!, lang)}`} />
-		<meta property="og:image" content={`${Astro.site}assets/images/logo/full.png`} />
+		<meta property="og:image" content={`${Astro.site}logo-full.png`} />
 		<meta property="og:type" content="website" />
 		<meta property="og:description" content={description} />
 
@@ -47,10 +49,9 @@ const t = useTranslations(lang);
 		<link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
 
 		{/* Flickity */}
-		<link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
-		<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+		<script src={`/flickity.pkgd.min.js`}></script>
 	</head>
-	
+
 	<body>
 		<header>
 			<MainNav />
