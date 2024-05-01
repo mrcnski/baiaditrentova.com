@@ -2,8 +2,9 @@
 import Layout from "@layouts/Layout.astro";
 
 import Faq from "@components/Faq.astro";
-import PageSection from "@components/PageSection.astro";
+import FadeIn from "@components/FadeIn.astro";
 import FormatText from "@components/FormatText.astro";
+import PageSection from "@components/PageSection.astro";
 
 import { getLangFromUrl, useTranslations } from '@i18n/utils';
 const lang = getLangFromUrl(Astro.url);
@@ -16,21 +17,25 @@ const t = useTranslations(lang);
     <PageSection>
         <div class="columns">
             <div class="column-left">
-                <h2>{t("contact.title")}</h2>
-                <p class="contact-description"><FormatText text={t("contact.description")} /></p>
+                <FadeIn>
+                    <h2>{t("contact.title")}</h2>
+                    <p class="contact-description"><FormatText text={t("contact.description")} /></p>
 
-                <br>
-                <br>
-                <slot name="contact-widget" />
+                    <br>
+                    <br>
+                    <slot name="contact-widget" />
+                </FadeIn>
             </div>
             
             <div class="column-right">
-                <h2>{t("contact.faq")}</h2>
-                <Faq />
-
-                <div class="weather-widget">
-                    <slot name="weather-widget" />
-                </div>
+                <FadeIn>
+                    <h2>{t("contact.faq")}</h2>
+                    <Faq />
+                    
+                    <div class="weather-widget">
+                        <slot name="weather-widget" />
+                    </div>
+                </FadeIn>
             </div>
         </div>
     </PageSection>

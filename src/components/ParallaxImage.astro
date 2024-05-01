@@ -9,6 +9,7 @@ interface Props {
     id?: string;
 }
 
+import ParallaxFadeIn from "@components/ParallaxFadeIn.astro";
 import RelativeSrcImage from "@components/RelativeSrcImage.astro";
 
 import { getLangFromUrl, useTranslations } from '@i18n/utils';
@@ -28,8 +29,10 @@ if (!id) {
 <div class="parallax-img-container" style={`height: ${height};`}>
     <RelativeSrcImage id={id} classes="parallax-img" relativeSrc={relativeSrc} alt={heading || t("site.name")} />
     
-    {(heading) && <h1 class="parallax-heading">{heading}</h1>}
-    {(description) && <p class="parallax-description">{description}</p>}
+    <ParallaxFadeIn>
+        {(heading) && <h1 class="parallax-heading">{heading}</h1>}
+        {(description) && <p class="parallax-description">{description}</p>}
+    </ParallaxFadeIn>
 </div>
 
 <style lang="less">
