@@ -12,7 +12,7 @@ const { images, name } = Astro.props;
 <div class="carousel" 
     data-flickity='{ "imagesLoaded": true, "percentPosition": false, "wrapAround": true }'>
 
-    {images.map((image, index) => (
+    {images.map((image) => (
         <RelativeSrcImage relativeSrc={image} alt={name} />
     ))}
 </div>

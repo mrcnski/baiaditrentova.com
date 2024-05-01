@@ -28,7 +28,7 @@ if (!id) {
 
 <div class="parallax-img-container" style={`height: ${height};`}>
     <RelativeSrcImage id={id} classes="parallax-img" relativeSrc={relativeSrc} alt={heading || t("site.name")} />
-    
+
     <ParallaxFadeIn>
         {(heading) && <h1 class="parallax-heading">{heading}</h1>}
         {(description) && <p class="parallax-description">{description}</p>}
@@ -53,7 +53,7 @@ if (!id) {
         max-width: 80%;
 
         margin: 0;
-        
+
         font-weight: bold;
         color: var(--white-bg);
         filter: drop-shadow(2px 9px 2px rgba(0, 0, 0, .26));
@@ -67,7 +67,7 @@ if (!id) {
         max-width: 80%;
 
         margin: 0;
-        
+
         color: var(--white-bg);
         font-size: 1.5rem;
         filter: drop-shadow(2px 9px 2px rgba(0, 0, 0, .26));
@@ -78,7 +78,7 @@ if (!id) {
     }
 </style>
 
-<script define:vars={{id}}>
+<script is:inline define:vars={{id}}>
     function main() {
         const image = document.querySelector(`#${id}`);
         if (!image) return;

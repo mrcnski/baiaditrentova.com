@@ -30,7 +30,7 @@ while (!id || /^\d/.test(id)) {
     }
 </style>
 
-<script define:vars={{id}}>
+<script is:inline define:vars={{id}}>
     function main() {
         function setVisible() {
             const element = document.querySelector(`#${id}`);

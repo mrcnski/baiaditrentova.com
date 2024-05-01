@@ -30,7 +30,7 @@ while (!id || /^\d/.test(id)) {
     }
 </style>
 
-<script define:vars={{id}}>
+<script is:inline define:vars={{id}}>
     function main() {
         const element = document.querySelector(`#${id}`);
         if (!element) return;
@@ -48,7 +48,7 @@ while (!id || /^\d/.test(id)) {
             rootMargin: "0px",
             threshold: 0.20,
         };
-        
+
         const observer = new IntersectionObserver(callback, options);
         observer.observe(element);
     }

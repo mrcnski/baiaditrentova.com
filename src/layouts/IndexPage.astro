@@ -27,7 +27,7 @@ const { d } = useDataTranslations(lang);
 ---
 
 <Layout title={t("index.title")} description={t("index.description")}>
-    {(indexPage?.images || []).map((image, index) => (
+    {(indexPage?.images || []).map((image) => (
         <ParallaxImage relativeSrc={image.image} heading={d(image.heading)!} />
     ))}
 </Layout>

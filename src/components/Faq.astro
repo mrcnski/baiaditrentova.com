@@ -11,9 +11,8 @@ try {
   console.log(e);
 }
 
-import { getLangFromUrl, useTranslations, useDataTranslations } from '@i18n/utils';
+import { getLangFromUrl, useDataTranslations } from '@i18n/utils';
 const lang = getLangFromUrl(Astro.url);
-const t = useTranslations(lang);
 const { d } = useDataTranslations(lang);
 ---
 
