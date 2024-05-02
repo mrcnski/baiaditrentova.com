@@ -1,30 +1,36 @@
-# Description: This file contains the index information for the Oreste Hotel. 
+# Description: This file contains the index information for the Oreste Hotel.
 #
 # Images are found in the /src/assets/images directory.
 
 images:
   - image: index/index1.jpg
-    heading: 
+    heading:
       en: Welcome to Cilento
       it: Benvenuti nel Cilento
 
   - image: index/index2.jpg
-    heading: 
+    heading:
       en: Bedroom with a Terrace
       it: Camera con Terrazza
 
   - image: index/index3.jpg
-    heading: 
+    heading:
       en: Breakfast with a View
       it: Colazione con Vista
 
   - image: index/index4.jpeg
-    heading: 
+    heading:
       en: Hosts with a Smile
       it: Ospiti con un Sorriso
 
   - image: index/index5.jpeg
 
   - image: index/index6.jpeg
+    description:
+      en: We're happy to welcome you in sunny Cilento! Have a nice drink on our terrace with some good company. We hope you enjoy the breathtaking views of the valley, mountains, and sea.
+      it: Siamo felici di darti il benvenuto nel soleggiato Cilento! Goditi un buon drink sulla nostra terrazza con buona compagnia. Speriamo che tu possa goderti le viste mozzafiato della valle, delle montagne e del mare.
 
   - image: index/index7.jpg
+    description:
+      en: Enjoy the beach, or take a scenic walk on the nearby Sentiero to the national park. Whether you want to just relax or be more active, there is something for everyone close by!
+      it: Goditi la spiaggia, o fai una passeggiata panoramica sul vicino Sentiero per il parco nazionale. Che tu voglia solo rilassarti o essere più attivo, c'è qualcosa per tutti nelle vicinanze!
