@@ -27,7 +27,7 @@ if (!id) {
 ---
 
 <div class="parallax-img-container" style={`height: ${height};`}>
-    <RelativeSrcImage id={id} classes="parallax-img" relativeSrc={relativeSrc} alt={heading || t("site.name")} />
+    <RelativeSrcImage id={id} classes={`parallax-img ${(description) && "parallax-img-filter"}`} relativeSrc={relativeSrc} alt={heading || t("site.name")} />
 
     <ParallaxFadeIn>
         {(heading) && <h1 class="parallax-heading">{heading}</h1>}
@@ -44,6 +44,9 @@ if (!id) {
         height: 100%;
         width: 100vw;
         object-fit: cover;
+    }
+    :global(.parallax-img-filter) {
+        filter: brightness(80%) saturate(120%);
     }
 
     .parallax-heading {

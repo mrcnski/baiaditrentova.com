@@ -3,8 +3,8 @@ import yaml from 'js-yaml';
 import fs from 'fs';
 
 interface IndexPage {
-    images: {
-        image: string;
+    elements: {
+        image?: string;
         heading?: string;
         description?: string;
     }[];
@@ -19,17 +19,16 @@ try {
 
 import Layout from "@layouts/Layout.astro";
 
-import ParallaxImage from "@components/ParallaxImage.astro";
+import IndexElement from "@components/IndexElement.astro";
 
-import { getLangFromUrl, useTranslations, useDataTranslations } from '@i18n/utils';
+import { getLangFromUrl, useTranslations } from '@i18n/utils';
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
-const { d } = useDataTranslations(lang);
 ---
 
 <Layout title={t("index.title")} description={t("index.description")}>
-    {(indexPage?.images || []).map((image) => (
-        <ParallaxImage relativeSrc={image.image} heading={d(image.heading)!} description={d(image.description)} />
+    {(indexPage?.elements || []).map((element) => (
+        <IndexElement element={element} />
     ))}
 </Layout>
 

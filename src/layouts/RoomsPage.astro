@@ -39,8 +39,8 @@ const { d } = useDataTranslations(lang);
 
 <Layout title={t("rooms.title")} description={t("rooms.description")}>
     <div class="rooms-top-spacer"></div>
-    <ParallaxImage id="welcome-img" relativeSrc={roomsPage!.welcomeImage} heading={t("rooms.welcome.header")} description={t("rooms.welcome")} height="60vh" />
-    
+    <ParallaxImage relativeSrc={roomsPage!.welcomeImage} heading={t("rooms.welcome.header")} description={t("rooms.welcome")} height="60vh" />
+
     <PageSection>
         <FadeIn>
             <h2 class="description-header">{t("rooms.description.header")}</h2>
@@ -84,10 +84,6 @@ const { d } = useDataTranslations(lang);
 </Layout>
 
 <style lang="less">
-    :global(#welcome-img) {
-        filter: brightness(65%) saturate(140%);
-    }
-
     /* Synced with navbar-container-outer */
     .rooms-top-spacer {
         margin-top: 5rem;
@@ -135,7 +131,7 @@ const { d } = useDataTranslations(lang);
         display: flex;
         flex-direction: row;
         align-items: stretch;
-        
+
         margin-top: 8rem;
 
         @media (max-width: 700px) {
@@ -162,7 +158,7 @@ const { d } = useDataTranslations(lang);
         padding: 2rem;
 
         background-color: var(--gray-bg);
-        
+
         h2 {
         }
         p {
@@ -173,8 +169,8 @@ const { d } = useDataTranslations(lang);
 
     .header-text {
         margin-top: 1rem;
-        
-        color: var(--blue);    
+
+        color: var(--blue);
     }
     .detail-text {
         margin: 0;

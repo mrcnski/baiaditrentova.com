@@ -1,0 +1,33 @@
+---
+interface Element {
+    image?: string;
+    heading?: string;
+    description?: string;
+}
+
+interface Props {
+    element: Element;
+}
+
+import PageSection from "@components/PageSection.astro";
+import ParallaxImage from "@components/ParallaxImage.astro";
+
+let { element } = Astro.props;
+
+import { getLangFromUrl, useTranslations, useDataTranslations } from '@i18n/utils';
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+const { d } = useDataTranslations(lang);
+---
+
+{(element.image) && <ParallaxImage relativeSrc={element.image} heading={d(element.heading)!} description={d(element.description)} />}
+
+{(!element.image && element.description) && <PageSection>
+    <p class="index-description">{d(element.description)}</p>
+</PageSection>}
+
+<style lang="less">
+    .index-description {
+        margin-bottom: 2rem;
+    }
+</style>

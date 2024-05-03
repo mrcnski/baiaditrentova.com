@@ -2,7 +2,7 @@
 #
 # Images are found in the /src/assets/images directory.
 
-images:
+elements:
   - image: index/index1.jpg
     heading:
       en: Welcome to Cilento
@@ -24,6 +24,9 @@ images:
       it: Ospiti con un Sorriso
 
   - image: index/index5.jpeg
+    description:
+      en: Have you been dreaming of the ideal Italian vacation? Do you want to enjoy limoncello, olive groves,  and real Italian wine?
+      it: Hai sognato la vacanza italiana ideale? Vuoi goderti il limoncello, gli uliveti e il vero vino italiano?
 
   - image: index/index6.jpeg
     description:
