@@ -4,7 +4,7 @@ import sitemap from "@astrojs/sitemap";
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://baiaditrentova.com',
+  site: 'https://www.baiaditrentova.com',
   // Using view transitions enables prefetching for all links on the page.
   // prefetch: true,
   i18n: {
