@@ -3,7 +3,7 @@
 # Images are found in the /src/assets/images directory.
 
 elements:
-  - image: index/index1.jpg
+  - image: index/ABF02978.jpg
     heading:
       en: Welcome to Cilento
       it: Benvenuti nel Cilento
