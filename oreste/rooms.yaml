@@ -54,6 +54,10 @@ rooms:
       en: King Bed (160x190)
       it: Letto Matrimoniale (160x190)
     images:
-      - rooms/fortino-1.jpg
-      - rooms/fortino-2.jpg
-      - rooms/fortino-3.jpg
+      - rooms/fortino1.jpeg
+      - rooms/fortino2.jpeg
+      - rooms/fortino3.jpeg
+      - rooms/fortino4.jpeg
+      - rooms/fortino5.jpeg
+      - rooms/fortino6.jpeg
+      - rooms/fortino7.jpeg
