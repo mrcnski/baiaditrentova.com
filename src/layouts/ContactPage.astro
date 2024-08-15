@@ -13,7 +13,7 @@ const t = useTranslations(lang);
 
 <Layout title={t("contact.title")} description={t("contact.description")}>
     <div class="top-spacer"></div>
-    
+
     <PageSection>
         <div class="columns">
             <div class="column-left">
@@ -26,12 +26,12 @@ const t = useTranslations(lang);
                     <slot name="contact-widget" />
                 </FadeIn>
             </div>
-            
+
             <div class="column-right">
                 <FadeIn>
                     <h2>{t("contact.faq")}</h2>
                     <Faq />
-                    
+
                     <div class="weather-widget">
                         <slot name="weather-widget" />
                     </div>
@@ -39,10 +39,10 @@ const t = useTranslations(lang);
             </div>
         </div>
     </PageSection>
-    
-    <PageSection>
-        <slot name="map-widget" />
-    </PageSection>
+
+    <!-- <PageSection> -->
+    <!--     <slot name="map-widget" /> -->
+    <!-- </PageSection> -->
 </Layout>
 
 <style lang="less">
@@ -70,7 +70,7 @@ const t = useTranslations(lang);
     .weather-widget {
         display: flex;
         justify-content: center;
-        
+
         margin-top: 2rem;
     }
 </style>
