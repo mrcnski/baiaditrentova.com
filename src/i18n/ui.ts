@@ -33,7 +33,7 @@ export const ui = {
 
         'nav.rooms': 'Our Rooms',
         'nav.restaurant': 'Restaurant',
-        'nav.contact': 'Contact Us / Info',
+        'nav.contact': 'Contact Us',
         'nav.reviews': 'Reviews',
         'nav.book': 'Book Now!',
 
@@ -63,7 +63,7 @@ export const ui = {
 
         'nav.rooms': 'Camere',
         'nav.restaurant': 'Ristorante',
-        'nav.contact': 'Contattaci / Info',
+        'nav.contact': 'Contattaci',
         'nav.reviews': 'Recensioni',
         'nav.book': 'Prenota Ora!',
 
