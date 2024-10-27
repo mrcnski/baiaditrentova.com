@@ -43,7 +43,7 @@ const { d } = useDataTranslations(lang);
 
     <PageSection>
         <FadeIn>
-            <h2 class="description-header">{t("rooms.description.header")}</h2>
+            <h2>{t("rooms.description.header")}</h2>
             <p class="body-text">{t("rooms.description")}</p>
         </FadeIn>
     </PageSection>
@@ -57,7 +57,7 @@ const { d } = useDataTranslations(lang);
                     </div>
 
                     <div class="column-details">
-                        <h3 class="description-header"><FormatText text={d(room.name)!} /></h3>
+                        <h3><FormatText text={d(room.name)!} /></h3>
 
                         <p class="header-text small-text">{t("rooms.capacity")}</p>
                         <p class="detail-text small-text"><FormatText text={d(room.capacity)!} /></p>
@@ -77,7 +77,7 @@ const { d } = useDataTranslations(lang);
         </div>
 
         <div class="column-breakfast-details">
-            <h2 class="description-header">{t("rooms.breakfast.header")}</h2>
+            <h2>{t("rooms.breakfast.header")}</h2>
             <p class="body-text">{t("rooms.breakfast")}</p>
         </div>
     </div>

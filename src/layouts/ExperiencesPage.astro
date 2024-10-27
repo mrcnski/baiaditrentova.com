@@ -1,0 +1,37 @@
+---
+import Layout from "@layouts/Layout.astro";
+
+import FadeIn from "@components/FadeIn.astro";
+import FormatText from "@components/FormatText.astro";
+import PageSection from "@components/PageSection.astro";
+
+import { getLangFromUrl, useTranslations, useDataTranslations } from '@i18n/utils';
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+const { d } = useDataTranslations(lang);
+---
+
+<Layout title={t("experiences.title")} description={t("experiences.description")}>
+    <div class="top-spacer"></div>
+
+    <PageSection>
+        <FadeIn>
+            <h2>{t("experiences.welcome.header")}</h2>
+            <p class="body-text"><FormatText text={t("experiences.welcome")} /></p>
+        </FadeIn>
+    </PageSection>
+
+    <PageSection>
+        <FadeIn>
+            <h3>{t("experiences.cooking-class.header")}</h3>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/UY91XgZrLfU?si=uFWyWdyQzNZRwGzm" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </FadeIn>
+    </PageSection>
+
+    <PageSection>
+        <FadeIn>
+            <h3>{t("experiences.tour.header")}</h3>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/MG-cLOz49gU?si=gfJvJesRPdt7DqGV" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </FadeIn>
+    </PageSection>
+</Layout

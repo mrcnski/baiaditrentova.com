@@ -16,6 +16,10 @@ export const paths = {
         it: 'camere',
         en: 'en/rooms',
     },
+    experiences: {
+        it: 'esperienze',
+        en: 'en/experiences',
+    },
     reviews: {
         it: 'recensioni',
         en: 'en/reviews',
@@ -32,13 +36,21 @@ export const ui = {
         'site.name': 'B&B Baia di Trentova',
 
         'nav.rooms': 'Our Rooms',
+        'nav.experiences': 'Experiences',
         'nav.restaurant': 'Restaurant',
-        'nav.contact': 'Contact Us',
+        'nav.contact': 'Contact Us / Info',
         'nav.reviews': 'Reviews',
         'nav.book': 'Book Now!',
 
         "index.title": "Welcome",
         "index.description": "B&B Baia di Trentova is a family-run bed and breakfast in Agropoli in Cilento. The B&B is located in a quiet area, close to the sea and the Trentova Bay.",
+
+        "experiences.title": "Experiences",
+        "experiences.description": "We offer unique experiences to make your stay even more special. From tours to cooking classes, we have something for everyone. Make your stay unforgettable!",
+        "experiences.welcome.header": "Our Experiences",
+        "experiences.welcome": "We offer unique experiences to make your stay even more special.<br>Contact us for personalized rates and availability.",
+        "experiences.cooking-class.header": "Cooking Classes",
+        "experiences.tour.header": "Local Tours",
 
         "rooms.title": "Our Rooms",
         "rooms.welcome.header": "Buongiorno",
@@ -62,13 +74,21 @@ export const ui = {
         'site.name': 'B&B Baia di Trentova',
 
         'nav.rooms': 'Camere',
+        'nav.experiences': 'Esperienze',
         'nav.restaurant': 'Ristorante',
-        'nav.contact': 'Contattaci',
+        'nav.contact': 'Contattaci / Info',
         'nav.reviews': 'Recensioni',
         'nav.book': 'Prenota Ora!',
 
         "index.title": "Benvenuti",
         "index.description": "Il B&B Baia di Trentova è un bed and breakfast a conduzione familiare ad Agropoli nel Cilento. Il B&B si trova in una zona tranquilla, vicino al mare e alla Baia di Trentova.",
+
+        "experiences.title": "Esperienze",
+        "experiences.description": "Offriamo esperienze uniche per rendere il tuo soggiorno ancora più speciale. Dai tour alle lezioni di cucina, abbiamo qualcosa per tutti. Rendi il tuo soggiorno indimenticabile!",
+        "experiences.welcome.header": "Le Nostre Esperienze",
+        "experiences.welcome": "Offriamo esperienze uniche per rendere il tuo soggiorno ancora più speciale.<br>Contattaci per tariffe personalizzate e disponibilità.",
+        "experiences.cooking-class.header": "Lezioni di Cucina",
+        "experiences.tour.header": "Tour Locali",
 
         "rooms.title": "Le nostre Camere",
         "rooms.welcome.header": "Buongiorno",
