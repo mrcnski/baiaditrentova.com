@@ -25,10 +25,10 @@ elements:
 
   - image: index/ABF04095 (1).jpeg
     description:
-      en: cilento experiences
-      it: Esperienze cilentane
-      
-  - image: index/ABF04095 (1).jpeg
-    description:
       en: 100percentocilento
       it: 100PercentCilento
+      
+  - image: index/cilento_experiences_mod.jpeg
+    description:
+      en: cilento experiences
+      it: esperienze cilentane
