@@ -11,7 +11,7 @@ elements:
   - image: index/ABF03049.jpeg
     heading:
       en: Bedroom with a Terrace
-      it: Camera con Terrazza
+      it: Terrazza Abbracciata dal Verde
 
   - image: index/ABF03028-Modifica.jpeg
     heading:
@@ -19,16 +19,16 @@ elements:
       it: Colazione cilentana
 
   - image: index/ABF03802 (1).jpeg
-    description:
+    heading:
       en: Breakfast with a View
       it: Colazione con Vista
 
   - image: index/ABF04095 (1).jpeg
-    description:
+    heading:
       en: 100PercentCilento
       it: 100PercentoCilento
       
   - image: index/cilento_experiences_mod.jpeg
-    description:
+    heading:
       en: cilento experiences
       it: esperienze cilentane
