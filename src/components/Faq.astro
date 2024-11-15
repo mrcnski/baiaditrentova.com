@@ -8,7 +8,8 @@ let faqs: any[] = [];
 try {
     faqs = yaml.load(fs.readFileSync('oreste/faq.yaml', 'utf8')) as any[];
 } catch (e) {
-  console.log(e);
+    console.log(e);
+    throw e;
 }
 
 import { getLangFromUrl, useDataTranslations } from '@i18n/utils';
@@ -17,9 +18,9 @@ const { d } = useDataTranslations(lang);
 ---
 
 <div class="faq">
-    {faqs.map((faq, index) => (
+    {faqs.map((faq, _index) => (
         <div class="faq-item">
-            <FaqCard question={d(faq.question)!} answer={d(faq.answer)!} id={index}  />
+            <FaqCard question={d(faq.question)!} answer={d(faq.answer)!}  />
         </div>
     ))}
 </div>

@@ -2,13 +2,11 @@
 interface Props {
     question: string;
     answer: string;
-    // NOTE: Unused?
-    id: number;
 }
 
 import FormatText from "@components/FormatText.astro";
 
-const { question, answer, id } = Astro.props;
+const { question, answer } = Astro.props;
 ---
 
 <details>

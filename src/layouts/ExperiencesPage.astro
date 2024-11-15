@@ -42,7 +42,7 @@ const { d } = useDataTranslations(lang);
 
     {experiencesPage.experiences.map((experience, index) => (
         <PageSection>
-            <FadeIn>
+            <FadeIn threshold={0.05}>
                 <div class="columns-experiences" data-reverse={(index % 2 == 0) ? "yes" : "no"} >
                     <div class="column-details">
                         <h3><FormatText text={d(experience.title)!} /></h3>
