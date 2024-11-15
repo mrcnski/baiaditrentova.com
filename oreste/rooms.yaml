@@ -7,16 +7,16 @@ welcomeImage: index/index2.jpg
 breakfastImage: index/index3.jpg
 
 rooms:
-  - name: 
+  - name:
       en: Double Room With Sea View Terrace
       it: Camera Doppia con Terrazza Vista Mare
-    capacity: 
+    capacity:
       en: 2 persons (max. 2 persons)
       it: 2 persone (max. 2 persone)
-    rooms: 
+    rooms:
       en: 1 bed room, 1 private bath room
       it: 1 camera da letto, 1 bagno privato
-    bed: 
+    bed:
       en: King Bed (160x190)
       it: Letto Matrimoniale (160x190)
     images:
@@ -24,16 +24,16 @@ rooms:
       - rooms/sanfra-2.jpg
       - rooms/sanfra-3.jpg
 
-  - name: 
+  - name:
       en: Triple Room With Sea View Terrace
       it: Camera Tripla con Terrazza Vista Mare
-    capacity: 
+    capacity:
       en: 3 persons (max. 3 persons)
       it: 3 persone (max. 3 persone)
-    rooms: 
+    rooms:
       en: 1 bed room, 1 private bath room
       it: 1 camera da letto, 1 bagno privato
-    bed: 
+    bed:
       en: Single Bed (80x190), King Bed (160x190)
       it: Letto Singolo (80x190), Letto Matrimoniale (160x190)
     images:
@@ -41,16 +41,16 @@ rooms:
       - rooms/vallone-2.jpg
       - rooms/vallone-3.jpg
 
-  - name: 
+  - name:
       en: Double Room With Sea View Patio and private terrace
       it: Camera Doppia con Patio Vista Mare e terrazzo privato
-    capacity: 
+    capacity:
       en: 2 persons (max.2 persons)
       it: 2 persone (max. 2 persone)
-    rooms: 
+    rooms:
       en: 1 bed room, 1 private bath room
       it: 1 camera da letto, 1 bagno privato
-    bed: 
+    bed:
       en: King Bed (160x190)
       it: Letto Matrimoniale (160x190)
     images:

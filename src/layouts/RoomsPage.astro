@@ -44,7 +44,7 @@ const { d } = useDataTranslations(lang);
     <PageSection>
         <FadeIn>
             <h2>{t("rooms.description.header")}</h2>
-            <p class="body-text">{t("rooms.description")}</p>
+            <p>{t("rooms.description")}</p>
         </FadeIn>
     </PageSection>
 
@@ -78,7 +78,7 @@ const { d } = useDataTranslations(lang);
 
         <div class="column-breakfast-details">
             <h2>{t("rooms.breakfast.header")}</h2>
-            <p class="body-text">{t("rooms.breakfast")}</p>
+            <p>{t("rooms.breakfast")}</p>
         </div>
     </div>
 </Layout>
@@ -167,6 +167,7 @@ const { d } = useDataTranslations(lang);
 
     .header-text {
         margin-top: 1rem;
+        font-weight: 400;
 
         color: var(--blue);
     }
