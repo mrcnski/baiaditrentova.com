@@ -2,6 +2,7 @@
 interface Props {
     question: string;
     answer: string;
+    // NOTE: Unused?
     id: number;
 }
 
@@ -38,7 +39,7 @@ const { question, answer, id } = Astro.props;
 
         cursor: pointer;
 
-        &:focus {
+        &:hover {
             border-color: var(--brown);
         }
     }
@@ -51,7 +52,7 @@ const { question, answer, id } = Astro.props;
         background: white;
     }
     details summary::-webkit-details-marker {
-        display:none;
+        display: none;
     }
     details[open] > summary:before {
         transform: rotate(90deg);
@@ -87,7 +88,7 @@ const { question, answer, id } = Astro.props;
     }
 </style>
 
-<script is:inline define:vars={{id}}>
+<script>
     // From https://css-tricks.com/how-to-animate-the-details-element/.
     class Accordion {
         constructor(el) {
