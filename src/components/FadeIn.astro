@@ -8,21 +8,21 @@ const { classList = [], threshold } = Astro.props;
 
 ---
 
-<fade-in class:list={["fade-in", ...classList]} data-message={threshold}>
-    <slot />
+<fade-in data-message={threshold}>
+    <div class:list={["fade-in", ...classList]}>
+        <slot />
+    </div>
 </fade-in>
 
 <style lang="less">
     .fade-in {
         opacity: 0;
         visibility: hidden;
-        transform: translateY(5vh);
-        transition: opacity 1.2s ease-in, transform 1.2s ease-in;
+        transition: opacity 1.2s ease-in;
     }
     .fade-in.is-visible {
         opacity: 1;
         visibility: visible;
-        transform: none;
     }
 </style>
 
@@ -44,7 +44,7 @@ const { classList = [], threshold } = Astro.props;
             };
 
             const observer = new IntersectionObserver(callback, options);
-            observer.observe(this);
+            observer.observe(this.children[0] as HTMLDivElement);
         }
     }
 

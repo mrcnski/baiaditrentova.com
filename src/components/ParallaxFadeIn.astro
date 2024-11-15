@@ -6,17 +6,13 @@ interface Props {
 }
 
 const { classList = [] } = Astro.props;
-
-// Make sure the ID doesn't start with a number.
-let id: string | undefined;
-while (!id || /^\d/.test(id)) {
-    id = Math.random().toString(36).slice(2, 11)
-}
 ---
 
-<div id={id} class:list={["parallax-fade-in", ...classList]}>
-  <slot />
-</div>
+<parallax-fade-in>
+    <div class:list={["parallax-fade-in", ...classList]}>
+        <slot />
+    </div>
+</parallax-fade-in>
 
 <style lang="less">
     .parallax-fade-in {
@@ -30,17 +26,18 @@ while (!id || /^\d/.test(id)) {
     }
 </style>
 
-<script is:inline define:vars={{id}}>
-    function main() {
-        function setVisible() {
-            const element = document.querySelector(`#${id}`);
-            if (!element) return;
+<script>
+    class ParallaxFadeIn extends HTMLElement {
+        connectedCallback() {
+            let div = this.children[0] as HTMLDivElement;
 
-            element.classList.add('is-visible')
+            function setVisible() {
+                div.classList.add('is-visible')
+            }
+
+            setTimeout(setVisible, 100);
         }
-
-        setTimeout(setVisible, 100);
     }
 
-    main();
+    customElements.define('parallax-fade-in', ParallaxFadeIn);
 </script>

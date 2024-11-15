@@ -9,16 +9,18 @@ import FormatText from "@components/FormatText.astro";
 const { question, answer } = Astro.props;
 ---
 
-<details>
-    <summary class="">
-        <FormatText text={question} />
-    </summary>
-    <div class="content">
-        <p class="">
-            <FormatText text={answer} />
-        </p>
-    </div>
-</details>
+<faq-card>
+    <details>
+        <summary class="">
+            <FormatText text={question} />
+        </summary>
+        <div class="content">
+            <p class="">
+                <FormatText text={answer} />
+            </p>
+        </div>
+    </details>
+</faq-card>
 
 <style lang="less">
     summary {
@@ -209,7 +211,11 @@ const { question, answer } = Astro.props;
         }
     }
 
-    document.querySelectorAll('details').forEach((el) => {
-        new Accordion(el);
-    });
+    class FaqCard extends HTMLElement {
+        connectedCallback() {
+            new Accordion(this.children[0] as HTMLDetailsElement);
+        }
+    }
+
+    customElements.define('faq-card', FaqCard);
 </script>

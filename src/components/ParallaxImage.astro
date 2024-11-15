@@ -26,14 +26,16 @@ if (!id) {
 }
 ---
 
-<div class="parallax-img-container" style={`height: ${height};`}>
-    <RelativeSrcImage id={id} classes={`parallax-img ${(description) && "parallax-img-filter"}`} relativeSrc={relativeSrc} alt={heading || t("site.name")} />
+<parallax-image>
+    <div class="parallax-img-container" style={`height: ${height};`}>
+        <RelativeSrcImage id={id} classes={`parallax-img ${(description) && "parallax-img-filter"}`} relativeSrc={relativeSrc} alt={heading || t("site.name")} />
 
-    <ParallaxFadeIn>
-        {(heading) && <h1 class="parallax-heading">{heading}</h1>}
-        {(description) && <p class="parallax-description">{description}</p>}
-    </ParallaxFadeIn>
-</div>
+        <ParallaxFadeIn>
+            {(heading) && <h1 class="parallax-heading">{heading}</h1>}
+            {(description) && <p class="parallax-description">{description}</p>}
+        </ParallaxFadeIn>
+    </div>
+</parallax-image>
 
 <style lang="less">
     .parallax-img-container {
@@ -83,50 +85,51 @@ if (!id) {
     }
 </style>
 
-<script is:inline define:vars={{id}}>
-    function main() {
-        const image = document.querySelector(`#${id}`);
-        if (!image) return;
-        const imageAspectRatio = image.naturalWidth / image.naturalHeight;
+<script>
+    class ParallaxImage extends HTMLElement {
+        connectedCallback() {
+            // Given an image, find out whether it's near the top or the
+            // bottom of the window and set the image's object-position
+            // CSS property accordingly.
+            function setImageScrollPercentage(rect: DOMRect) {
+                const imageHeight = rect.width / imageAspectRatio;
 
-        let lastImageRect = image.getBoundingClientRect();
-        let ticking = false;
+                var viewableRegion = window.innerHeight - rect.height;
+                if (imageHeight > viewableRegion) {
+                    viewableRegion = imageHeight - rect.height;
+                }
 
-        setImageScrollPercentage(lastImageRect);
-
-        // Listen for window-resize and document-scroll events.
-        window.addEventListener('resize', function() {
-          setImageScrollPercentage(image.getBoundingClientRect());
-        });
-        document.addEventListener('scroll', function() {
-          let lastImageRect = image.getBoundingClientRect();
-
-          if (!ticking) {
-            window.requestAnimationFrame(() => {
-              setImageScrollPercentage(lastImageRect);
-              ticking = false;
-            });
-
-            ticking = true;
-          }
-        });
-
-        // Given an image, find out whether it's near the top or the
-        // bottom of the window and set the image's object-position
-        // CSS property accordingly.
-        function setImageScrollPercentage(rect) {
-            const imageHeight = rect.width / imageAspectRatio;
-
-            var viewableRegion = window.innerHeight - rect.height;
-            if (imageHeight > viewableRegion) {
-                viewableRegion = imageHeight - rect.height;
+                //const objectVerticalOffset = Math.round(1000 * rect.top / viewableRegion) / 10.0;
+                //const objectVerticalOffset = 100 * rect.top / viewableRegion;
+                //this.style.objectPosition = `0 ${50+objectVerticalOffset}%`;
             }
 
-            //const objectVerticalOffset = Math.round(1000 * rect.top / viewableRegion) / 10.0;
-            const objectVerticalOffset = 100 * rect.top / viewableRegion;
-            //image.style.objectPosition = `0 ${50+objectVerticalOffset}%`;
+            let image = this.children[0] as HTMLImageElement;
+            const imageAspectRatio = image.naturalWidth / image.naturalHeight;
+
+            let lastImageRect = this.getBoundingClientRect();
+            let ticking = false;
+
+            setImageScrollPercentage(lastImageRect);
+
+            // Listen for window-resize and document-scroll events.
+            window.addEventListener('resize', function() {
+                setImageScrollPercentage(image.getBoundingClientRect());
+            });
+            document.addEventListener('scroll', function() {
+                let lastImageRect = image.getBoundingClientRect();
+
+                if (!ticking) {
+                    window.requestAnimationFrame(() => {
+                      setImageScrollPercentage(lastImageRect);
+                      ticking = false;
+                    });
+
+                    ticking = true;
+               }
+           });
         }
     }
 
-    main();
+    customElements.define('parallax-image', ParallaxImage);
 </script>
