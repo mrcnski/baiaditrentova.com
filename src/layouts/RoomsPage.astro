@@ -54,18 +54,18 @@ const { d } = useDataTranslations(lang);
             <FadeIn>
                 <div class="columns-rooms" data-reverse={(index % 2 == 1) ? "yes" : "no"} >
                     <div class="column-images">
-                        <ImageCarousel images={room.images} name={d(room.name)} />
+                        <ImageCarousel images={room.images} name={d(room.name)!} />
                     </div>
 
                     <div class="column-details">
-                        <h3><FormatText text={d(room.name)} /></h3>
+                        <h3><FormatText text={d(room.name)!} /></h3>
 
                         <p class="header-text small-text">{t("rooms.capacity")}</p>
-                        <p class="detail-text small-text"><FormatText text={d(room.capacity)} /></p>
+                        <p class="detail-text small-text"><FormatText text={d(room.capacity)!} /></p>
                         <p class="header-text small-text">{t("rooms.rooms")}</p>
-                        <p class="detail-text small-text"><FormatText text={d(room.rooms)} /></p>
+                        <p class="detail-text small-text"><FormatText text={d(room.rooms)!} /></p>
                         <p class="header-text small-text">{t("rooms.bed")}</p>
-                        <p class="detail-text small-text"><FormatText text={d(room.bed)} /></p>
+                        <p class="detail-text small-text"><FormatText text={d(room.bed)!} /></p>
                     </div>
                 </div>
             </FadeIn>

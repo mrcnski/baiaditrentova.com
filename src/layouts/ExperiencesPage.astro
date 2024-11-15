@@ -5,6 +5,7 @@ import yaml from 'js-yaml';
 interface Experience {
     title: Record<string, string>;
     text: Record<string, string>;
+    media?: string;
 }
 interface ExperiencesPage {
     experiences: Experience[];
@@ -44,9 +45,9 @@ const { d } = useDataTranslations(lang);
             <FadeIn>
                 <div class="columns-experiences" data-reverse={(index % 2 == 0) ? "yes" : "no"} >
                     <div class="column-details">
-                        <h3><FormatText text={d(experience.title)} /></h3>
+                        <h3><FormatText text={d(experience.title)!} /></h3>
 
-                        <p class="small-text"><FormatText text={d(experience.text)} /></p>
+                        <p class="small-text"><FormatText text={d(experience.text)!} /></p>
                     </div>
 
                     <div class="column-images">
@@ -56,12 +57,6 @@ const { d } = useDataTranslations(lang);
             </FadeIn>
         </PageSection>
     ))}
-
-    <PageSection>
-        <FadeIn>
-            <h3>{t("experiences.tour.header")}</h3>
-        </FadeIn>
-    </PageSection>
 </Layout>
 
 <style lang="less">
