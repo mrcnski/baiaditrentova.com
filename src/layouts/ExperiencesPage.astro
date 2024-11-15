@@ -68,6 +68,12 @@ const { d } = useDataTranslations(lang);
             font-size: 1.1rem;
         }
     }
+    :global(summary) {
+        font-size: 1.2rem;
+    }
+    :global(details p) {
+        font-size: 1.2rem;
+    }
 
     .columns-experiences {
         display: flex;
@@ -95,6 +101,9 @@ const { d } = useDataTranslations(lang);
         flex: 0.55;
 
         width: 100%;
+
+        display: flex;
+        justify-content: center;
     }
     .column-details {
         flex: 0.45;

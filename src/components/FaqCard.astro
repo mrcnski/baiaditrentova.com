@@ -33,6 +33,8 @@ const { question, answer, id } = Astro.props;
 
         background: var(--gray-bg);
         color: var(--brown-dk);
+        font-weight: 300;
+        font-size: 1rem;
 
         cursor: pointer;
 
@@ -115,14 +117,13 @@ const { question, answer, id } = Astro.props;
             // Check if the element is being closed or is already closed
             if (this.isClosing || !this.el.open) {
                 this.open();
-            // Check if the element is being openned or is already open
+            // Check if the element is being opened or is already open
             } else if (this.isExpanding || this.el.open) {
                 this.shrink();
             }
         }
 
         shrink() {
-            // Set the element as "being closed"
             this.isClosing = true;
 
             // Store the current height of the element
@@ -132,7 +133,6 @@ const { question, answer, id } = Astro.props;
 
             // If there is already an animation running
             if (this.animation) {
-                // Cancel the current animation
                 this.animation.cancel();
             }
 
@@ -161,7 +161,6 @@ const { question, answer, id } = Astro.props;
         }
 
         expand() {
-            // Set the element as "being expanding"
             this.isExpanding = true;
             // Get the current fixed height of the element
             const startHeight = `${this.el.offsetHeight}px`;
@@ -170,7 +169,6 @@ const { question, answer, id } = Astro.props;
 
             // If there is already an animation running
             if (this.animation) {
-                // Cancel the current animation
                 this.animation.cancel();
             }
 

@@ -30,7 +30,7 @@ export function useDataTranslations(lang: keyof typeof ui) {
         if (Array.isArray(record)) return record;
         return record[lang] || record[defaultLang] || undefined;
     }
-    return { 
+    return {
         d,
         dArray,
     }
@@ -60,7 +60,7 @@ export function urlToLangPath(currentUrl: URL, newLang: keyof typeof ui): string
     path = path.endsWith('/') ? path.slice(0, -1) : path;
     // Remove .html if present.
     path = path.endsWith('.html') ? path.slice(0, -5) : path;
-    
+
     return useTranslatedPath(newLang)(path);
 }
 
