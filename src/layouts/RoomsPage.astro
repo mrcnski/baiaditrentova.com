@@ -1,12 +1,12 @@
 ---
-import yaml from 'js-yaml';
 import fs from 'fs';
+import yaml from 'js-yaml';
 
 interface Room {
-    name: string;
-    capacity: string;
-    rooms: string;
-    bed: string;
+    name: Record<string, string>;
+    capacity: Record<string, string>;
+    rooms: Record<string, string>;
+    bed: Record<string, string>;
     images: string[];
 }
 interface RoomsPage {
@@ -20,6 +20,7 @@ try {
     roomsPage = yaml.load(fs.readFileSync('oreste/rooms.yaml', 'utf8')) as RoomsPage;
 } catch (e) {
     console.log(e);
+    throw e;
 }
 
 import Layout from "@layouts/Layout.astro";
@@ -39,7 +40,7 @@ const { d } = useDataTranslations(lang);
 
 <Layout title={t("rooms.title")} description={t("rooms.description")}>
     <div class="rooms-top-spacer"></div>
-    <ParallaxImage relativeSrc={roomsPage!.welcomeImage} heading={t("rooms.welcome.header")} description={t("rooms.welcome")} height="60vh" />
+    <ParallaxImage relativeSrc={roomsPage.welcomeImage} heading={t("rooms.welcome.header")} description={t("rooms.welcome")} height="60vh" />
 
     <PageSection>
         <FadeIn>
@@ -48,23 +49,23 @@ const { d } = useDataTranslations(lang);
         </FadeIn>
     </PageSection>
 
-    {roomsPage!.rooms.map((room, index) => (
+    {roomsPage.rooms.map((room, index) => (
         <PageSection>
             <FadeIn>
                 <div class="columns-rooms" data-reverse={(index % 2 == 1) ? "yes" : "no"} >
                     <div class="column-images">
-                        <ImageCarousel images={room.images} name={d(room.name)!} />
+                        <ImageCarousel images={room.images} name={d(room.name)} />
                     </div>
 
                     <div class="column-details">
-                        <h3><FormatText text={d(room.name)!} /></h3>
+                        <h3><FormatText text={d(room.name)} /></h3>
 
                         <p class="header-text small-text">{t("rooms.capacity")}</p>
-                        <p class="detail-text small-text"><FormatText text={d(room.capacity)!} /></p>
+                        <p class="detail-text small-text"><FormatText text={d(room.capacity)} /></p>
                         <p class="header-text small-text">{t("rooms.rooms")}</p>
-                        <p class="detail-text small-text"><FormatText text={d(room.rooms)!} /></p>
+                        <p class="detail-text small-text"><FormatText text={d(room.rooms)} /></p>
                         <p class="header-text small-text">{t("rooms.bed")}</p>
-                        <p class="detail-text small-text"><FormatText text={d(room.bed)!} /></p>
+                        <p class="detail-text small-text"><FormatText text={d(room.bed)} /></p>
                     </div>
                 </div>
             </FadeIn>
@@ -73,7 +74,7 @@ const { d } = useDataTranslations(lang);
 
     <div class="columns-breakfast">
         <div class="column-breakfast-images">
-            <RelativeSrcImage relativeSrc={roomsPage!.breakfastImage} alt="Breakfast" />
+            <RelativeSrcImage relativeSrc={roomsPage.breakfastImage} alt="Breakfast" />
         </div>
 
         <div class="column-breakfast-details">
