@@ -42,16 +42,16 @@ const { d } = useDataTranslations(lang);
 
     {experiencesPage.experiences.map((experience, index) => (
         <PageSection>
-            <FadeIn threshold={0.05}>
+            <FadeIn threshold={0}>
                 <div class="columns-experiences" data-reverse={(index % 2 == 0) ? "yes" : "no"} >
+                    <div class="column-images">
+                        {experience.media && <Fragment set:html={experience.media} />}
+                    </div>
+
                     <div class="column-details">
                         <h3><FormatText text={d(experience.title)!} /></h3>
 
                         <p class="small-text"><FormatText text={d(experience.text)!} /></p>
-                    </div>
-
-                    <div class="column-images">
-                        {experience.media && <Fragment set:html={experience.media} />}
                     </div>
                 </div>
             </FadeIn>
@@ -80,6 +80,10 @@ const { d } = useDataTranslations(lang);
         &:hover {
             scale: 1.1;
         }
+
+        @media (max-width: 768px) {
+            font-size: 1rem;
+        }
     }
     :global(details) {
         width: 100%;
@@ -89,6 +93,10 @@ const { d } = useDataTranslations(lang);
     }
     :global(details p) {
         font-size: 1.2rem;
+
+        @media (max-width: 768px) {
+            font-size: 1rem;
+        }
     }
 
     .columns-experiences {
@@ -120,6 +128,7 @@ const { d } = useDataTranslations(lang);
 
         display: flex;
         justify-content: center;
+        align-content: center;
     }
     .column-details {
         flex: 0.45;
