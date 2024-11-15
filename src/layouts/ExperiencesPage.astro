@@ -42,15 +42,15 @@ const { d } = useDataTranslations(lang);
     {experiencesPage.experiences.map((experience, index) => (
         <PageSection>
             <FadeIn>
-                <div class="columns-experiences" data-reverse={(index % 2 == 1) ? "yes" : "no"} >
-                    <div class="column-images">
-                        {experience.media && <Fragment set:html={experience.media} />}
-                    </div>
-
+                <div class="columns-experiences" data-reverse={(index % 2 == 0) ? "yes" : "no"} >
                     <div class="column-details">
                         <h3><FormatText text={d(experience.title)} /></h3>
 
                         <p class="small-text"><FormatText text={d(experience.text)} /></p>
+                    </div>
+
+                    <div class="column-images">
+                        {experience.media && <Fragment set:html={experience.media} />}
                     </div>
                 </div>
             </FadeIn>
