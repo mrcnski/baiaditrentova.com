@@ -3,8 +3,6 @@ import fs from 'fs';
 import yaml from 'js-yaml';
 
 interface CookingClassPage {
-    title: Record<string, string>;
-    description: Record<string, string>;
 }
 
 let cookingClassPage: CookingClassPage | undefined = undefined;
@@ -21,18 +19,41 @@ import FadeIn from "@components/FadeIn.astro";
 import FormatText from "@components/FormatText.astro";
 import PageSection from "@components/PageSection.astro";
 
-import { getLangFromUrl, useTranslations, useDataTranslations } from '@i18n/utils';
+import { getLangFromUrl, useTranslations, useDataTranslations, useTranslatedPath } from '@i18n/utils';
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 const { d } = useDataTranslations(lang);
+const translatePath = useTranslatedPath(lang);
 ---
 
-<Layout title={d(cookingClassPage.title)} description={d(cookingClassPage.description)}>
+<Layout title={t("cooking-class.title")} description={t("cooking-class.description")}>
     <div class="top-spacer"></div>
 
     <PageSection>
         <FadeIn>
-            <h2>{d(cookingClassPage.title)}</h2>
+            <h2>{t("cooking-class.title")}</h2>
+
+            <div class="review">
+                <i>Our group had four evening cooking lessons, taught by lovely Maria and assisted by the ever effervescent Adriana. We prepared and cooked a variety of foods including pasta, pizza, stuffed artichokes, eggplant, zuchini blossoms, desserts, and other dishes. These evenings were so lively and fun - learning to cook Italian style, drinking wine, laughing, sharing stories and, of course, getting to eat everything we cooked. Our thanks go to Maria for her patience as we worked to turn our little fat rolls of pasta dough into the shapes and sizes that she so effortlessly and expertly demonstrated. We were definitely beginners, but practice makes perfect and we planned to try the recipes (and our new skills) upon returning home!</i><br>
+                <span>~ Louise from Colorado</span>
+
+                <a href={translatePath("en/reviews")}>({t("cooking-class.reviews")})</a>
+            </div>
+        </FadeIn>
+    </PageSection>
+
+    <PageSection>
+        <FadeIn>
+            <h3>{t("cooking-class.intro.title")}</h3>
         </FadeIn>
     </PageSection>
 </Layout>
+
+<style lang="less">
+    .review {
+        margin-top: 2rem;
+        //margin-left: 4rem;
+        //margin-right: 4rem;
+        width: 75%;
+    }
+</style>

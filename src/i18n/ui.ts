@@ -57,6 +57,15 @@ export const ui = {
         "experiences.description": "We offer unique experiences to make your stay even more special. From tours to cooking classes, we have something for everyone. Make your stay unforgettable!",
         "experiences.click": "Click for details / booking!",
 
+        "cooking-class.title": "Cooking Class",
+        "cooking-class.description": "Learn how to cook traditional Cilento dishes with nonna Maria! Enjoy a fun and interactive cooking class, and then taste the delicious dishes you prepared.",
+        "cooking-class.reviews": "See more reviews",
+        "cooking-class.intro.title": "Join our Hands-On Cooking Class",
+        "cooking-class.intro.description": "Escape the crowds and discover the hidden gem of Cilento. Nestled south of the Amalfi Coast, our cooking classes and food tours offer a more authentic Italian experience. Learn to cook like a local, savor fresh, seasonal ingredients, and relax in the heart of South Italy and discover the secrets of the Mediterranean diet. Create memories that will last a lifetime in this hidden paradise.",
+
+        "food-tour.title": "Food Tour",
+        "food-tour.description": "Discover the flavors of Cilento with our food tour! Visit local producers, taste traditional products, and enjoy a delicious lunch in a typical restaurant.",
+
         "rooms.title": "Our Rooms",
         "rooms.welcome.header": "Buongiorno",
         "rooms.welcome": "Clean and comfortable accommodation. Enjoy the quiet and relaxed atmosphere, read a book or taste a good glass of wine.",
@@ -91,6 +100,15 @@ export const ui = {
         "experiences.title": "Le Nostre Esperienze",
         "experiences.description": "Offriamo esperienze uniche per rendere il tuo soggiorno ancora più speciale. Dai tour alle lezioni di cucina, abbiamo qualcosa per tutti. Rendi il tuo soggiorno indimenticabile!",
         "experiences.click": "Clicca per dettagli / prenotazione!",
+
+        "cooking-class.title": "Corso di Cucina",
+        "cooking-class.description": "Impara a cucinare piatti tradizionali del Cilento con la nonna Maria! Goditi un corso di cucina divertente e interattivo, e poi assaggia i deliziosi piatti che hai preparato.",
+        "cooking-class.reviews": "Vedi altre recensioni",
+        "cooking-class.intro.title": "Unisciti al nostro Corso di Cucina Pratico",
+        "cooking-class.intro.description": "Scappa dalla folla e scopri la gemma nascosta del Cilento. Incastonato a sud della Costiera Amalfitana, i nostri corsi di cucina e tour gastronomici offrono un'esperienza italiana più autentica. Impara a cucinare come un locale, assapora ingredienti freschi e di stagione, e rilassati nel cuore del Sud Italia e scopri i segreti della dieta mediterranea. Crea ricordi che dureranno per sempre in questo paradiso nascosto.",
+
+        "food-tour.title": "Tour Gastronomico",
+        "food-tour.description": "Scopri i sapori del Cilento con il nostro tour gastronomico! Visita produttori locali, assaggia prodotti tradizionali e goditi un delizioso pranzo in un ristorante tipico.",
 
         "rooms.title": "Le nostre Camere",
         "rooms.welcome.header": "Buongiorno",

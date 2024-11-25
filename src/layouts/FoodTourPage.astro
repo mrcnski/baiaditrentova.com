@@ -3,8 +3,6 @@ import fs from 'fs';
 import yaml from 'js-yaml';
 
 interface FoodTourPage {
-    title: Record<string, string>;
-    description: Record<string, string>;
 }
 
 let foodTourPage: FoodTourPage | undefined = undefined;
@@ -27,12 +25,12 @@ const t = useTranslations(lang);
 const { d } = useDataTranslations(lang);
 ---
 
-<Layout title={d(foodTourPage.title)} description={d(foodTourPage.description)}>
+<Layout title={t("food-tour.title")} description={t("food-tour.description")}>
     <div class="top-spacer"></div>
 
     <PageSection>
         <FadeIn>
-            <h2>{d(foodTourPage.title)}</h2>
+            <h2>{t("food-tour.title")}</h2>
         </FadeIn>
     </PageSection>
 </Layout>
