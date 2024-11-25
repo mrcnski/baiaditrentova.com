@@ -8,21 +8,21 @@ experiences:
       it: "Cilento: Innamorati dell'Italia Autentica"
     text:
       en: |
-        Escape the crowds and discover the hidden gem of Cilento. Nestled south of the Amalfi Coast, our cooking classes and food tours offer a more authentic Italian experience. Learn to cook like a local; savor fresh, seasonal ingredients; and relax in the heart of South Italy. Learn to cook regional specialties, explore local vineyards, and discover the secrets of the Mediterranean diet. Create memories that will last a lifetime in this hidden paradise.<br>
-        <br>
-        "These unforgettable unique experiences offer:"<br>
+        <p>Escape the crowds and discover the hidden gem of Cilento. Nestled south of the Amalfi Coast, our cooking classes and food tours offer a more authentic Italian experience. Learn to cook like a local; savor fresh, seasonal ingredients; and relax in the heart of South Italy. Learn to cook regional specialties, explore local vineyards, and discover the secrets of the Mediterranean diet. Create memories that will last a lifetime in this hidden paradise.</p>
+        <p>"These unforgettable unique experiences offer:"</p>
         <ul>
         <li>Authentic encounters with local people.</li>
         <li>A deeper understanding of Italy’s food and wine culture.</li>
         <li>Unforgettable memories and a new perspective on the Italian way of life.</li>
+        </ul>
       it: |
-        Fuggite dalla folla e scoprite la gemma nascosta del Cilento. A sud della Costiera Amalfitana, i nostri corsi di cucina e tour gastronomici offrono un'esperienza italiana più autentica. Imparate a cucinare come un abitante del luogo, assaporate ingredienti freschi e di stagione e rilassatevi nel cuore del Sud Italia. Imparate a cucinare le specialità regionali, esplorate i vigneti locali e scoprite i segreti della dieta mediterranea. Create ricordi che dureranno per tutta la vita in questo paradiso nascosto.<br>
-        <br>
-        "Queste esperienze uniche indimenticabili offrono:"<br>
+        <p>Fuggite dalla folla e scoprite la gemma nascosta del Cilento. A sud della Costiera Amalfitana, i nostri corsi di cucina e tour gastronomici offrono un'esperienza italiana più autentica. Imparate a cucinare come un abitante del luogo, assaporate ingredienti freschi e di stagione e rilassatevi nel cuore del Sud Italia. Imparate a cucinare le specialità regionali, esplorate i vigneti locali e scoprite i segreti della dieta mediterranea. Create ricordi che dureranno per tutta la vita in questo paradiso nascosto.</p>
+        <p>"Queste esperienze uniche indimenticabili offrono:"</p>
         <ul>
         <li>Incontri autentici con la gente del posto.</li>
         <li>Una comprensione più profonda della cultura alimentare e vinicola italiana.</li>
         <li>Ricordi indimenticabili e una nuova prospettiva sullo stile di vita italiano.</li>
+        </ul>
 
   - title:
       en: "Cilento Culinary Escape: Cook with Nonna Maria"
@@ -32,33 +32,23 @@ experiences:
       it: "/esperienze/corso-di-cucina"
     text:
       en: |
-        Discover the heart of Cilento with a unique culinary adventure. Your day begins with an exciting challenge: navigating the local market like a true local, imagine strolling through a vibrant Italian market, surrounded by the fragrant aroma of fresh herbs and ripe tomatoes! Armed with Nonna Maria's  shopping list, handwritten in Italian with tips on what to look for and where to find the best ingredients, you'll venture out to gather fresh, seasonal products.<br>
-        <br>
-        Get ready to experience the warmth and hospitality of the Cilento people, known for their friendly nature and love of conversation. Don't be surprised if you find yourself chatting about the best tomatoes or the latest news. This is your chance to practice your Italian, or even start learning it, connect with friendly vendors, and experience the lively atmosphere of an Italian market.<br>
-        <br>
+        <p>Discover the heart of Cilento with a unique culinary adventure. Your day begins with an exciting challenge: navigating the local market like a true local, imagine strolling through a vibrant Italian market, surrounded by the fragrant aroma of fresh herbs and ripe tomatoes! Armed with Nonna Maria's  shopping list, handwritten in Italian with tips on what to look for and where to find the best ingredients, you'll venture out to gather fresh, seasonal products.</p>
+        <p>Get ready to experience the warmth and hospitality of the Cilento people, known for their friendly nature and love of conversation. Don't be surprised if you find yourself chatting about the best tomatoes or the latest news. This is your chance to practice your Italian, or even start learning it, connect with friendly vendors, and experience the lively atmosphere of an Italian market.</p>
         <details>
         <summary>Read more...</summary>
         <div class='content'>
-        <p>
-        Nonna’s cooking class! In Nonna Maria's cozy kitchen, you'll prepare an authentic Italian meal with your market finds. You'll have the opportunity to choose which classic Italian dishes you'd like to learn, with Nonna Maria guiding you through each step, sharing her passion for cooking and captivating stories of Cilento's culinary heritage. Learn to make pasta from scratch and other Italian specialties, discovering the roots of the Mediterranean Diet, which was born in this very region.<br>
-        <br>
-        Savor the Flavors! Enjoy the amazing meal you've prepared, paired with a glass of good wine, we'll guide you through the nuances of Italian winemaking, exploring how different territories, climates, and grape varietals influence the flavors and aromas of each wine. Learn to pair your homemade dishes with the perfect glass of wine, and savor the flavors of Italy.
-        </p>
+        <p>Nonna’s cooking class! In Nonna Maria's cozy kitchen, you'll prepare an authentic Italian meal with your market finds. You'll have the opportunity to choose which classic Italian dishes you'd like to learn, with Nonna Maria guiding you through each step, sharing her passion for cooking and captivating stories of Cilento's culinary heritage. Learn to make pasta from scratch and other Italian specialties, discovering the roots of the Mediterranean Diet, which was born in this very region.</p>
+        <p>Savor the Flavors! Enjoy the amazing meal you've prepared, paired with a glass of good wine, we'll guide you through the nuances of Italian winemaking, exploring how different territories, climates, and grape varietals influence the flavors and aromas of each wine. Learn to pair your homemade dishes with the perfect glass of wine, and savor the flavors of Italy.</p>
         </div>
         </details>
       it: |
-        Scoprite il cuore del Cilento con un'avventura culinaria unica. La vostra giornata inizia con una sfida entusiasmante: navigare nel mercato locale come un vero abitante del luogo, immaginate di passeggiare in un vivace mercato italiano, circondati dall'aroma fragrante di erbe fresche e pomodori maturi! Armati della lista della spesa di Nonna Maria, scritta a mano in italiano con consigli su cosa cercare e dove trovare gli ingredienti migliori, vi avventurerete alla ricerca di prodotti freschi e di stagione.<br>
-        <br>
-        Preparatevi a sperimentare il calore e l'ospitalità dei cilentani, noti per la loro natura amichevole e l'amore per la conversazione. Non stupitevi se vi ritroverete a chiacchierare dei migliori pomodori o delle ultime notizie. Questa è la vostra occasione per praticare l'italiano, o anche per iniziare a impararlo, per entrare in contatto con venditori amichevoli e per sperimentare l'atmosfera vivace di un mercato italiano.<br>
-        <br>
+        <p>Scoprite il cuore del Cilento con un'avventura culinaria unica. La vostra giornata inizia con una sfida entusiasmante: navigare nel mercato locale come un vero abitante del luogo, immaginate di passeggiare in un vivace mercato italiano, circondati dall'aroma fragrante di erbe fresche e pomodori maturi! Armati della lista della spesa di Nonna Maria, scritta a mano in italiano con consigli su cosa cercare e dove trovare gli ingredienti migliori, vi avventurerete alla ricerca di prodotti freschi e di stagione.</p>
+        <p>Preparatevi a sperimentare il calore e l'ospitalità dei cilentani, noti per la loro natura amichevole e l'amore per la conversazione. Non stupitevi se vi ritroverete a chiacchierare dei migliori pomodori o delle ultime notizie. Questa è la vostra occasione per praticare l'italiano, o anche per iniziare a impararlo, per entrare in contatto con venditori amichevoli e per sperimentare l'atmosfera vivace di un mercato italiano.</p>
         <details>
         <summary>Read more...</summary>
         <div class='content'>
-        <p>
-        Corso di cucina della Nonna! Nell'accogliente cucina di Nonna Maria, preparerete un autentico pasto italiano con i prodotti del mercato. Avrete l'opportunità di scegliere i piatti classici italiani che desiderate imparare, con Nonna Maria che vi guiderà in ogni fase, condividendo la sua passione per la cucina e le sue storie accattivanti sul patrimonio culinario del Cilento. Imparerete a fare la pasta da zero e altre specialità italiane, scoprendo le radici della Dieta Mediterranea, che è nata proprio in questa regione.<br>
-        <br>
-        Assaporate i sapori! Godetevi il fantastico pasto che avete preparato, abbinato a un bicchiere di buon vino. Vi guideremo attraverso le sfumature della produzione vinicola italiana, esplorando come i diversi territori, i climi e i vitigni influenzino i sapori e gli aromi di ogni vino. Imparate ad abbinare i vostri piatti fatti in casa con il bicchiere di vino perfetto e assaporate i sapori dell'Italia.
-        </p>
+        <p>Corso di cucina della Nonna! Nell'accogliente cucina di Nonna Maria, preparerete un autentico pasto italiano con i prodotti del mercato. Avrete l'opportunità di scegliere i piatti classici italiani che desiderate imparare, con Nonna Maria che vi guiderà in ogni fase, condividendo la sua passione per la cucina e le sue storie accattivanti sul patrimonio culinario del Cilento. Imparerete a fare la pasta da zero e altre specialità italiane, scoprendo le radici della Dieta Mediterranea, che è nata proprio in questa regione.</p>
+        <p>Assaporate i sapori! Godetevi il fantastico pasto che avete preparato, abbinato a un bicchiere di buon vino. Vi guideremo attraverso le sfumature della produzione vinicola italiana, esplorando come i diversi territori, i climi e i vitigni influenzino i sapori e gli aromi di ogni vino. Imparate ad abbinare i vostri piatti fatti in casa con il bicchiere di vino perfetto e assaporate i sapori dell'Italia.</p>
         </div>
         </details>
     media: |
@@ -73,41 +63,27 @@ experiences:
       it: "/esperienze/tour-gastronomico"
     text:
       en: |
-        Imagine yourself strolling through charming villages, where time seems to slow down and the pace of life is dictated by the sun and the seasons. Picture yourself surrounded by the warmth of the Italian people, sharing stories and laughter over glasses of locally-produced wine. Envision yourself exploring hidden corners of ancient passageways. We'll pause in characteristic piazzas, where you can relax at historic cafes and enjoy a prosecco or spritz for a typical italian aperitivo.<br>
-        <br>
-        This is the experience we offer you - an immersive journey into the heart of Italy, where you'll connect with local artisans, discover the secrets of the Mediterranean Diet, and savor the flavors of this unspoiled region.<br>
-        <br>
+        <p>Imagine yourself strolling through charming villages, where time seems to slow down and the pace of life is dictated by the sun and the seasons. Picture yourself surrounded by the warmth of the Italian people, sharing stories and laughter over glasses of locally-produced wine. Envision yourself exploring hidden corners of ancient passageways. We'll pause in characteristic piazzas, where you can relax at historic cafes and enjoy a prosecco or spritz for a typical italian aperitivo.</p>
+        <p>This is the experience we offer you - an immersive journey into the heart of Italy, where you'll connect with local artisans, discover the secrets of the Mediterranean Diet, and savor the flavors of this unspoiled region.</p>
         <details>
         <summary>Read more...</summary>
         <div class='content'>
-        <p>
-        We'll take you beyond the typical tourist trail, introducing you to the passionate people who cultivate and craft Cilento's unique ingredients, visit family-run farms producing creamy mozzarella di bufala, sun-dried figs, artisanal cheeses and meats and many more treasures this area has to offer.<br>
-        <br>
-        Explore the vineyards of Cilento, meeting local winemakers and savoring their exquisite wines, learning about the unique terroir and winemaking traditions of this area.<br>
-        <br>
-        And what better way to end your journey than with a fun and delicious pizza night with our family at a local pizzeria? Share stories, laughter, and create unforgettable memories.<br>
-        <br>
-        This is more than just a tour; it's an authentic encounter with the people, traditions, and flavors of Cilento.
-        </p>
+        <p>We'll take you beyond the typical tourist trail, introducing you to the passionate people who cultivate and craft Cilento's unique ingredients, visit family-run farms producing creamy mozzarella di bufala, sun-dried figs, artisanal cheeses and meats and many more treasures this area has to offer.</p>
+        <p>Explore the vineyards of Cilento, meeting local winemakers and savoring their exquisite wines, learning about the unique terroir and winemaking traditions of this area.</p>
+        <p>And what better way to end your journey than with a fun and delicious pizza night with our family at a local pizzeria? Share stories, laughter, and create unforgettable memories.</p>
+        <p>This is more than just a tour; it's an authentic encounter with the people, traditions, and flavors of Cilento.</p>
         </div>
         </details>
       it: |
-        Immaginatevi a passeggiare in villaggi incantevoli, dove il tempo sembra rallentare e il ritmo della vita è dettato dal sole e dalle stagioni. Immaginatevi circondati dal calore del popolo italiano, a condividere storie e risate davanti a bicchieri di vino di produzione locale. Immaginatevi di esplorare angoli nascosti dell'antico. Ci fermeremo nelle piazze caratteristiche, dove potrete rilassarvi nei caffè storici e sorseggiare un prosecco o uno spritz per un tipico aperitivo italiano.<br>
-        <br>
-        Questa è l'esperienza che vi offriamo: un viaggio immersivo nel cuore dell'Italia, dove entrerete in contatto con gli artigiani locali, scoprirete i segreti della Dieta Mediterranea e assaporerete i sapori di questa regione incontaminata.<br>
-        <br>
+        <p>Immaginatevi a passeggiare in villaggi incantevoli, dove il tempo sembra rallentare e il ritmo della vita è dettato dal sole e dalle stagioni. Immaginatevi circondati dal calore del popolo italiano, a condividere storie e risate davanti a bicchieri di vino di produzione locale. Immaginatevi di esplorare angoli nascosti dell'antico. Ci fermeremo nelle piazze caratteristiche, dove potrete rilassarvi nei caffè storici e sorseggiare un prosecco o uno spritz per un tipico aperitivo italiano.</p>
+        <p>Questa è l'esperienza che vi offriamo: un viaggio immersivo nel cuore dell'Italia, dove entrerete in contatto con gli artigiani locali, scoprirete i segreti della Dieta Mediterranea e assaporerete i sapori di questa regione incontaminata.</p>
         <details>
         <summary>Read more...</summary>
         <div class='content'>
-        <p>
-        Vi porteremo oltre il tipico percorso turistico, presentandovi le persone appassionate che coltivano e producono gli ingredienti unici del Cilento, visitando le aziende agricole a conduzione familiare che producono la cremosa mozzarella di bufala, i fichi secchi, i formaggi e le carni artigianali e molti altri tesori che questa zona ha da offrire.<br>
-        <br>
-        Esplorate i vigneti del Cilento, incontrando i viticoltori locali e assaporando i loro vini squisiti, imparando a conoscere il terroir unico e le tradizioni enologiche di questa zona.<br>
-        <br>
-        E quale modo migliore di concludere il viaggio se non con una divertente e deliziosa serata pizza con la nostra famiglia in una pizzeria locale? Condividete storie, risate e create ricordi indimenticabili.<br>
-        <br>
-        Questo è più di un semplice tour: è un incontro autentico con la gente, le tradizioni e i sapori del Cilento.
-        </p>
+        <p>Vi porteremo oltre il tipico percorso turistico, presentandovi le persone appassionate che coltivano e producono gli ingredienti unici del Cilento, visitando le aziende agricole a conduzione familiare che producono la cremosa mozzarella di bufala, i fichi secchi, i formaggi e le carni artigianali e molti altri tesori che questa zona ha da offrire.</p>
+        <p>Esplorate i vigneti del Cilento, incontrando i viticoltori locali e assaporando i loro vini squisiti, imparando a conoscere il terroir unico e le tradizioni enologiche di questa zona.</p>
+        <p>E quale modo migliore di concludere il viaggio se non con una divertente e deliziosa serata pizza con la nostra famiglia in una pizzeria locale? Condividete storie, risate e create ricordi indimenticabili.</p>
+        <p>Questo è più di un semplice tour: è un incontro autentico con la gente, le tradizioni e i sapori del Cilento.</p>
         </div>
         </details>
     media: |

@@ -57,7 +57,7 @@ const { d } = useDataTranslations(lang);
                           </a>
                         }
 
-                        <p class="small-text"><FormatText text={d(experience.text)!} /></p>
+                        <FormatText text={d(experience.text)!} />
                     </div>
                 </div>
             </FadeIn>
@@ -94,13 +94,6 @@ const { d } = useDataTranslations(lang);
     :global(details) {
         width: 100%;
         box-sizing: border-box;
-    }
-    :global(details p,a) {
-        font-size: 1.2rem;
-
-        @media (max-width: 768px) {
-            font-size: 1rem;
-        }
     }
 
     .columns-experiences {
@@ -139,6 +132,16 @@ const { d } = useDataTranslations(lang);
 
         text-align: center;
         max-width: 80%;
+    }
+    :global(.column-details p, .column-details a, .column-details li) {
+        font-size: 1.3rem;
+
+        @media (max-width: 768px) {
+            font-size: 1.1rem;
+        }
+    }
+    :global(.column-details details) {
+        margin-top: 1rem;
     }
 </style>
 
