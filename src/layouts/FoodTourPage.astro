@@ -1,0 +1,38 @@
+---
+import fs from 'fs';
+import yaml from 'js-yaml';
+
+interface FoodTourPage {
+    title: Record<string, string>;
+    description: Record<string, string>;
+}
+
+let foodTourPage: FoodTourPage | undefined = undefined;
+try {
+    foodTourPage = yaml.load(fs.readFileSync('oreste/food-tour.yaml', 'utf8')) as FoodTourPage;
+} catch (e) {
+    console.log(e);
+    throw e;
+}
+
+import Layout from "@layouts/Layout.astro";
+
+import FadeIn from "@components/FadeIn.astro";
+import FormatText from "@components/FormatText.astro";
+import PageSection from "@components/PageSection.astro";
+
+import { getLangFromUrl, useTranslations, useDataTranslations } from '@i18n/utils';
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+const { d } = useDataTranslations(lang);
+---
+
+<Layout title={d(foodTourPage.title)} description={d(foodTourPage.description)}>
+    <div class="top-spacer"></div>
+
+    <PageSection>
+        <FadeIn>
+            <h2>{d(foodTourPage.title)}</h2>
+        </FadeIn>
+    </PageSection>
+</Layout>

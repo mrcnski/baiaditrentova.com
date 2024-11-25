@@ -27,6 +27,9 @@ experiences:
   - title:
       en: "Cilento Culinary Escape: Cook with Nonna Maria"
       it: "Fuga culinaria nel Cilento: Cucinare con Nonna Maria"
+    link:
+      en: "/en/experiences/cooking-class"
+      it: "/esperienze/corso-di-cucina"
     text:
       en: |
         Discover the heart of Cilento with a unique culinary adventure. Your day begins with an exciting challenge: navigating the local market like a true local, imagine strolling through a vibrant Italian market, surrounded by the fragrant aroma of fresh herbs and ripe tomatoes! Armed with Nonna Maria's  shopping list, handwritten in Italian with tips on what to look for and where to find the best ingredients, you'll venture out to gather fresh, seasonal products.<br>
@@ -65,6 +68,9 @@ experiences:
   - title:
       en: Experience the True Heart of Italy in Cilento
       it: Scopri il Vero Cuore dell'Italia nel Cilento
+    link:
+      en: "/en/experiences/food-tour"
+      it: "/esperienze/tour-gastronomico"
     text:
       en: |
         Imagine yourself strolling through charming villages, where time seems to slow down and the pace of life is dictated by the sun and the seasons. Picture yourself surrounded by the warmth of the Italian people, sharing stories and laughter over glasses of locally-produced wine. Envision yourself exploring hidden corners of ancient passageways. We'll pause in characteristic piazzas, where you can relax at historic cafes and enjoy a prosecco or spritz for a typical italian aperitivo.<br>

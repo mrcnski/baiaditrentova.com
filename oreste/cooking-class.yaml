@@ -1,0 +1,10 @@
+# Description: This file contains the experiences information for the cooking class.
+#
+# Images are found in the /src/assets/images directory.
+
+title:
+  en: Cooking Class
+  it: Corso di Cucina
+description:
+  en: Discover the heart of Cilento with a unique culinary adventure.
+  it: Scoprite il cuore del Cilento con un'avventura culinaria unica.

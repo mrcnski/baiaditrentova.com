@@ -1,15 +1,12 @@
 :root {
-  --blue: #0086BF;
-  --orange: #d27b35;
-  --brown: #887860;
-  --brown-trans: rgba(136, 120, 96, 0.3);
-  --brown-dk: #554A37;
+    --blue: #0086BF;
+    --orange: #d27b35;
+    --brown: #887860;
+    --brown-trans: rgba(136, 120, 96, 0.3);
+    --brown-dk: #554A37;
 
-  --white-bg: #F5FAFF;
-  --gray-bg: #f4efec;
-
-  --font-size-important: 1.2rem;
-  --font-size-base: 1rem;
+    --white-bg: #F5FAFF;
+    --gray-bg: #f4efec;
 }
 
 .lato-light {
@@ -82,26 +79,27 @@ h3 {
 }
 
 a {
-  color: var(--blue);
+    color: var(--blue);
+    text-decoration: none;
 }
 
 p, li {
-  max-width: 60ch;
+    max-width: 60ch;
 
-  font-size: 1.5em;
-  font-weight: 300;
+    font-size: 1.5rem;
+    font-weight: 300;
 
-  @media (max-width: 768px) {
-    font-size: 1.25rem;
-  }
+    @media (max-width: 768px) {
+        font-size: 1.25rem;
+    }
 }
 
 .small-text {
-  font-size: 1.3rem;
+    font-size: 1.3rem;
 
-  @media (max-width: 768px) {
-      font-size: 1.1rem;
-  }
+    @media (max-width: 768px) {
+        font-size: 1.1rem;
+    }
 }
 
 img, svg {

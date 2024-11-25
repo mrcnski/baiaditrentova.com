@@ -1,0 +1,10 @@
+# Description: This file contains the experiences information for the food tour.
+#
+# Images are found in the /src/assets/images directory.
+
+title:
+  en: Food Tour
+  it: Tour Gastronomico
+description:
+  en: Experience the True Heart of Italy in Cilento
+  it: Scopri il Vero Cuore dell'Italia nel Cilento

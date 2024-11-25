@@ -1,0 +1,38 @@
+---
+import fs from 'fs';
+import yaml from 'js-yaml';
+
+interface CookingClassPage {
+    title: Record<string, string>;
+    description: Record<string, string>;
+}
+
+let cookingClassPage: CookingClassPage | undefined = undefined;
+try {
+    cookingClassPage = yaml.load(fs.readFileSync('oreste/cooking-class.yaml', 'utf8')) as CookingClassPage;
+} catch (e) {
+    console.log(e);
+    throw e;
+}
+
+import Layout from "@layouts/Layout.astro";
+
+import FadeIn from "@components/FadeIn.astro";
+import FormatText from "@components/FormatText.astro";
+import PageSection from "@components/PageSection.astro";
+
+import { getLangFromUrl, useTranslations, useDataTranslations } from '@i18n/utils';
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+const { d } = useDataTranslations(lang);
+---
+
+<Layout title={d(cookingClassPage.title)} description={d(cookingClassPage.description)}>
+    <div class="top-spacer"></div>
+
+    <PageSection>
+        <FadeIn>
+            <h2>{d(cookingClassPage.title)}</h2>
+        </FadeIn>
+    </PageSection>
+</Layout>

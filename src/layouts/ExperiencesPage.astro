@@ -4,6 +4,7 @@ import yaml from 'js-yaml';
 
 interface Experience {
     title: Record<string, string>;
+    link?: string;
     text: Record<string, string>;
     media?: string;
 }
@@ -50,6 +51,11 @@ const { d } = useDataTranslations(lang);
 
                     <div class="column-details">
                         <h3><FormatText text={d(experience.title)!} /></h3>
+                        {experience.link &&
+                          <a href={d(experience.link)}>
+                              {t("experiences.click")}
+                          </a>
+                        }
 
                         <p class="small-text"><FormatText text={d(experience.text)!} /></p>
                     </div>
@@ -88,10 +94,8 @@ const { d } = useDataTranslations(lang);
     :global(details) {
         width: 100%;
         box-sizing: border-box;
-
-        margin-top: 0.5em;
     }
-    :global(details p) {
+    :global(details p,a) {
         font-size: 1.2rem;
 
         @media (max-width: 768px) {

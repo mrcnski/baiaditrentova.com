@@ -20,6 +20,14 @@ export const paths = {
         it: 'esperienze',
         en: 'en/experiences',
     },
+    cookingClass: {
+        it: 'esperienze/corso-di-cucina',
+        en: 'en/experiences/cooking-class',
+    },
+    foodTour: {
+        it: 'esperienze/tour-gastronomico',
+        en: 'en/experiences/food-tour',
+    },
     reviews: {
         it: 'recensioni',
         en: 'en/reviews',
@@ -47,6 +55,7 @@ export const ui = {
 
         "experiences.title": "Our Experiences",
         "experiences.description": "We offer unique experiences to make your stay even more special. From tours to cooking classes, we have something for everyone. Make your stay unforgettable!",
+        "experiences.click": "Click for details / booking!",
 
         "rooms.title": "Our Rooms",
         "rooms.welcome.header": "Buongiorno",
@@ -81,6 +90,7 @@ export const ui = {
 
         "experiences.title": "Le Nostre Esperienze",
         "experiences.description": "Offriamo esperienze uniche per rendere il tuo soggiorno ancora più speciale. Dai tour alle lezioni di cucina, abbiamo qualcosa per tutti. Rendi il tuo soggiorno indimenticabile!",
+        "experiences.click": "Clicca per dettagli / prenotazione!",
 
         "rooms.title": "Le nostre Camere",
         "rooms.welcome.header": "Buongiorno",
