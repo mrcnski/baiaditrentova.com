@@ -3,6 +3,7 @@ import fs from 'fs';
 import yaml from 'js-yaml';
 
 interface CookingClassPage {
+    images: string[];
 }
 
 let cookingClassPage: CookingClassPage | undefined = undefined;
@@ -33,18 +34,51 @@ const translatePath = useTranslatedPath(lang);
         <FadeIn>
             <h2>{t("cooking-class.title")}</h2>
 
-            <div class="review">
+            <p class="review">
                 <i>Our group had four evening cooking lessons, taught by lovely Maria and assisted by the ever effervescent Adriana. We prepared and cooked a variety of foods including pasta, pizza, stuffed artichokes, eggplant, zuchini blossoms, desserts, and other dishes. These evenings were so lively and fun - learning to cook Italian style, drinking wine, laughing, sharing stories and, of course, getting to eat everything we cooked. Our thanks go to Maria for her patience as we worked to turn our little fat rolls of pasta dough into the shapes and sizes that she so effortlessly and expertly demonstrated. We were definitely beginners, but practice makes perfect and we planned to try the recipes (and our new skills) upon returning home!</i><br>
                 <span>~ Louise from Colorado</span>
 
                 <a href={translatePath("en/reviews")}>({t("cooking-class.reviews")})</a>
-            </div>
+            </p>
         </FadeIn>
     </PageSection>
 
     <PageSection>
         <FadeIn>
             <h3>{t("cooking-class.intro.title")}</h3>
+
+            <p>
+                {t("cooking-class.intro.description")}
+            </p>
+
+            <FormatText text={t("cooking-class.intro.includes")} />
+        </FadeIn>
+        <FadeIn>
+            <FormatText text={t("cooking-class.intro.prices")} />
+        </FadeIn>
+    </PageSection>
+
+    <PageSection>
+        <FadeIn>
+            <h3>{t("cooking-class.included.title")}</h3>
+
+            <FormatText text={t("cooking-class.included.text")} />
+        </FadeIn>
+    </PageSection>
+
+    <PageSection>
+        <FadeIn>
+            <h3>{t("cooking-class.description.title")}</h3>
+
+            <FormatText text={t("cooking-class.description.text")} />
+        </FadeIn>
+    </PageSection>
+
+    <PageSection>
+        <FadeIn>
+            <h3>{t("cooking-class.notes.title")}</h3>
+
+            <FormatText text={t("cooking-class.notes.text")} />
         </FadeIn>
     </PageSection>
 </Layout>
@@ -52,8 +86,24 @@ const translatePath = useTranslatedPath(lang);
 <style lang="less">
     .review {
         margin-top: 2rem;
-        //margin-left: 4rem;
-        //margin-right: 4rem;
-        width: 75%;
+
+        i {
+            color: gray;
+        }
+    }
+
+    :global(p, li, tr) {
+        font-size: 1.3rem;
+
+        @media (max-width: 768px) {
+            font-size: 1.1rem;
+        }
+    }
+    :global(th) {
+        font-weight: 400;
+        padding-right: 2rem;
+    }
+    :global(td) {
+        font-weight: 300;
     }
 </style>

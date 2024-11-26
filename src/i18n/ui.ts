@@ -55,13 +55,74 @@ export const ui = {
 
         "experiences.title": "Our Experiences",
         "experiences.description": "We offer unique experiences to make your stay even more special. From tours to cooking classes, we have something for everyone. Make your stay unforgettable!",
-        "experiences.click": "Click for details / booking!",
+        "experiences.click": "Click for details!",
 
         "cooking-class.title": "Cooking Class",
         "cooking-class.description": "Learn how to cook traditional Cilento dishes with nonna Maria! Enjoy a fun and interactive cooking class, and then taste the delicious dishes you prepared.",
         "cooking-class.reviews": "See more reviews",
         "cooking-class.intro.title": "Join our Hands-On Cooking Class",
         "cooking-class.intro.description": "Escape the crowds and discover the hidden gem of Cilento. Nestled south of the Amalfi Coast, our cooking classes and food tours offer a more authentic Italian experience. Learn to cook like a local, savor fresh, seasonal ingredients, and relax in the heart of South Italy and discover the secrets of the Mediterranean diet. Create memories that will last a lifetime in this hidden paradise.",
+        "cooking-class.intro.includes": "<h4>This Unforgettable Culinary Experience Includes:</h4><ul><li>Authentic encounters with local people.</li><li>A deeper understanding of Italy’s food and wine culture.</li><li>Unforgettable memories and a new perspective on the Italian way of life.</li></ul>",
+        "cooking-class.intro.prices": "<h4>Prices:</h4>\
+<p style='color: var(--blue)'>Low season (March - April, October)</p>\
+<table>\
+  <tbody>\
+    <tr>\
+      <th scope='row'>1-3 people</th>\
+      <td>€ 130 per person</td>\
+    </tr>\
+    <tr>\
+      <th scope='row'>4-6 people</th>\
+      <td>€ 125 per person</td>\
+    </tr>\
+    <tr>\
+      <th scope='row'>7+ people</th>\
+      <td>€ 120 per person</td>\
+    </tr>\
+  </tbody>\
+</table>\
+<p style='color: var(--blue)'>High season (May - September)</p>\
+<table>\
+  <tbody>\
+    <tr>\
+      <th scope='row'>1-3 people</th>\
+      <td>€ 140 per person</td>\
+    </tr>\
+    <tr>\
+      <th scope='row'>4-6 people</th>\
+      <td>€ 135 per person</td>\
+    </tr>\
+    <tr>\
+      <th scope='row'>7+ people</th>\
+      <td>€ 130 per person</td>\
+    </tr>\
+  </tbody>\
+</table>\
+<p><i>Enjoy the benefits of being guests of our B&B! You'll receive a discount on our cooking class.</i></p>",
+        "cooking-class.included.title": "What's Included",
+        "cooking-class.included.text": "<ul>\
+<li>3/4 hours hands-on cooking class.</li>\
+<li>Nonna’s class will be held in <b>Italian</b>, with live English translation.</li>\
+<li>Fresh ingredients picked by you at the local farmers market.</li>\
+<li>Meal with the dishes made during the class, and other snacks.</li>\
+<li>Beverages, water, fine Italian wine, Limoncello made by Nonna, Neapolitan coffee.</li>\
+<li>Recipes sent by email after the class.</li>\
+<li>Cooking diploma for your hard work!</li>\
+<li>Personalized apron with our logo to take home with you.</li>\
+</ul>",
+        "cooking-class.description.title": "Class Description",
+        "cooking-class.description.text": "<ul>\
+<li><b>Market Adventure:</b> Begin your day navigating the local market like a true local! With Nonna Maria's handwritten Italian shopping list, gather fresh, seasonal ingredients while practicing your Italian and connecting with friendly vendors.</li>\
+<li><b>Cooking with Nonna Maria:</b> In Nonna Maria's cozy kitchen, prepare an authentic Italian meal with your market finds. You'll have the opportunity to choose which classic Italian dishes you'd like to learn, with Nonna Maria guiding you through each step, sharing her passion for cooking and captivating stories of Cilento's culinary heritage. Learn to make pasta from scratch and other Italian specialties, discovering the roots of the Mediterranean Diet, which was born in this very region.</li>\
+<li><b>Our Intimate Wine Experience:</b> To ensure a personalized and exclusive experience, our tastings are held in a small, intimate setting with a maximum of 10 guests. Our carefully curated wine collection offers a diverse selection of Italian wines, highlighting the unique characteristics of each region and grape varietal. We rotate our selection throughout the year, offering you the opportunity to discover new favorites and explore the nuances of Italian winemaking. During your tasting, you'll learn how different territories, climates, and sun exposures influence the flavors and aromas of each wine. We'll also guide you through the art of pairing, demonstrating how different wines complement and enhance the flavors of various dishes.</li>\
+</ul>",
+        "cooking-class.notes.title": "Important Notes",
+        "cooking-class.notes.text": "<ul>\
+<li><b>Dietary Options:</b> A vegetarian or other dietary restrictions option is available upon request at the time of booking.</li>\
+<li><b>Food Allergies:</b> Please inform us of any food allergies when booking your experience.</li>\
+<li><b>Group Activity:</b> This activity is designed as a shared group experience. For private classes, please contact us.</li>\
+<li><b>Accessibility:</b> We are pleased to offer full accessibility for wheelchair users. Please contact us in advance so we can ensure a comfortable and enjoyable experience for you.</li>\
+</ul>",
 
         "food-tour.title": "Food Tour",
         "food-tour.description": "Discover the flavors of Cilento with our food tour! Visit local producers, taste traditional products, and enjoy a delicious lunch in a typical restaurant.",
@@ -99,13 +160,74 @@ export const ui = {
 
         "experiences.title": "Le Nostre Esperienze",
         "experiences.description": "Offriamo esperienze uniche per rendere il tuo soggiorno ancora più speciale. Dai tour alle lezioni di cucina, abbiamo qualcosa per tutti. Rendi il tuo soggiorno indimenticabile!",
-        "experiences.click": "Clicca per dettagli / prenotazione!",
+        "experiences.click": "Clicca per dettagli!",
 
         "cooking-class.title": "Corso di Cucina",
         "cooking-class.description": "Impara a cucinare piatti tradizionali del Cilento con la nonna Maria! Goditi un corso di cucina divertente e interattivo, e poi assaggia i deliziosi piatti che hai preparato.",
         "cooking-class.reviews": "Vedi altre recensioni",
         "cooking-class.intro.title": "Unisciti al nostro Corso di Cucina Pratico",
         "cooking-class.intro.description": "Scappa dalla folla e scopri la gemma nascosta del Cilento. Incastonato a sud della Costiera Amalfitana, i nostri corsi di cucina e tour gastronomici offrono un'esperienza italiana più autentica. Impara a cucinare come un locale, assapora ingredienti freschi e di stagione, e rilassati nel cuore del Sud Italia e scopri i segreti della dieta mediterranea. Crea ricordi che dureranno per sempre in questo paradiso nascosto.",
+        "cooking-class.intro.includes": "<h4>Questa Indimenticabile Esperienza Culinaria Include:</h4><ul><li>Incontri autentici con persone del luogo.</li><li>Una comprensione più profonda della cultura enogastronomica italiana.</li><li>Ricordi indimenticabili e una nuova prospettiva sullo stile di vita italiano.</li></ul>",
+        "cooking-class.intro.prices": "<h4>Prezzi:</h4>\
+<p style='color: var(--blue)'>Bassa stagione (Marzo - Aprile, Ottobre)</p>\
+<table>\
+  <tbody>\
+    <tr>\
+      <th scope='row'>1-3 persone</th>\
+      <td>€ 130 a persona</td>\
+    </tr>\
+    <tr>\
+      <th scope='row'>4-6 persone</th>\
+      <td>€ 125 a persona</td>\
+    </tr>\
+    <tr>\
+      <th scope='row'>7+ persone</th>\
+      <td>€ 120 a persona</td>\
+    </tr>\
+  </tbody>\
+</table>\
+<p style='color: var(--blue)'>Alta stagione (Maggio - Settembre)</p>\
+<table>\
+  <tbody>\
+    <tr>\
+      <th scope='row'>1-3 persone</th>\
+      <td>€ 140 a persona</td>\
+    </tr>\
+    <tr>\
+      <th scope='row'>4-6 persone</th>\
+      <td>€ 135 a persona</td>\
+    </tr>\
+    <tr>\
+      <th scope='row'>7+ persone</th>\
+      <td>€ 130 a persona</td>\
+    </tr>\
+  </tbody>\
+</table>\
+<p><i>Goditi i vantaggi di essere ospiti del nostro B&B! Riceverai uno sconto sul nostro corso di cucina.</i></p>",
+        "cooking-class.included.title": "Cosa è Incluso",
+        "cooking-class.included.text": "<ul>\
+<li>Corso di cucina pratico di 3/4 ore.</li>\
+<li>Il corso della nonna sarà tenuto in <b>italiano</b>, con traduzione simultanea in inglese.</li>\
+<li>Ingredienti freschi raccolti da te al mercato contadino locale.</li>\
+<li>Pasto con i piatti preparati durante il corso, e altri snack.</li>\
+<li>Bevande, acqua, vino italiano di qualità, Limoncello fatto dalla nonna, caffè napoletano.</li>\
+<li>Ricette inviate via email dopo il corso.</li>\
+<li>Diploma di cucina per il tuo duro lavoro!</li>\
+<li>Grembiule personalizzato con il nostro logo da portare a casa con te.</li>\
+</ul>",
+        "cooking-class.description.title": "Descrizione del Corso",
+        "cooking-class.description.text": "<ul>\
+<li><b>Avventura al Mercato:</b> Inizia la tua giornata navigando il mercato locale come un vero locale! Con la lista della spesa scritta a mano della nonna Maria, raccogli ingredienti freschi e di stagione mentre pratichi il tuo italiano e ti colleghi con i venditori amichevoli.</li>\
+<li><b>Cucinare con la Nonna Maria:</b> Nella cucina accogliente della nonna Maria, prepara un pasto italiano autentico con i tuoi acquisti al mercato. Avrai l'opportunità di scegliere quali piatti classici italiani desideri imparare, con la nonna Maria che ti guida attraverso ogni passaggio, condividendo la sua passione per la cucina e affascinanti storie del patrimonio culinario del Cilento. Impara a fare la pasta fatta in casa e altre specialità italiane, scoprendo le radici della Dieta Mediterranea, nata proprio in questa regione.</li>\
+<li><b>La Nostra Intima Esperienza del Vino:</b> Per garantire un'esperienza personalizzata ed esclusiva, le nostre degustazioni si svolgono in un ambiente piccolo e intimo con un massimo di 10 ospiti. La nostra collezione di vini accuratamente selezionata offre una vasta selezione di vini italiani, mettendo in evidenza le caratteristiche uniche di ciascuna regione e varietà di uva. Ruotiamo la nostra selezione durante l'anno, offrendoti l'opport unità di scoprire nuovi preferiti ed esplorare le sfumature della produzione vinicola italiana. Durante la tua degustazione, imparerai come i diversi territori, climi e esposizioni al sole influenzano i sapori e gli aromi di ciascun vino. Ti guideremo anche nell'arte dell'abbinamento, dimostrando come i diversi vini completino e esaltino i sapori di vari piatti.</li>\
+</ul>",
+        "cooking-class.notes.title": "Note Importanti",
+        "cooking-class.notes.text": "<ul>\
+<li><b>Opzioni Dietetiche:</b> È disponibile una opzione vegetariana o altre restrizioni alimentari su richiesta al momento della prenotazione.</li>\
+<li><b>Allergie Alimentari:</b> Si prega di informarci di eventuali allergie alimentari al momento della prenotazione dell'esperienza.</li>\
+<li><b>Attività di Gruppo:</b> Questa attività è progettata come un'esperienza di gruppo condivisa. Per lezioni private, si prega di contattarci.</li>\
+<li><b>Accessibilità:</b> Siamo lieti di offrire piena accessibilità per gli utenti di sedia a rotelle. Si prega di contattarci in anticipo in modo da poter garantire un'esperienza confortevole e piacevole per te.</li>\
+</ul>",
 
         "food-tour.title": "Tour Gastronomico",
         "food-tour.description": "Scopri i sapori del Cilento con il nostro tour gastronomico! Visita produttori locali, assaggia prodotti tradizionali e goditi un delizioso pranzo in un ristorante tipico.",
