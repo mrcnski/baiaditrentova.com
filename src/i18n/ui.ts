@@ -65,7 +65,7 @@ export const ui = {
         "cooking-class.intro.description": "Escape the crowds and discover the hidden gem of Cilento. Nestled south of the Amalfi Coast, our cooking classes and food tours offer a more authentic Italian experience. Learn to cook like a local, savor fresh, seasonal ingredients, and relax in the heart of South Italy and discover the secrets of the Mediterranean diet. Create memories that will last a lifetime in this hidden paradise.",
         "cooking-class.intro.includes": "<h4>This Unforgettable Culinary Experience Includes:</h4><ul><li>Authentic encounters with local people.</li><li>A deeper understanding of Italy’s food and wine culture.</li><li>Unforgettable memories and a new perspective on the Italian way of life.</li></ul>",
         "cooking-class.intro.prices": "<h4>Prices:</h4>\
-<p style='color: var(--blue)'>Low season (March - April, October)</p>\
+<p style='color: var(--orange)'>Low season (March - April, October)</p>\
 <table>\
   <tbody>\
     <tr>\
@@ -82,7 +82,7 @@ export const ui = {
     </tr>\
   </tbody>\
 </table>\
-<p style='color: var(--blue)'>High season (May - September)</p>\
+<p style='color: var(--orange)'>High season (May - September)</p>\
 <table>\
   <tbody>\
     <tr>\
@@ -103,7 +103,7 @@ export const ui = {
         "cooking-class.included.title": "What's Included",
         "cooking-class.included.text": "<ul>\
 <li>3/4 hours hands-on cooking class.</li>\
-<li>Nonna’s class will be held in <b>Italian</b>, with live English translation.</li>\
+<li>Nonna’s class will be held in <strong>Italian</strong>, with live English translation.</li>\
 <li>Fresh ingredients picked by you at the local farmers market.</li>\
 <li>Meal with the dishes made during the class, and other snacks.</li>\
 <li>Beverages, water, fine Italian wine, Limoncello made by Nonna, Neapolitan coffee.</li>\
@@ -171,7 +171,7 @@ export const ui = {
         "cooking-class.intro.description": "Scappa dalla folla e scopri la gemma nascosta del Cilento. Incastonato a sud della Costiera Amalfitana, i nostri corsi di cucina e tour gastronomici offrono un'esperienza italiana più autentica. Impara a cucinare come un locale, assapora ingredienti freschi e di stagione, e rilassati nel cuore del Sud Italia e scopri i segreti della dieta mediterranea. Crea ricordi che dureranno per sempre in questo paradiso nascosto.",
         "cooking-class.intro.includes": "<h4>Questa Indimenticabile Esperienza Culinaria Include:</h4><ul><li>Incontri autentici con persone del luogo.</li><li>Una comprensione più profonda della cultura enogastronomica italiana.</li><li>Ricordi indimenticabili e una nuova prospettiva sullo stile di vita italiano.</li></ul>",
         "cooking-class.intro.prices": "<h4>Prezzi:</h4>\
-<p style='color: var(--blue)'>Bassa stagione (Marzo - Aprile, Ottobre)</p>\
+<p style='color: var(--orange)'>Bassa stagione (Marzo - Aprile, Ottobre)</p>\
 <table>\
   <tbody>\
     <tr>\
@@ -188,7 +188,7 @@ export const ui = {
     </tr>\
   </tbody>\
 </table>\
-<p style='color: var(--blue)'>Alta stagione (Maggio - Settembre)</p>\
+<p style='color: var(--orange)'>Alta stagione (Maggio - Settembre)</p>\
 <table>\
   <tbody>\
     <tr>\
@@ -209,7 +209,7 @@ export const ui = {
         "cooking-class.included.title": "Cosa è Incluso",
         "cooking-class.included.text": "<ul>\
 <li>Corso di cucina pratico di 3/4 ore.</li>\
-<li>Il corso della nonna sarà tenuto in <b>italiano</b>, con traduzione simultanea in inglese.</li>\
+<li>Il corso della nonna sarà tenuto in <strong>italiano</strong>, con traduzione simultanea in inglese.</li>\
 <li>Ingredienti freschi raccolti da te al mercato contadino locale.</li>\
 <li>Pasto con i piatti preparati durante il corso, e altri snack.</li>\
 <li>Bevande, acqua, vino italiano di qualità, Limoncello fatto dalla nonna, caffè napoletano.</li>\
