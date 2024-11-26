@@ -42,6 +42,7 @@ export const paths = {
 export const ui = {
     en: {
         'site.name': 'B&B Baia di Trentova',
+        'site.book': "Reserve",
 
         'nav.rooms': 'Our Rooms',
         'nav.experiences': 'Experiences',
@@ -147,6 +148,7 @@ export const ui = {
     },
     it: {
         'site.name': 'B&B Baia di Trentova',
+        'site.book': 'Prenota',
 
         'nav.rooms': 'Camere',
         'nav.experiences': 'Esperienze',

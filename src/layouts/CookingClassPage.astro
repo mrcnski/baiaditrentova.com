@@ -19,6 +19,7 @@ import Layout from "@layouts/Layout.astro";
 import FadeIn from "@components/FadeIn.astro";
 import FormatText from "@components/FormatText.astro";
 import PageSection from "@components/PageSection.astro";
+import BookButton from "@components/BookButton.astro";
 
 import { getLangFromUrl, useTranslations, useDataTranslations, useTranslatedPath } from '@i18n/utils';
 const lang = getLangFromUrl(Astro.url);
@@ -26,6 +27,8 @@ const t = useTranslations(lang);
 const { d } = useDataTranslations(lang);
 const translatePath = useTranslatedPath(lang);
 ---
+
+<BookButton />
 
 <Layout title={t("cooking-class.title")} description={t("cooking-class.description")}>
     <div class="top-spacer"></div>
