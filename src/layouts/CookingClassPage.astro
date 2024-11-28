@@ -18,6 +18,7 @@ import Layout from "@layouts/Layout.astro";
 
 import FadeIn from "@components/FadeIn.astro";
 import FormatText from "@components/FormatText.astro";
+import SubNavBar from "@components/SubNavBar.astro";
 import PageSection from "@components/PageSection.astro";
 import CookingClassButton from "@components/CookingClassButton.astro";
 
@@ -28,14 +29,15 @@ const { d } = useDataTranslations(lang);
 const translatePath = useTranslatedPath(lang);
 ---
 
-<CookingClassButton />
-
 <Layout title={t("cooking-class.title")} description={t("cooking-class.description")}>
+    <CookingClassButton />
+    <SubNavBar />
+
     <div class="top-spacer"></div>
 
     <PageSection>
         <FadeIn>
-            <h2>{t("cooking-class.title")}</h2>
+            <h2 id="cooking-class">{t("cooking-class.title")}</h2>
 
             <div class="columns-experiences" data-reverse={"yes"} >
                 <div class="column-images">
@@ -90,6 +92,14 @@ const translatePath = useTranslatedPath(lang);
             <h3>{t("cooking-class.notes.title")}</h3>
 
             <FormatText text={t("cooking-class.notes.text")} />
+        </FadeIn>
+    </PageSection>
+
+    <PageSection>
+        <FadeIn>
+            <h2 id="food-tour">{t("food-tour.title")}</h2>
+
+            <p>{t("food-tour.description")}</p>
         </FadeIn>
     </PageSection>
 </Layout>

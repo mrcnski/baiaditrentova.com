@@ -47,6 +47,7 @@ export const ui = {
 
         'nav.rooms': 'Our Rooms',
         'nav.experiences': 'Experiences',
+        'nav.cooking-class': 'Cooking Class',
         'nav.restaurant': 'Restaurant',
         'nav.contact': 'Contact Us / Info',
         'nav.reviews': 'Reviews',
@@ -154,6 +155,7 @@ export const ui = {
 
         'nav.rooms': 'Camere',
         'nav.experiences': 'Esperienze',
+        'nav.cooking-class': 'Corso di Cucina',
         'nav.restaurant': 'Ristorante',
         'nav.contact': 'Contattaci / Info',
         'nav.reviews': 'Recensioni',
