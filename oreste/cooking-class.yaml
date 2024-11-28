@@ -2,3 +2,21 @@
 #
 # Images are found in the /src/assets/images directory.
 
+images:
+  - "cooking-class/1_cooking_gallery.jpeg"
+  - "cooking-class/2_cooking_gallery.jpeg"
+  - "cooking-class/3_cooking_gallery.jpeg"
+  - "cooking-class/4_cooking_gallery.jpeg"
+  - "cooking-class/5_cooking_gallery.jpeg"
+  - "cooking-class/6_cooking_gallery.jpeg"
+  - "cooking-class/7_cooking_gallery.jpeg"
+  - "cooking-class/8_cooking_gallery.jpeg"
+  - "cooking-class/9_cooking_gallery.jpeg"
+  - "cooking-class/10_cooking_gallery.jpeg"
+  - "cooking-class/11_cooking_gallery.jpeg"
+  - "cooking-class/12a_cooking_gallery.jpeg"
+  - "cooking-class/12_cooking_gallery.jpeg"
+  - "cooking-class/13_cooking_gallery.jpeg"
+  - "cooking-class/14_cooking_gallery.jpeg"
+  - "cooking-class/15_cooking_gallery.jpeg"
+  - "cooking-class/16_cooking_gallery.jpeg"

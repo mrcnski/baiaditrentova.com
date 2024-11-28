@@ -1,0 +1,49 @@
+---
+interface Props {
+    name: string;
+    images: string[];
+}
+
+import RelativeSrcImage from "@components/RelativeSrcImage.astro";
+
+const { images, name } = Astro.props;
+---
+
+<div class="gallery"
+    data-flickity='{
+      "imagesLoaded": true,
+      "percentPosition": false,
+      "wrapAround": true,
+      "groupCells": false
+    }'>
+
+    {images.map((image) => (
+        <RelativeSrcImage relativeSrc={image} alt={name} />
+    ))}
+</div>
+
+<style lang="less">
+    .gallery {
+        //background: var(--white-bg);
+    }
+
+    :global(.gallery img) {
+        display: block;
+
+        margin-right: 0.25rem;
+
+        width: 200px;
+        height: 200px;
+
+        object-fit: cover;
+    }
+    /* selected image */
+    :global(.gallery .is-selected) {
+    }
+
+    @media screen and ( max-width: 768px ) {
+        :global(.gallery img) {
+            //height: 400px;
+        }
+    }
+</style>
