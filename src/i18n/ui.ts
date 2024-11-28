@@ -126,6 +126,19 @@ export const ui = {
 <li><b>Group Activity:</b> This activity is designed as a shared group experience. For private classes, please contact us.</li>\
 <li><b>Accessibility:</b> We are pleased to offer full accessibility for wheelchair users. Please contact us in advance so we can ensure a comfortable and enjoyable experience for you.</li>\
 </ul>",
+        "cooking-class.food-tour.title": "Food Tour",
+        "cooking-class.food-tour.description": "\
+<p>Imagine yourself strolling through charming villages, where time seems to slow down and the pace of life is dictated by the sun and the seasons. Picture yourself surrounded by the warmth of the Italian people, sharing stories and laughter over glasses of locally-produced wine. Envision yourself exploring hidden corners of ancient passageways. We'll pause in characteristic piazzas, where you can relax at historic cafes and enjoy a prosecco or spritz for a typical italian aperitivo.</p>\
+<p>This is the experience we offer you - an immersive journey into the heart of Italy, where you'll connect with local artisans, discover the secrets of the Mediterranean Diet, and savor the flavors of this unspoiled region.</p>\
+<details>\
+<summary>Read more...</summary>\
+<div class='content'>\
+<p>We'll take you beyond the typical tourist trail, introducing you to the passionate people who cultivate and craft Cilento's unique ingredients, visit family-run farms producing creamy mozzarella di bufala, sun-dried figs, artisanal cheeses and meats and many more treasures this area has to offer.</p>\
+<p>Explore the vineyards of Cilento, meeting local winemakers and savoring their exquisite wines, learning about the unique terroir and winemaking traditions of this area.</p>\
+<p>And what better way to end your journey than with a fun and delicious pizza night with our family at a local pizzeria? Share stories, laughter, and create unforgettable memories.</p>\
+<p>This is more than just a tour; it's an authentic encounter with the people, traditions, and flavors of Cilento.</p>\
+</div>\
+</details>",
 
         "food-tour.title": "Food Tour",
         "food-tour.description": "Discover the flavors of Cilento with our food tour! Visit local producers, taste traditional products, and enjoy a delicious lunch in a typical restaurant.",
@@ -234,6 +247,19 @@ export const ui = {
 <li><b>Attività di Gruppo:</b> Questa attività è progettata come un'esperienza di gruppo condivisa. Per lezioni private, si prega di contattarci.</li>\
 <li><b>Accessibilità:</b> Siamo lieti di offrire piena accessibilità per gli utenti di sedia a rotelle. Si prega di contattarci in anticipo in modo da poter garantire un'esperienza confortevole e piacevole per te.</li>\
 </ul>",
+        "cooking-class.food-tour.title": "Tour Gastronomico",
+        "cooking-class.food-tour.description": "\
+<p>Immaginatevi a passeggiare in villaggi incantevoli, dove il tempo sembra rallentare e il ritmo della vita è dettato dal sole e dalle stagioni. Immaginatevi circondati dal calore del popolo italiano, a condividere storie e risate davanti a bicchieri di vino di produzione locale. Immaginatevi di esplorare angoli nascosti dell'antico. Ci fermeremo nelle piazze caratteristiche, dove potrete rilassarvi nei caffè storici e sorseggiare un prosecco o uno spritz per un tipico aperitivo italiano.</p>\
+<p>Questa è l'esperienza che vi offriamo: un viaggio immersivo nel cuore dell'Italia, dove entrerete in contatto con gli artigiani locali, scoprirete i segreti della Dieta Mediterranea e assaporerete i sapori di questa regione incontaminata.</p>\
+<details>\
+<summary>Read more...</summary>\
+<div class='content'>\
+<p>Vi porteremo oltre il tipico percorso turistico, presentandovi le persone appassionate che coltivano e producono gli ingredienti unici del Cilento, visitando le aziende agricole a conduzione familiare che producono la cremosa mozzarella di bufala, i fichi secchi, i formaggi e le carni artigianali e molti altri tesori che questa zona ha da offrire.</p>\
+<p>Esplorate i vigneti del Cilento, incontrando i viticoltori locali e assaporando i loro vini squisiti, imparando a conoscere il terroir unico e le tradizioni enologiche di questa zona.</p>\
+<p>E quale modo migliore di concludere il viaggio se non con una divertente e deliziosa serata pizza con la nostra famiglia in una pizzeria locale? Condividete storie, risate e create ricordi indimenticabili.</p>\
+<p>Questo è più di un semplice tour: è un incontro autentico con la gente, le tradizioni e i sapori del Cilento.</p>\
+</div>\
+</details>",
 
         "food-tour.title": "Tour Gastronomico",
         "food-tour.description": "Scopri i sapori del Cilento con il nostro tour gastronomico! Visita produttori locali, assaggia prodotti tradizionali e goditi un delizioso pranzo in un ristorante tipico.",
