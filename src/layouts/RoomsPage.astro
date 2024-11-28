@@ -39,7 +39,7 @@ const { d } = useDataTranslations(lang);
 ---
 
 <Layout title={t("rooms.title")} description={t("rooms.description")}>
-    <div class="rooms-top-spacer"></div>
+    <div class="parallax-header-top-spacer"></div>
     <ParallaxImage relativeSrc={roomsPage.welcomeImage} heading={t("rooms.welcome.header")} description={t("rooms.welcome")} height="60vh" />
 
     <PageSection>
@@ -85,15 +85,6 @@ const { d } = useDataTranslations(lang);
 </Layout>
 
 <style lang="less">
-    /* Synced with navbar-container-outer */
-    .rooms-top-spacer {
-        margin-top: 5rem;
-
-        @media (max-width: 700px) {
-            margin-top: 4rem;
-        }
-    }
-
     .columns-rooms {
         display: flex;
         flex-direction: row;

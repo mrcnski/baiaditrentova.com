@@ -176,3 +176,11 @@ a:focus {
         margin-top: 6rem;
     }
 }
+/* Synced with navbar-container-outer */
+.parallax-header-top-spacer {
+    margin-top: 5rem;
+
+    @media (max-width: 700px) {
+        margin-top: 4rem;
+    }
+}

@@ -2,7 +2,9 @@
 #
 # Images are found in the /src/assets/images directory.
 
-images:
+headerImage: "index/cilento_experiences_2_mod.jpeg"
+
+galleryImages:
   - "cooking-class/1_cooking_gallery.jpeg"
   - "cooking-class/2_cooking_gallery.jpeg"
   - "cooking-class/3_cooking_gallery.jpeg"

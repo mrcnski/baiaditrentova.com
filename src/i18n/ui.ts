@@ -105,7 +105,7 @@ export const ui = {
         "cooking-class.included.title": "What's Included",
         "cooking-class.included.text": "<ul>\
 <li>3/4 hours hands-on cooking class.</li>\
-<li>Nonna’s class will be held in <strong>Italian</strong>, with live English translation.</li>\
+<li>Nonna’s class will be held in <strong>Italian</strong>, with <strong>live English translation</strong>.</li>\
 <li>Fresh ingredients picked by you at the local farmers market.</li>\
 <li>Meal with the dishes made during the class, and other snacks.</li>\
 <li>Beverages, water, fine Italian wine, Limoncello made by Nonna, Neapolitan coffee.</li>\
@@ -226,7 +226,7 @@ export const ui = {
         "cooking-class.included.title": "Cosa è Incluso",
         "cooking-class.included.text": "<ul>\
 <li>Corso di cucina pratico di 3/4 ore.</li>\
-<li>Il corso della nonna sarà tenuto in <strong>italiano</strong>, con traduzione simultanea in inglese.</li>\
+<li>Il corso della nonna sarà tenuto in <strong>italiano</strong>, con <strong>traduzione simultanea in inglese</strong>.</li>\
 <li>Ingredienti freschi raccolti da te al mercato contadino locale.</li>\
 <li>Pasto con i piatti preparati durante il corso, e altri snack.</li>\
 <li>Bevande, acqua, vino italiano di qualità, Limoncello fatto dalla nonna, caffè napoletano.</li>\

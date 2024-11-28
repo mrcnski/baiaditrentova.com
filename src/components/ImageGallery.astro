@@ -9,7 +9,7 @@ import RelativeSrcImage from "@components/RelativeSrcImage.astro";
 const { images, name } = Astro.props;
 ---
 
-<div class="gallery"
+<div class="image-gallery"
     data-flickity='{
       "imagesLoaded": true,
       "percentPosition": false,
@@ -23,11 +23,11 @@ const { images, name } = Astro.props;
 </div>
 
 <style lang="less">
-    .gallery {
+    .image-gallery {
         //background: var(--white-bg);
     }
 
-    :global(.gallery img) {
+    :global(.image-gallery img) {
         display: block;
 
         margin-right: 0.25rem;
@@ -38,11 +38,11 @@ const { images, name } = Astro.props;
         object-fit: cover;
     }
     /* selected image */
-    :global(.gallery .is-selected) {
+    :global(.image-gallery .is-selected) {
     }
 
     @media screen and ( max-width: 768px ) {
-        :global(.gallery img) {
+        :global(.image-gallery img) {
             //height: 400px;
         }
     }

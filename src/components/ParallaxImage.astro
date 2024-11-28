@@ -4,6 +4,7 @@
 interface Props {
     relativeSrc: string;
     heading?: string;
+    headingId?: string;
     description?: string;
     height?: string;
     id?: string;
@@ -16,7 +17,7 @@ import { getLangFromUrl, useTranslations } from '@i18n/utils';
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 
-let { relativeSrc, heading, description, height = "100vh", id } = Astro.props;
+let { relativeSrc, heading, headingId, description, height = "100vh", id } = Astro.props;
 
 // Make sure the ID doesn't start with a number.
 if (!id) {
@@ -31,7 +32,7 @@ if (!id) {
         <RelativeSrcImage id={id} classes={`parallax-img ${(description) && "parallax-img-filter"}`} relativeSrc={relativeSrc} alt={heading || t("site.name")} />
 
         <ParallaxFadeIn>
-            {(heading) && <h1 class="parallax-heading">{heading}</h1>}
+            {(heading) && <h1 id={headingId} class="parallax-heading">{heading}</h1>}
             {(description) && <p class="parallax-description">{description}</p>}
         </ParallaxFadeIn>
     </div>
