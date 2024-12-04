@@ -12,6 +12,8 @@ const t = useTranslations(lang);
 ---
 
 <Layout title={t("contact.title")} description={t("contact.description")}>
+    <slot name="chat-widget" />
+
     <div class="top-spacer"></div>
 
     <PageSection>
