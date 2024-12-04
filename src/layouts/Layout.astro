@@ -61,9 +61,15 @@ const t = useTranslations(lang);
         <script is:inline>
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
+            gtag('set', 'linker', {
+                'accept_incoming': true
+              });
+            gtag('consent', 'default', {
+                'ad_storage': 'denied',
+                'analytics_storage': 'denied'
+              });
             gtag('js', new Date());
-
-            gtag('config', 'G-ZWFRG89C1Z');
+            gtag('config', 'G-B6R60P9R4G');
         </script>
 	</head>
 
