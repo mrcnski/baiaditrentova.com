@@ -29,7 +29,7 @@ The outer container is needed just to center the whole thing.
                 <NavCard href={(lang === 'it') ? 'https://ubbipo.it' : 'https://ubbipo.it/en'} text={t("nav.restaurant")} />
                 <NavCard href={translatePath("en/reviews")} text={t("nav.reviews")} />
                 <NavCard href={translatePath("en/contact")} text={t("nav.contact")} />
-                <NavCard href="https://wubook.net/nneb/bk?f=tomorrow&n=2&ep=621e64c4&board=bb&o=2.0.0.0" text={t("nav.book")} />
+                <NavCard href="https://wubook.net/nneb/bk?f=tomorrow&n=2&ep=621e64c4&board=bb&o=2.0.0.0" id="book" text={t("nav.book")} />
             </div>
         </div>
 
@@ -147,6 +147,10 @@ The outer container is needed just to center the whole thing.
         @media (max-width: 700px) {
             top: 4rem;
         }
+    }
+
+    :global(#book) {
+        color: var(--blue);
     }
 
     /*!

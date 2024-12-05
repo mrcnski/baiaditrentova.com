@@ -12,7 +12,7 @@ const regexBold = /\*([^\*]+)\*/g;
 <Fragment set:html={
     text
         .replace(regexItalics, "<i>$1</i>")
-        .replace(regexBold, "<b>$1</b>")
+        .replace(regexBold, "<strong>$1</strong>")
 }/>
 
 <style lang="less">
