@@ -57,19 +57,13 @@ const t = useTranslations(lang);
 		{/* Flickity */}
 		<script is:inline src="/flickity.pkgd.min.js"></script>
 
-        {/* Google tag (gtag.js) */}
+        <!-- Google tag (gtag.js) -->
         <script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-ZWFRG89C1Z"></script>
         <script is:inline>
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
-            gtag('set', 'linker', {
-                'accept_incoming': true
-              });
-            gtag('consent', 'default', {
-                'ad_storage': 'denied',
-                'analytics_storage': 'denied'
-              });
             gtag('js', new Date());
+
             gtag('config', 'G-ZWFRG89C1Z');
         </script>
 	</head>
