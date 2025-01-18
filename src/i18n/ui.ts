@@ -281,5 +281,10 @@ export const ui = {
         "contact.title": "Contattaci",
         "contact.description": "Siamo sempre felici di sentirti, quindi parla con noi in qualsiasi momento ti piaccia.<br><br>Se la tua richiesta è urgente, utilizza uno dei contatti sui social media elencati di seguito, altrimenti ti risponderemo via email il prima possibile. Ciao!",
         "contact.faq": "FAQ",
+
+        "cookie.title": "Consenso Cookie",
+        "cookie.description": "Utilizziamo i cookie per analizzare il traffico del nostro sito web. Cliccando su 'Accetta', acconsenti all'uso dei cookie.",
+        "cookie.accept": "Accetta",
+        "cookie.deny": "Rifiuta",
     },
 } as const;
