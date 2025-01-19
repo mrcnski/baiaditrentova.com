@@ -160,6 +160,11 @@ export const ui = {
         "contact.title": "Contact Us",
         "contact.description": "We’re always happy to hear from you, so talk to us any time you like.<br><br>If your inquiry is urgent, please use one of the social media contacts listed below, otherwise, we will reply by email as soon as possible. Ciao!",
         "contact.faq": "FAQ",
+
+        "cookie.title": "Cookie Consent",
+        "cookie.description": "We use cookies to analyze website traffic. By clicking 'Accept', you consent to the use of cookies.",
+        "cookie.accept": "Accept",
+        "cookie.deny": "Deny",
     },
     it: {
         'site.name': 'B&B Baia di Trentova',

@@ -25,10 +25,9 @@ import PageSection from "@components/PageSection.astro";
 import ParallaxImage from "@components/ParallaxImage.astro";
 import SubNavBar from "@components/SubNavBar.astro";
 
-import { getLangFromUrl, useTranslations, useDataTranslations, useTranslatedPath } from '@i18n/utils';
+import { getLangFromUrl, useTranslations, useTranslatedPath } from '@i18n/utils';
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
-const { d } = useDataTranslations(lang);
 const translatePath = useTranslatedPath(lang);
 ---
 
