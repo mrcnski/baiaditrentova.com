@@ -162,7 +162,7 @@ export const ui = {
         "contact.faq": "FAQ",
 
         "cookie.title": "Cookie Consent",
-        "cookie.description": "We use cookies to analyze website traffic. By clicking 'Accept', you consent to the use of cookies.",
+        "cookie.description": "As a small business, cookies help us to better know our customers and what they are looking for in an Italian vacation. By clicking 'Accept', you consent to the use of cookies.",
         "cookie.accept": "Accept",
         "cookie.deny": "Deny",
     },
@@ -288,7 +288,7 @@ export const ui = {
         "contact.faq": "FAQ",
 
         "cookie.title": "Consenso Cookie",
-        "cookie.description": "Utilizziamo i cookie per analizzare il traffico del nostro sito web. Cliccando su 'Accetta', acconsenti all'uso dei cookie.",
+        "cookie.description": "Come piccola impresa, i cookie ci aiutano a conoscere meglio i nostri clienti e cosa cercano in una vacanza italiana. Cliccando su 'Accetta', acconsenti all'uso dei cookie.",
         "cookie.accept": "Accetta",
         "cookie.deny": "Rifiuta",
     },
