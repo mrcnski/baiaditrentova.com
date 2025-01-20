@@ -58,6 +58,27 @@ const t = useTranslations(lang);
 		{/* Flickity */}
 		<script is:inline src="/flickity.pkgd.min.js"></script>
 
+        {/* Consent mode - load this BEFORE Google Tag Manager */}
+        <script is:inline>
+            window.dataLayer = window.dataLayer || [];
+
+            function gtag() {
+                dataLayer.push(arguments);
+            }
+
+            if (localStorage.getItem('consentMode') === null) {
+                gtag('consent', 'default', {
+                    'ad_storage': 'denied',
+                    'analytics_storage': 'denied',
+                    'personalization_storage': 'denied',
+                    'functionality_storage': 'denied',
+                    'security_storage': 'denied',
+                });
+            } else {
+                gtag('consent', 'default', JSON.parse(localStorage.getItem('consentMode')));
+            }
+        </script>
+
         <!-- Google Tag Manager -->
         <script is:inline>
             (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
