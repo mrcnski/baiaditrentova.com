@@ -1,0 +1,45 @@
+name: AI Commit Review
+
+on:
+  push:
+    branches: [master]
+  pull_request:
+    branches: [master]
+
+jobs:
+  review:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 2
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'
+
+      - name: Install dependencies
+        run: pip install openai
+
+      - name: Run AI review on commit diff
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+        run: |
+          DIFF=$(git diff HEAD^1 HEAD)
+          export DIFF
+          python3 scripts/ai_review.py
+
+      - name: Send email
+        uses: dawidd6/action-send-mail@v5
+        with:
+          server_address: ${{ secrets.SMTP_SERVER }}
+          server_port: ${{ secrets.SMTP_PORT }}
+          username: ${{ secrets.SMTP_USER }}
+          password: ${{ secrets.SMTP_PASSWORD }}
+          subject: AI Review - Commit to ${{ github.repository }}
+          to: ${{ secrets.MAIL_TO }}
+          from: "GitHub Bot <${{ secrets.SMTP_USER }}>"
+          html_body: file://ai_review.txt
+          # Optional converting Markdown to HTML (set content_type to text/html too):
+          convert_markdown: true
